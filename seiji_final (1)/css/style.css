@@ -268,7 +268,8 @@ nav a {
 }
 
 .gameboy {
-  width: 320px;
+  width: 100%;
+  max-width: 340px;
   margin: auto;
   background: #ffeaf7;
   border: 8px solid #ffb6c1;
@@ -277,6 +278,7 @@ nav a {
   box-shadow: inset 0 0 10px #fcb;
   position: relative;
 }
+
 
 .pantalla-kawaii {
   background: #fff;
@@ -296,12 +298,12 @@ nav a {
 }
 
 .botones-ab button {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   background: #ff7fa8;
   border: none;
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: white;
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
