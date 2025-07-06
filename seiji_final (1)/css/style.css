@@ -268,8 +268,7 @@ nav a {
 }
 
 .gameboy {
-  width: 100%;
-  max-width: 340px;
+  width: 320px;
   margin: auto;
   background: #ffeaf7;
   border: 8px solid #ffb6c1;
@@ -278,7 +277,6 @@ nav a {
   box-shadow: inset 0 0 10px #fcb;
   position: relative;
 }
-
 
 .pantalla-kawaii {
   background: #fff;
@@ -298,12 +296,12 @@ nav a {
 }
 
 .botones-ab button {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   background: #ff7fa8;
   border: none;
   border-radius: 50%;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: white;
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -484,4 +482,67 @@ nav a {
   color: #ff4f81;
   font-style: italic;
   margin-top: 1rem;
+}
+
+/* Aumentar tamaño en celular */
+@media (max-width: 500px) {
+  html {
+    font-size: 17px;
+  }
+
+  .pantalla-kawaii {
+    height: 230px;
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+
+  .botones-ab button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
+  }
+
+  .tweet-principal,
+  .comentario {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .entrada {
+    font-size: 1.7rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .opciones-corazones button {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  .frase {
+    font-size: 1.1rem;
+  }
+
+  .personaje {
+    width: 50px;
+    height: 50px;
+  }
+
+  .objeto {
+    width: 36px;
+    height: 36px;
+  }
+
+  .gameboy {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
 }
