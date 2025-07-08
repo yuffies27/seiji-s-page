@@ -2,9 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bloqueo Seiji</title>
-  <link rel="stylesheet" href="css/style_v2.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <style>
+    button {
+      touch-action: manipulation;
+    }
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+  </style>
+  <title>Bienvenido</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div id="bloqueo">
@@ -22,10 +31,12 @@
         <button onclick="agregarNumero('9')">9</button>
         <button onclick="borrarNumero()">⌫</button>
         <button onclick="agregarNumero('0')">0</button>
-        <button onclick="verificarPIN()">✔️</button>
+        <button onclick="verificarPIN()">✔</button>
       </div>
     </div>
   </div>
-  <script src="js/jasc_v2.js"></script>
+
+  <script src="js/jasc.js"></script>
 </body>
 </html>
+
