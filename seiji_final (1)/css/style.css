@@ -546,3 +546,14 @@ nav a {
     font-size: 2.2rem;
   }
 }
+
+/* --- Ajustes móviles sin romper diseño original --- */
+button {
+  touch-action: manipulation;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
