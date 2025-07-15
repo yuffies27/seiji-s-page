@@ -413,7 +413,7 @@ nav a {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 450px) {
   .controles-touch {
     display: none; /* Oculta en escritorio */
   }
@@ -498,7 +498,7 @@ nav a {
 }
 
 /* Aumentar tamaño en celular */
-@media (max-width: 500px) {
+@media (max-width: 450px) {
   html {
     font-size: 17px;
   }
@@ -566,7 +566,7 @@ button {
 }
 
 html, body {
-  max-width: 100%;
+  max-width: 75%;
   overflow-x: hidden;
 }
 
@@ -586,7 +586,7 @@ html, body {
 
   .tweet-principal,
   .comentario {
-    max-width: 90%;
+    max-width: 60%;
     font-size: 0.9rem;
   }
 
