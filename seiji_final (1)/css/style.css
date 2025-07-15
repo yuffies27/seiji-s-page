@@ -636,31 +636,46 @@ html, body {
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin: 0.3rem 0;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
   }
 
   nav a {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
   }
 
- .tweet-principal,
+  .tweet-principal,
   .comentario {
     max-width: 95%;
-    max-height: 20vh;
+    max-height: 20vh; /* Limita alto para que no haya scroll */
     font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+    margin: 0.3rem auto;
     overflow: hidden;
   }
 
   .foto-post {
+    width: 100%;
     max-height: 80px;
+    object-fit: contain; /* Ajusta la imagen sin deformar */
+    border-radius: 12px;
   }
 
   .perfil {
     width: 32px;
     height: 32px;
   }
-}
+
+  .mensaje, .nombre, .user {
+    font-size: 0.85rem;
+  }
 
   .entrada {
     font-size: 1.2rem;
@@ -677,3 +692,4 @@ html, body {
     font-size: 1rem;
   }
 }
+
