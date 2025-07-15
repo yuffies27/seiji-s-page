@@ -736,3 +736,12 @@ html, body {
   }
 }
 
+@media (max-width: 450px) {
+  .gameboy {
+    width: 95%;
+    max-width: 360px; /* o menos, según el diseño */
+    margin: 0 auto;
+    box-sizing: border-box; /* para que padding y border no aumenten el tamaño */
+    overflow: hidden; /* para evitar que se desborde contenido interno */
+  }
+}
