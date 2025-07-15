@@ -171,6 +171,7 @@ main.contenido section {
   width: 100%;
   border-radius: 15px;
   margin-top: 0.5rem;
+  object-fit: cover; /* importante para que la imagen se ajuste */
 }
 
 .icons {
@@ -643,16 +644,23 @@ html, body {
     padding: 0.4rem 0.8rem;
   }
 
-  .tweet-principal,
+ .tweet-principal,
   .comentario {
-    max-width: 60%;
-    font-size: 0.9rem;
+    max-width: 95%;
+    max-height: 20vh;
+    font-size: 0.85rem;
+    overflow: hidden;
+  }
+
+  .foto-post {
+    max-height: 80px;
   }
 
   .perfil {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
   }
+}
 
   .entrada {
     font-size: 1.2rem;
