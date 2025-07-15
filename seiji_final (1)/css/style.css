@@ -3,15 +3,16 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: #ffeef5;
+  background: #f9ccd3; /* rosa suave */
   font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #333333; /* negro suave para texto */
 }
 
 /* Pantalla de bloqueo kawaii */
 #bloqueo {
   position: fixed;
   inset: 0;
-  background: #ffd6e8;
+  background: #f7a8b8; /* rosa suave más oscuro */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,10 +20,10 @@ body, html {
 }
 
 .pantalla {
-  background: white;
+  background: #ffffff; /* blanco puro */
   padding: 2rem;
   border-radius: 25px;
-  box-shadow: 0 0 15px #ffb6c1;
+  box-shadow: 0 0 15px #dcbfa6; /* sombra marrón claro */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,13 +32,13 @@ body, html {
 .entrada {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #a7355e;
-  background: white;
+  color: #333333;
+  background: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 15px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 8px #ffc0cb;
+  box-shadow: 0 0 8px #b2d8b2; /* verde pastel */
 }
 
 .teclado {
@@ -50,17 +51,19 @@ body, html {
 .teclado button {
   padding: 12px;
   font-size: 1.2rem;
-  background-color: #ff69b4;
-  color: white;
-  border: none;
+  background-color: #f7a8b8; /* rosa suave */
+  color: #333333;
+  border: 2px solid #dcbfa6; /* marrón claro */
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(220, 191, 166, 0.7);
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .teclado button:hover {
-  background-color: #ff3f88;
+  background-color: #b2d8b2; /* verde pastel */
+  color: #ffffff;
+  border-color: #a0c0a0;
 }
 
 .vibrar {
@@ -79,17 +82,23 @@ body, html {
 .contenido {
   padding: 2rem;
   text-align: center;
+  background: #ffffff; /* blanco puro */
+  border-radius: 20px;
+  max-width: 480px;
+  margin: 1rem auto;
+  box-shadow: 0 0 12px #dcbfa6;
+  color: #333333;
 }
 
 h1 {
   font-size: 2rem;
-  color: #d94f7a;
-  margin-bottom: 0.3rem;
+  color: #b2d8b2; /* verde pastel */
+  margin-bottom: 0.5rem;
 }
 
 p {
   font-size: 1.1rem;
-  color: #844d5d;
+  color: #444444;
   margin-bottom: 1rem;
 }
 
@@ -103,36 +112,39 @@ nav {
 
 nav a {
   padding: 0.5rem 1rem;
-  background-color: #ffc0cb;
-  border: 2px solid #ff8fb5;
-  color: #a7355e;
+  background-color: #f9ccd3; /* rosa suave */
+  border: 2px solid #dcbfa6; /* marrón claro */
+  color: #333333;
   border-radius: 999px;
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(220, 191, 166, 0.5);
 }
 
 nav a:hover {
-  background-color: #ffd4dc;
-  color: #7b264f;
+  background-color: #b2d8b2; /* verde pastel */
+  color: #ffffff;
+  border-color: #a0c0a0;
+  box-shadow: 0 4px 10px rgba(178, 216, 178, 0.7);
 }
 
 /* Estilo para páginas individuales */
 main.contenido section {
   margin-top: 1rem;
   font-size: 1rem;
-  color: #555;
+  color: #444444;
 }
 
 /* --- Sección tipo tweet --- */
 .tweet-principal {
-  background: white;
+  background: #ffffff;
   border-radius: 20px;
   padding: 1rem;
   margin: auto;
   max-width: 400px;
-  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+  box-shadow: 0 4px 15px rgba(220, 191, 166, 0.4);
   margin-bottom: 1rem;
 }
 
@@ -148,7 +160,7 @@ main.contenido section {
   border-radius: 50%;
   margin-right: 0.6rem;
   object-fit: cover;
-  border: 2px solid #ff8fb5;
+  border: 2px solid #dcbfa6;
 }
 
 .foto-post {
@@ -169,14 +181,14 @@ main.contenido section {
 /* Comentarios estilo tweet */
 .comentario {
   display: flex;
-  background: #fff8fc;
+  background: #f9ccd3; /* rosa suave */
   padding: 0.8rem;
   border-radius: 15px;
   max-width: 400px;
   margin: 1rem auto;
   align-items: flex-start;
   gap: 0.6rem;
-  box-shadow: 0 0 10px rgba(255, 192, 203, 0.2);
+  box-shadow: 0 0 10px rgba(178, 216, 178, 0.3);
 }
 
 .comentario img.perfil {
@@ -185,6 +197,7 @@ main.contenido section {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
+  border: 2px solid #dcbfa6;
 }
 
 .info-usuario {
@@ -203,40 +216,44 @@ main.contenido section {
 
 .nombre {
   font-weight: bold;
-  color: #a7355e;
+  color: #333333;
   font-size: 0.95rem;
   margin-bottom: 2px;
 }
 
 .user {
   font-size: 0.85rem;
-  color: #777;
+  color: #444444;
 }
 
 .mensaje {
   font-size: 0.95rem;
-  color: #444;
+  color: #333333;
 }
 
 /* Botón siguiente */
 #mensajes button, .comentario + button {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
-  background-color: #ff69b4;
-  color: white;
-  border: none;
+  background-color: #f7a8b8;
+  color: #333333;
+  border: 2px solid #dcbfa6;
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(220, 191, 166, 0.6);
 }
 
 #mensajes button:hover, .comentario + button:hover {
-  background-color: #ff3f88;
+  background-color: #b2d8b2;
+  color: #ffffff;
+  border-color: #a0c0a0;
+  box-shadow: 0 4px 10px rgba(178, 216, 178, 0.8);
 }
 
 body {
-  background: #ffeef5;
+  background: #f9ccd3;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   margin: 0;
   padding: 0;
@@ -248,7 +265,7 @@ body {
 }
 
 h1 {
-  color: #d94f7a;
+  color: #b2d8b2;
   margin-bottom: 1.5rem;
 }
 
@@ -259,27 +276,27 @@ nav {
 nav a {
   margin: 0.3rem;
   padding: 0.5rem 1rem;
-  background-color: #ffc0cb;
+  background-color: #f9ccd3;
   border-radius: 20px;
   text-decoration: none;
-  color: #a7355e;
+  color: #333333;
   font-weight: bold;
 }
 
 .gameboy {
   width: 320px;
   margin: auto;
-  background: #ffeaf7;
-  border: 8px solid #ffb6c1;
+  background: #ffffff;
+  border: 8px solid #dcbfa6;
   border-radius: 30px;
   padding: 1.2rem;
-  box-shadow: inset 0 0 10px #fcb;
+  box-shadow: inset 0 0 10px #dcbfa6;
   position: relative;
 }
 
 .pantalla-kawaii {
-  background: #fff;
-  border: 4px inset #ffc0cb;
+  background: #ffffff;
+  border: 4px inset #dcbfa6;
   height: 200px;
   border-radius: 15px;
   padding: 1rem;
@@ -297,18 +314,18 @@ nav a {
 .botones-ab button {
   width: 50px;
   height: 50px;
-  background: #ff7fa8;
+  background: #b2d8b2;
   border: none;
   border-radius: 50%;
   font-size: 1.2rem;
-  color: white;
+  color: #333333;
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   cursor: pointer;
 }
 
 .botones-ab button:hover {
-  background: #ff5e92;
+  background: #a0c0a0;
 }
 
 /* --- Juego Atrapa el Sol --- */
@@ -316,10 +333,11 @@ nav a {
   position: relative;
   width: 100%;
   height: 160px;
-  background: #fff5fa;
+  background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
   margin-top: 0.5rem;
+  box-shadow: 0 0 10px #dcbfa6;
 }
 
 .personaje {
@@ -328,20 +346,13 @@ nav a {
   left: 120px;
   width: 40px;
   height: 40px;
-  background: pink;
+  background: #b2d8b2;
   border-radius: 50%;
+  box-shadow: 0 0 5px #a0c0a0;
 }
 
 .personaje.vibrar {
   animation: vibrar 0.3s;
-}
-
-@keyframes vibrar {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
 }
 
 .objeto {
@@ -352,18 +363,20 @@ nav a {
 }
 
 .sol {
-  background: gold;
+  background: #dcbfa6;
+  box-shadow: 0 0 8px #b2d8b2;
 }
 
 .nube {
-  background: lightgray;
+  background: #f7a8b8;
+  box-shadow: inset 0 0 5px #dcbfa6;
 }
 
 .particle {
   position: absolute;
   width: 10px;
   height: 10px;
-  background: gold;
+  background: #b2d8b2;
   border-radius: 50%;
   pointer-events: none;
   animation: explotar 0.5s ease-out forwards;
@@ -390,9 +403,9 @@ nav a {
 }
 
 .controles-touch button {
-  background: #ff7fa8;
+  background: #b2d8b2;
   border: none;
-  color: white;
+  color: #333333;
   font-size: 1.5rem;
   border-radius: 15px;
   padding: 5px 10px;
@@ -408,7 +421,7 @@ nav a {
 
 .adivina-juego {
   text-align: center;
-  color: #d94f7a;
+  color: #b2d8b2;
   font-family: 'Comic Sans MS', cursive;
 }
 
@@ -416,10 +429,10 @@ nav a {
   font-size: 1rem;
   margin-bottom: 1rem;
   font-style: italic;
-  background: #fff0f5;
+  background: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 15px;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+  box-shadow: inset 0 0 5px rgba(220,191,166,0.1);
 }
 
 .opciones-corazones {
@@ -441,27 +454,28 @@ nav a {
 }
 
 .opciones-corazones button {
-  background: #ffe4ec;
-  border: 2px solid #ffb6c1;
+  background: #f9ccd3;
+  border: 2px solid #dcbfa6;
   padding: 0.5rem 1.2rem;
   border-radius: 999px;
   font-size: 0.9rem;
-  color: #a7355e;
+  color: #333333;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 1px 2px 5px rgba(220,191,166,0.2);
 }
 
 .opciones-corazones button:hover {
-  background: #ffd2e1;
-  color: #912b4c;
+  background: #b2d8b2;
+  color: #ffffff;
+  border-color: #a0c0a0;
 }
 
 /* Colores según resultado */
 .opciones-corazones button.correcta {
-  background-color: #a0e8af !important;
-  border-color: #70c58a !important;
+  background-color: #a0d7a0 !important;
+  border-color: #70b370 !important;
   color: #276442 !important;
 }
 
@@ -478,7 +492,7 @@ nav a {
 
 .respuesta {
   font-size: 0.9rem;
-  color: #ff4f81;
+  color: #b23456;
   font-style: italic;
   margin-top: 1rem;
 }
@@ -600,3 +614,4 @@ html, body {
 button {
   touch-action: manipulation;
 }
+
