@@ -289,7 +289,7 @@ nav a {
 }
 
 .gameboy {
-  width: 320px;
+  width: 320px;          /* ancho fijo para escritorio */
   margin: auto;
   background: #ffffff;
   border: 8px solid #dcbfa6;
@@ -297,6 +297,8 @@ nav a {
   padding: 1.2rem;
   box-shadow: inset 0 0 10px #dcbfa6;
   position: relative;
+  box-sizing: content-box; /* el default, para que padding y border sumen al ancho */
+  overflow: visible;
 }
 
 .pantalla-kawaii {
@@ -738,10 +740,12 @@ html, body {
 
 @media (max-width: 450px) {
   .gameboy {
-    width: 95%;
-    max-width: 360px; /* o menos, según el diseño */
+    width: 95%;           /* que ocupe casi todo el ancho disponible */
+    max-width: 360px;     /* límite máximo para pantallas más anchas */
     margin: 0 auto;
-    box-sizing: border-box; /* para que padding y border no aumenten el tamaño */
-    overflow: hidden; /* para evitar que se desborde contenido interno */
+    box-sizing: border-box; /* incluye padding y border en el ancho total */
+    overflow: hidden;     /* evita que el contenido interno se salga */
+    border-width: 4px;    /* borde más delgado para móviles */
+    padding: 1rem;        /* padding un poco menor para ajustarse */
   }
 }
