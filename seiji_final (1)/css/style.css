@@ -749,3 +749,17 @@ html, body {
     padding: 1rem;        /* padding un poco menor para ajustarse */
   }
 }
+
+/* Definir la fuente Retro Mario */
+@font-face {
+  font-family: 'Retro Mario';
+  src: url('./fonts/RetroMario-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Aplicar la fuente solo al título de la Gameboy */
+.titulo-gameboy {
+  font-family: 'Retro Mario', cursive, sans-serif;
+}
+
