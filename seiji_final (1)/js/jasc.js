@@ -71,7 +71,7 @@ function mostrarJuego(nombre) {
           <button onclick="moverDerecha()">➡️</button>
         </div>
       </div>
-      <p>Puntos: <span id="puntos">0</span></p>
+      <p style="color:#5a422a; font-weight:bold; margin-top:10px;">Puntos: <span id="puntos">0</span></p>
     `;
     iniciarAtrapa();
   }
@@ -154,7 +154,7 @@ function evaluarRespuesta(correcto, elegido) {
       quizIndex = 0;
       cargarPregunta(frases[quizIndex]);
     } else {
-      document.getElementById("pantalla-juego").innerHTML = `<p class="frase">¡Completaste todas las frases! 🌟</p>`;
+      document.getElementById("pantalla-juego").innerHTML = `<p class="frase" style="color:#276442; font-weight:bold;">¡Completaste todas las frases! 🌟</p>`;
     }
   }, 1300);
 }
@@ -171,7 +171,10 @@ function iniciarAtrapa() {
   document.getElementById("puntos").textContent = puntos;
   const juego = document.getElementById("atrapa-juego");
   const personaje = document.getElementById("personaje");
+  personaje.style.left = "120px";
 
+  // Evitar múltiples listeners
+  document.removeEventListener("keydown", moverConTeclado);
   document.addEventListener("keydown", moverConTeclado);
 
   clearIntervalos();
@@ -181,6 +184,7 @@ function iniciarAtrapa() {
     const esSol = Math.random() > 0.4;
     objeto.classList.add("objeto", esSol ? "sol" : "nube");
     objeto.style.left = Math.random() * 260 + "px";
+    objeto.style.top = "0px";
     juego.appendChild(objeto);
 
     let caida = setInterval(() => {
@@ -209,7 +213,7 @@ function iniciarAtrapa() {
             const mensajeFinal = document.createElement("p");
             mensajeFinal.textContent = "Tú eres el solecito ☀️";
             mensajeFinal.style.fontSize = "1.1rem";
-            mensajeFinal.style.color = "#d94f7a";
+            mensajeFinal.style.color = "#276442";
             mensajeFinal.style.marginTop = "1rem";
             document.getElementById("pantalla-juego").appendChild(mensajeFinal);
           }
@@ -226,6 +230,7 @@ function iniciarAtrapa() {
 
 function moverConTeclado(e) {
   const personaje = document.getElementById("personaje");
+  if (!personaje) return;
   let left = parseInt(window.getComputedStyle(personaje).left);
   if (e.key === "ArrowLeft") personaje.style.left = Math.max(left - 20, 0) + "px";
   if (e.key === "ArrowRight") personaje.style.left = Math.min(left + 20, 260) + "px";
@@ -257,4 +262,3 @@ function clearIntervalos() {
   intervalos.forEach(i => clearInterval(i));
   intervalos = [];
 }
-
