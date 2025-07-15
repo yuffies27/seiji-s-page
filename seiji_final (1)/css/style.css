@@ -497,66 +497,106 @@ nav a {
   margin-top: 1rem;
 }
 
-/* Aumentar tamaño en celular */
-@media (max-width: 450px) {
+/* ------------------------- */
+/* AJUSTES PARA MÓVILES iPHONE 11 y similares */
+/* ------------------------- */
+@media (max-width: 440px) {
   html {
-    font-size: 17px;
+    font-size: 16px; /* Base cómoda para lectura */
+  }
+
+  body {
+    font-size: 16px;
+    padding: 1.5rem 1.2rem; /* Margen para no pegarse a bordes */
+    background-color: #f9ccd3; /* rosa suave */
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+    color: #333333;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.3rem;
+    background-color: #ffffff; /* blanco puro */
+    color: #333333; /* negro suave */
+    border-radius: 25px;
+    border: 2px solid #dcbfa6;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(220, 191, 166, 0.4);
+    transition: background-color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #f7a8b8; /* rosa más intenso */
+    color: #333333;
+  }
+
+  .tweet-principal,
+  .comentario {
+    max-width: 100%;
+    margin: 1rem auto;
+    font-size: 1.1rem;
+    padding: 1rem 1.2rem;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(220, 191, 166, 0.3);
+    color: #444444;
+  }
+
+  .perfil {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #dcbfa6;
+  }
+
+  .mensaje, .nombre, .user {
+    font-size: 1rem;
   }
 
   .pantalla-kawaii {
     height: 230px;
     font-size: 1rem;
-    padding: 1.2rem;
+    padding: 1rem 1.2rem;
+    border: 2px inset #dcbfa6;
+    background: #ffffff;
   }
 
-  .botones-ab button {
-    width: 60px;
-    height: 60px;
-    font-size: 1.4rem;
-  }
-
-  .tweet-principal,
-  .comentario {
-    padding: 1.2rem;
+  button {
     font-size: 1.1rem;
-  }
-
-  .entrada {
-    font-size: 1.7rem;
     padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    background-color: #f9ccd3;
+    color: #333333;
+    border: 2px solid #dcbfa6;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 
-  .opciones-corazones button {
-    font-size: 1.1rem;
-    padding: 0.7rem 1.4rem;
-  }
-
-  .frase {
-    font-size: 1.1rem;
-  }
-
-  .personaje {
-    width: 50px;
-    height: 50px;
-  }
-
-  .objeto {
-    width: 36px;
-    height: 36px;
+  button:hover {
+    background-color: #f7a8b8;
   }
 
   .gameboy {
     width: 95%;
-    padding: 1.5rem;
-  }
-
-  nav a {
-    font-size: 1.1rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  h1 {
-    font-size: 2.2rem;
+    max-width: 360px;
+    padding: 1.2rem;
+    margin: auto;
+    background: #ffffff;
+    border: 4px solid #dcbfa6;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(220, 191, 166, 0.4);
   }
 }
 
@@ -566,9 +606,11 @@ button {
 }
 
 html, body {
-  max-width: 75%;
+  max-width: 100%;
   overflow-x: hidden;
 }
+
+/* No modifiques las reglas siguientes si no es necesario */
 
 @media (max-width: 450px) {
   body {
@@ -576,42 +618,6 @@ html, body {
   }
 
   h1 {
-    font-size: 1.5rem;
-  }
+    font-size
 
-  nav a {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .tweet-principal,
-  .comentario {
-    max-width: 60%;
-    font-size: 0.9rem;
-  }
-
-  .perfil {
-    width: 40px;
-    height: 40px;
-  }
-
-  .entrada {
-    font-size: 1.2rem;
-  }
-
-  .teclado button {
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  .botones-ab button {
-    width: 45px;
-    height: 45px;
-    font-size: 1rem;
-  }
-}
-
-button {
-  touch-action: manipulation;
-}
 
