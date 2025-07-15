@@ -753,7 +753,7 @@ html, body {
 /* Definir la fuente Retro Mario */
 @font-face {
   font-family: 'Retro Mario';
-  src: url('./fonts/RetroMario-Regular.ttf') format('truetype');
+  src: url('./fonts/RetroMario-Regular.oft') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
