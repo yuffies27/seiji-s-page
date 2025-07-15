@@ -506,20 +506,15 @@ nav a {
 /* ------------------------- */
 @media (max-width: 440px) {
   html, body {
-    height: 100vh;
+    font-size: 16px; 
     max-width: 100%;
     width: 100%;
+    height: 100vh;         /* altura total de la ventana */
     margin: 0;
     padding: 0;
     background-color: #f9ccd3;
-    overflow: hidden; /* bloquea scroll */
-    font-size: 16px;
-  }
-
-  .contenido, #mensajes, main {
-    height: 100vh;
-    overflow: hidden;
-    padding: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: hidden;    /* evita scroll vertical */
     box-sizing: border-box;
   }
 
@@ -547,20 +542,33 @@ nav a {
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 2px 4px rgba(220, 191, 166, 0.4);
+    transition: background-color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #f7a8b8;
+    color: #333333;
+  }
+
+  .contenido, #mensajes, main {
+    height: 100vh;          /* ocupan toda la pantalla */
+    overflow: hidden;       /* sin scroll interno */
+    padding: 0.5rem;
+    box-sizing: border-box;
   }
 
   .tweet-principal,
   .comentario {
     max-width: 100%;
-    max-height: 20%;
+    max-height: 20%;       /* limita alto para que quepa todo */
     font-size: 0.85rem;
     padding: 0.4rem;
     margin: 0.3rem 0;
+    overflow: hidden;      /* no permite scroll dentro del bloque */
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 2px 8px rgba(220, 191, 166, 0.3);
     color: #444444;
-    overflow: hidden;
   }
 
   .foto-post {
@@ -568,21 +576,18 @@ nav a {
     height: auto;
     max-height: 80px;
     object-fit: cover;
+    border-radius: 15px;
+    margin-top: 0.5rem;
   }
 
   .perfil {
     width: 32px;
     height: 32px;
+    border: 2px solid #dcbfa6;
   }
 
   .mensaje, .nombre, .user {
     font-size: 0.8rem;
-  }
-
-  .pantalla-kawaii {
-    height: 220px;
-    font-size: 1rem;
-    padding: 1rem;
   }
 
   button {
@@ -606,7 +611,61 @@ nav a {
     max-width: 100%;
     padding: 1rem;
     margin: auto;
-    border-radius: 20px;
     background: #ffffff;
+    border: 4px solid #dcbfa6;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(220, 191, 166, 0.4);
+  }
+}
+
+/* --- Ajustes móviles sin romper diseño original --- */
+button {
+  touch-action: manipulation;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ajustes adicionales para móviles con ancho hasta 450px */
+@media (max-width: 450px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .tweet-principal,
+  .comentario {
+    max-width: 60%;
+    font-size: 0.9rem;
+  }
+
+  .perfil {
+    width: 40px;
+    height: 40px;
+  }
+
+  .entrada {
+    font-size: 1.2rem;
+  }
+
+  .teclado button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .botones-ab button {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
   }
 }
