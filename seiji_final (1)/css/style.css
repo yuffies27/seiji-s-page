@@ -651,30 +651,39 @@ html, body {
     padding: 0.3rem 0.5rem;
   }
 
-.tweet-principal,
-.comentario {
-  max-width: 95%;
-  /* max-height: 20vh;  <-- quita esta línea o pon un valor más grande */
-  font-size: 0.85rem;
-  /* overflow: hidden;  <-- quítalo */
-}
+  .tweet-principal,
+  .comentario {
+    max-width: 95%;
+    height: auto; /* que la altura se ajuste al contenido */
+    max-height: none; /* sin límite que corte */
+    font-size: 0.9rem;
+    margin: 0.5rem auto;
+    padding: 1rem;
+    overflow: visible; /* que no oculte nada */
+  }
 
-.foto-post {
-  max-height: 150px; /* pon un valor más alto para que se vea bien */
-  width: 100%;
-  object-fit: contain; /* para que la imagen no se corte */
-  border-radius: 15px;
-}
+  .tweet-principal {
+    min-height: 200px; /* aumentamos el tamaño para que se vea bien el cuadro */
+    box-sizing: border-box;
+  }
 
+  .foto-post {
+    max-height: 120px; /* tamaño cómodo para la foto */
+    width: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+  }
 
   .perfil {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
   }
 
   .mensaje, .nombre, .user {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
+}
+
 
   .entrada {
     font-size: 1.2rem;
