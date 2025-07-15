@@ -213,7 +213,6 @@ main.contenido section {
   color: #777;
 }
 
-
 .mensaje {
   font-size: 0.95rem;
   color: #444;
@@ -601,4 +600,3 @@ html, body {
 button {
   touch-action: manipulation;
 }
-
