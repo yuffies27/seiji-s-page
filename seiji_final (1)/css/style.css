@@ -3,20 +3,21 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: #FFF5D0; /* Fondo general */
+  background: #D9F0F0; /* Fondo general azul muy claro */
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  color: #1B475D; /* Texto principal */
+  color: #1B475D; /* Texto principal azul oscuro */
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
   padding: 0 1rem;
 }
+
 /* Pantalla de bloqueo kawaii */
 #bloqueo {
   position: fixed;
   inset: 0;
-  background: #B4BD62; /* Botón secundario / borde */
+  background: #3B7A74; /* verde azulado para botón secundario / borde */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +28,7 @@ body, html {
   background: #ffffff; /* blanco puro */
   padding: 2rem;
   border-radius: 25px;
-  box-shadow: 0 0 15px #B4BD62; /* sombra con tono secundario */
+  box-shadow: 0 0 15px #3B7A74; /* sombra verde azulado */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,13 +37,13 @@ body, html {
 .entrada {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #1B475D; /* texto principal */
+  color: #1B475D; /* texto principal azul oscuro */
   background: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 15px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 8px #8EBD9D; /* hover color para sombra */
+  box-shadow: 0 0 8px #3B7A74; /* sombra verde azulado */
 }
 
 .teclado {
@@ -55,19 +56,19 @@ body, html {
 .teclado button {
   padding: 12px;
   font-size: 1.2rem;
-  background-color: #FAD564; /* botón primario */
-  color: #1B475D; /* texto en botón primario */
-  border: 2px solid #B4BD62; /* borde botón secundario */
+  background-color: #4A90E2; /* botón azul medio */
+  color: #D9F0F0; /* texto claro para contraste */
+  border: 2px solid #3B7A74; /* borde verde azulado */
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(180, 189, 98, 0.7);
+  box-shadow: 0 2px 5px rgba(59, 122, 116, 0.7); /* sombra verde azulado */
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .teclado button:hover {
-  background-color: #8EBD9D; /* hover */
-  color: #ffffff;
-  border-color: #8EBD9D;
+  background-color: #3B7A74; /* hover verde azulado */
+  color: #D9F0F0;
+  border-color: #3B7A74;
 }
 
 .vibrar {
@@ -90,19 +91,19 @@ body, html {
   border-radius: 20px;
   max-width: 480px;
   margin: 1rem auto;
-  box-shadow: 0 0 12px #B4BD62; /* sombra con tono secundario */
-  color: #1B475D; /* texto principal */
+  box-shadow: 0 0 12px #3B7A74; /* sombra verde azulado */
+  color: #1B475D; /* texto principal azul oscuro */
 }
 
 h1 {
   font-size: 2rem;
-  color: #1B475D; /* título */
+  color: #1B475D; /* título azul oscuro */
   margin-bottom: 0.5rem;
 }
 
 p {
   font-size: 1.1rem;
-  color: #1B475D; /* Texto principal */
+  color: #1B475D; /* Texto principal azul oscuro */
   margin-bottom: 1rem;
 }
 
@@ -116,29 +117,29 @@ nav {
 
 nav a {
   padding: 0.5rem 1rem;
-  background-color: #FAD564; /* Botón primario */
-  border: 2px solid #B4BD62; /* Borde secundario */
-  color: #1B475D; /* Texto en botón */
+  background-color: #4A90E2; /* Botón azul medio */
+  border: 2px solid #3B7A74; /* Borde verde azulado */
+  color: #D9F0F0; /* Texto claro */
   border-radius: 999px;
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(180, 189, 98, 0.5);
+  box-shadow: 0 2px 4px rgba(59, 122, 116, 0.5); /* sombra verde azulado */
 }
 
 nav a:hover {
-  background-color: #8EBD9D; /* Hover */
-  color: #ffffff;
-  border-color: #8EBD9D;
-  box-shadow: 0 4px 10px rgba(142, 189, 157, 0.7);
+  background-color: #3B7A74; /* Hover verde azulado */
+  color: #D9F0F0;
+  border-color: #3B7A74;
+  box-shadow: 0 4px 10px rgba(59, 122, 116, 0.7);
 }
 
 /* Estilo para páginas individuales */
 main.contenido section {
   margin-top: 1rem;
   font-size: 1rem;
-  color: #1B475D; /* Texto principal */
+  color: #1B475D; /* Texto principal azul oscuro */
 }
 
 /* --- Sección tipo tweet --- */
@@ -148,7 +149,7 @@ main.contenido section {
   padding: 1rem;
   margin: auto;
   max-width: 400px;
-  box-shadow: 0 4px 15px rgba(180, 189, 98, 0.4); /* Borde sombra */
+  box-shadow: 0 4px 15px rgba(59, 122, 116, 0.4); /* Borde sombra verde azulado */
   margin-bottom: 1rem;
 }
 
@@ -164,7 +165,7 @@ main.contenido section {
   border-radius: 50%;
   margin-right: 0.6rem;
   object-fit: cover;
-  border: 2px solid #B4BD62; /* Borde secundario */
+  border: 2px solid #3B7A74; /* Borde verde azulado */
 }
 
 .foto-post {
@@ -186,14 +187,14 @@ main.contenido section {
 /* Comentarios estilo tweet */
 .comentario {
   display: flex;
-  background: #FAD564; /* Botón primario */
+  background: #4A90E2; /* Botón azul medio */
   padding: 0.8rem;
   border-radius: 15px;
   max-width: 400px;
   margin: 1rem auto;
   align-items: flex-start;
   gap: 0.6rem;
-  box-shadow: 0 0 10px rgba(142, 189, 157, 0.3); /* Hover color en sombra */
+  box-shadow: 0 0 10px rgba(59, 122, 116, 0.3); /* sombra verde azulado */
 }
 
 .comentario img.perfil {
@@ -202,7 +203,7 @@ main.contenido section {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid #B4BD62; /* Borde secundario */
+  border: 2px solid #3B7A74; /* Borde verde azulado */
 }
 
 .info-usuario {
@@ -221,44 +222,44 @@ main.contenido section {
 
 .nombre {
   font-weight: bold;
-  color: #1B475D; /* Texto principal */
+  color: #D9F0F0; /* Texto claro para contraste */
   font-size: 0.95rem;
   margin-bottom: 2px;
 }
 
 .user {
   font-size: 0.85rem;
-  color: #1B475D; /* Texto principal */
+  color: #D9F0F0; /* Texto claro */
 }
 
 .mensaje {
   font-size: 0.95rem;
-  color: #1B475D; /* Texto principal */
+  color: #D9F0F0; /* Texto claro */
 }
 
 /* Botón siguiente */
 #mensajes button, .comentario + button {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
-  background-color: #FAD564; /* Botón primario */
-  color: #1B475D;
-  border: 2px solid #B4BD62;
+  background-color: #4A90E2; /* Botón azul medio */
+  color: #D9F0F0; /* Texto claro */
+  border: 2px solid #3B7A74; /* Borde verde azulado */
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(180, 189, 98, 0.6);
+  box-shadow: 0 2px 5px rgba(59, 122, 116, 0.6); /* sombra verde azulado */
 }
 
 #mensajes button:hover, .comentario + button:hover {
-  background-color: #8EBD9D; /* Hover */
-  color: #ffffff;
-  border-color: #8EBD9D;
-  box-shadow: 0 4px 10px rgba(142, 189, 157, 0.8);
+  background-color: #3B7A74; /* Hover verde azulado */
+  color: #D9F0F0;
+  border-color: #3B7A74;
+  box-shadow: 0 4px 10px rgba(59, 122, 116, 0.8);
 }
 
 body {
-  background: #FFF5D0; /* Fondo general */
+  background: #D9F0F0; /* Fondo general azul muy claro */
   font-family: 'Comic Sans MS', cursive, sans-serif;
   margin: 0;
   padding: 0;
@@ -267,6 +268,7 @@ body {
 .contenido {
   text-align: center;
   padding: 2rem;
+  color: #1B475D; /* texto principal azul oscuro */
 }
 
 h1 {
@@ -281,21 +283,31 @@ nav {
 nav a {
   margin: 0.3rem;
   padding: 0.5rem 1rem;
-  background-color: #FAD564;
+  background-color: #4A90E2; /* botón azul medio */
   border-radius: 20px;
   text-decoration: none;
-  color: #1B475D;
+  color: #D9F0F0; /* texto claro */
   font-weight: bold;
+  border: 2px solid #3B7A74; /* borde verde azulado */
+  box-shadow: 0 2px 4px rgba(59, 122, 116, 0.5);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #3B7A74; /* hover verde azulado */
+  color: #D9F0F0;
+  border-color: #3B7A74;
+  box-shadow: 0 4px 10px rgba(59, 122, 116, 0.8);
 }
 
 .gameboy {
   width: 320px;          /* ancho fijo para escritorio */
   margin: auto;
   background: #ffffff;
-  border: 8px solid #B4BD62;
+  border: 8px solid #3B7A74; /* borde verde azulado */
   border-radius: 30px;
   padding: 1.2rem;
-  box-shadow: inset 0 0 10px #B4BD62;
+  box-shadow: inset 0 0 10px #3B7A74; /* sombra verde azulado */
   position: relative;
   box-sizing: content-box;
   overflow: visible;
@@ -303,13 +315,14 @@ nav a {
 
 .pantalla-kawaii {
   background: #ffffff;
-  border: 4px inset #B4BD62;
+  border: 4px inset #3B7A74; /* borde verde azulado */
   height: 200px;
   border-radius: 15px;
   padding: 1rem;
   overflow-y: auto;
   box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
   font-family: monospace;
+  color: #1B475D; /* texto azul oscuro */
 }
 
 .botones-ab {
@@ -321,18 +334,37 @@ nav a {
 .botones-ab button {
   width: 50px;
   height: 50px;
-  background: #FAD564;
+  background: #4A90E2; /* botón azul medio */
   border: none;
   border-radius: 50%;
   font-size: 1.2rem;
-  color: #1B475D;
+  color: #D9F0F0; /* texto claro */
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .botones-ab button:hover {
-  background: #8EBD9D;
+  background: #3B7A74; /* hover verde azulado */
+}
+
+.botones-ab button {
+  width: 50px;
+  height: 50px;
+  background: #4A90E2; /* azul medio */
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #D9F0F0; /* texto claro */
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botones-ab button:hover {
+  background: #3B7A74; /* verde azulado hover */
 }
 
 /* --- Juego Atrapa el Sol --- */
@@ -344,7 +376,7 @@ nav a {
   border-radius: 10px;
   overflow: hidden;
   margin-top: 0.5rem;
-  box-shadow: 0 0 10px #B4BD62;
+  box-shadow: 0 0 10px #3B7A74; /* verde azulado sombra */
 }
 
 .personaje {
@@ -353,9 +385,9 @@ nav a {
   left: 120px;
   width: 40px;
   height: 40px;
-  background: #FAD564;
+  background: #4A90E2; /* azul medio */
   border-radius: 50%;
-  box-shadow: 0 0 5px #8EBD9D;
+  box-shadow: 0 0 5px #3B7A74; /* sombra verde azulado */
 }
 
 .personaje.vibrar {
@@ -370,20 +402,20 @@ nav a {
 }
 
 .sol {
-  background: #FAD564;
-  box-shadow: 0 0 8px #8EBD9D;
+  background: #4A90E2; /* azul medio */
+  box-shadow: 0 0 8px #3B7A74;
 }
 
 .nube {
-  background: #8EBD9D;
-  box-shadow: inset 0 0 5px #B4BD62;
+  background: #3B7A74; /* verde azulado */
+  box-shadow: inset 0 0 5px #1B475D; /* azul oscuro */
 }
 
 .particle {
   position: absolute;
   width: 10px;
   height: 10px;
-  background: #FAD564;
+  background: #4A90E2; /* azul medio */
   border-radius: 50%;
   pointer-events: none;
   animation: explotar 0.5s ease-out forwards;
@@ -410,14 +442,19 @@ nav a {
 }
 
 .controles-touch button {
-  background: #FAD564;
+  background: #4A90E2; /* azul medio */
   border: none;
-  color: #1B475D;
+  color: #D9F0F0; /* texto claro */
   font-size: 1.5rem;
   border-radius: 15px;
   padding: 5px 10px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.controles-touch button:hover {
+  background-color: #3B7A74; /* verde azulado hover */
 }
 
 @media (min-width: 450px) {
@@ -428,7 +465,7 @@ nav a {
 
 .adivina-juego {
   text-align: center;
-  color: #1B475D;
+  color: #1B475D; /* azul oscuro */
   font-family: 'Comic Sans MS', cursive;
 }
 
@@ -439,7 +476,8 @@ nav a {
   background: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 15px;
-  box-shadow: inset 0 0 5px rgba(180,189,98,0.2);
+  box-shadow: inset 0 0 5px rgba(59, 122, 116, 0.2); /* verde azulado */
+  color: #1B475D; /* texto azul oscuro */
 }
 
 .opciones-corazones {
@@ -461,35 +499,35 @@ nav a {
 }
 
 .opciones-corazones button {
-  background: #FAD564;
-  border: 2px solid #B4BD62;
+  background: #4A90E2; /* azul medio */
+  border: 2px solid #3B7A74; /* verde azulado */
   padding: 0.5rem 1.2rem;
   border-radius: 999px;
   font-size: 0.9rem;
-  color: #1B475D;
+  color: #D9F0F0; /* texto claro */
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 1px 2px 5px rgba(180,189,98,0.3);
+  box-shadow: 1px 2px 5px rgba(59, 122, 116, 0.3);
 }
 
 .opciones-corazones button:hover {
-  background: #8EBD9D;
-  color: #ffffff;
-  border-color: #8EBD9D;
+  background: #3B7A74; /* verde azulado hover */
+  color: #D9F0F0;
+  border-color: #3B7A74;
 }
 
 /* Colores según resultado */
 .opciones-corazones button.correcta {
-  background-color: #8EBD9D !important;
-  border-color: #B4BD62 !important;
-  color: #1B475D !important;
+  background-color: #3B7A74 !important; /* verde azulado */
+  border-color: #1B475D !important; /* azul oscuro */
+  color: #D9F0F0 !important;
 }
 
 .opciones-corazones button.incorrecta {
-  background-color: #FAD564 !important;
-  border-color: #B4BD62 !important;
-  color: #912b4c !important;
+  background-color: #4A90E2 !important; /* azul medio */
+  border-color: #3B7A74 !important;
+  color: #912b4c !important; /* rojo para incorrecta, mantén si quieres */
 }
 
 .opciones-corazones button:disabled {
@@ -499,11 +537,12 @@ nav a {
 
 .respuesta {
   font-size: 0.9rem;
-  color: #912b4c;
+  color: #912b4c; /* rojo */
   font-style: italic;
   margin-top: 1rem;
 }
 
+/* Media queries para móvil, colores adaptados igual */
 @media (max-width: 440px) {
   html, body {
     font-size: 16px; 
@@ -512,7 +551,7 @@ nav a {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #FFF5D0;
+    background-color: #D9F0F0; /* azul muy claro */
     overflow-x: hidden;
     overflow-y: hidden;
     box-sizing: border-box;
@@ -521,7 +560,7 @@ nav a {
   h1 {
     font-size: 1.3rem;
     margin: 0.3rem 0;
-    color: #1B475D;
+    color: #1B475D; /* azul oscuro */
   }
 
   nav {
@@ -535,19 +574,19 @@ nav a {
   nav a {
     font-size: 0.8rem;
     padding: 0.3rem 0.5rem;
-    background-color: #FAD564;
-    color: #1B475D;
+    background-color: #4A90E2; /* azul medio */
+    color: #D9F0F0; /* texto claro */
     border-radius: 20px;
-    border: 2px solid #B4BD62;
+    border: 2px solid #3B7A74; /* verde azulado */
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 2px 4px rgba(180, 189, 98, 0.4);
+    box-shadow: 0 2px 4px rgba(59, 122, 116, 0.4);
     transition: background-color 0.3s ease;
   }
 
   nav a:hover {
-    background-color: #8EBD9D;
-    color: #ffffff;
+    background-color: #3B7A74; /* verde azulado */
+    color: #D9F0F0;
   }
 
   .contenido, #mensajes, main {
@@ -567,7 +606,7 @@ nav a {
     overflow: hidden;
     background-color: #ffffff;
     border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(180, 189, 98, 0.3);
+    box-shadow: 0 2px 8px rgba(59, 122, 116, 0.3);
     color: #1B475D;
   }
 
@@ -583,7 +622,7 @@ nav a {
   .perfil {
     width: 32px;
     height: 32px;
-    border: 2px solid #B4BD62;
+    border: 2px solid #3B7A74;
   }
 
   .mensaje, .nombre, .user {
@@ -594,17 +633,17 @@ nav a {
     font-size: 1rem;
     padding: 0.6rem 1rem;
     border-radius: 18px;
-    background-color: #FAD564;
-    color: #1B475D;
-    border: 2px solid #B4BD62;
+    background-color: #4A90E2;
+    color: #D9F0F0;
+    border: 2px solid #3B7A74;
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
 
   button:hover {
-    background-color: #8EBD9D;
-    color: #ffffff;
+    background-color: #3B7A74;
+    color: #D9F0F0;
   }
 
   .gameboy {
@@ -613,9 +652,9 @@ nav a {
     padding: 1rem;
     margin: auto;
     background: #ffffff;
-    border: 4px solid #B4BD62;
+    border: 4px solid #3B7A74;
     border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(180, 189, 98, 0.4);
+    box-shadow: 0 4px 12px rgba(59, 122, 116, 0.4);
   }
 }
 
@@ -638,7 +677,7 @@ html, body {
     overflow-x: hidden;
     overflow-y: auto;
     font-size: 14px;
-    background-color: #FFF5D0;
+    background-color: #D9F0F0;
     font-family: 'Comic Sans MS', cursive, sans-serif;
   }
 
@@ -659,13 +698,13 @@ html, body {
   nav a {
     font-size: 0.85rem;
     padding: 0.3rem 0.5rem;
-    background-color: #FAD564;
-    color: #1B475D;
+    background-color: #4A90E2;
+    color: #D9F0F0;
     border-radius: 20px;
-    border: 2px solid #B4BD62;
+    border: 2px solid #3B7A74;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 2px 4px rgba(180, 189, 98, 0.4);
+    box-shadow: 0 2px 4px rgba(59, 122, 116, 0.4);
   }
 
   .contenido, #mensajes, main {
@@ -687,7 +726,7 @@ html, body {
     box-sizing: border-box;
     background: #ffffff;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(180, 189, 98, 0.4);
+    box-shadow: 0 4px 15px rgba(59, 122, 116, 0.4);
   }
 
   .tweet-principal {
@@ -695,8 +734,9 @@ html, body {
   }
 
   .comentario {
-    background: #FAD564;
-    box-shadow: 0 0 10px rgba(142, 189, 157, 0.3);
+    background: #4A90E2;
+    box-shadow: 0 0 10px rgba(59, 122, 116, 0.3);
+    color: #D9F0F0;
   }
 
   .foto-post {
@@ -711,13 +751,13 @@ html, body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid #B4BD62;
+    border: 2px solid #3B7A74;
     object-fit: cover;
   }
 
   .mensaje, .nombre, .user {
     font-size: 1rem;
-    color: #1B475D;
+    color: #D9F0F0;
   }
 
   .entrada {
@@ -727,17 +767,17 @@ html, body {
   .teclado button {
     font-size: 1rem;
     padding: 10px;
-    background-color: #FAD564;
-    border: 2px solid #B4BD62;
-    color: #1B475D;
+    background-color: #4A90E2;
+    border: 2px solid #3B7A74;
+    color: #D9F0F0;
   }
 
   .botones-ab button {
     width: 45px;
     height: 45px;
     font-size: 1rem;
-    background: #8EBD9D;
-    color: #1B475D;
+    background: #3B7A74;
+    color: #D9F0F0;
     border: none;
   }
 }
@@ -752,8 +792,8 @@ html, body {
     border-width: 4px;
     padding: 1rem;
     background: #ffffff;
-    border: 4px solid #B4BD62;
-    box-shadow: 0 4px 12px rgba(180, 189, 98, 0.4);
+    border: 4px solid #3B7A74;
+    box-shadow: 0 4px 12px rgba(59, 122, 116, 0.4);
   }
 }
 
@@ -770,6 +810,5 @@ html, body {
 /* Para aplicar la fuente al título de la gameboy */
 .titulo-gameboy {
   font-family: 'Retro Mario', cursive, sans-serif;
-  color: #1B475D;
+  color: #1B475D; /* Azul oscuro */
 }
-
