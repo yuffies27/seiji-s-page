@@ -248,6 +248,7 @@ function moverConTeclado(e) {
 
 function moverIzquierda() {
   const personaje = document.getElementById("personaje");
+  if (!personaje) return;
   let left = parseInt(window.getComputedStyle(personaje).left);
   personaje.style.left = Math.max(left - 20, 0) + "px";
   personaje.dataset.direccion = "izquierda";
@@ -256,6 +257,7 @@ function moverIzquierda() {
 
 function moverDerecha() {
   const personaje = document.getElementById("personaje");
+  if (!personaje) return;
   let left = parseInt(window.getComputedStyle(personaje).left);
   personaje.style.left = Math.min(left + 20, 260) + "px";
   personaje.dataset.direccion = "derecha";
@@ -264,9 +266,9 @@ function moverDerecha() {
 
 function actualizarAvatar(personaje) {
   if (personaje.dataset.direccion === "izquierda") {
-    personaje.style.backgroundImage = "url('images/avatariz.png')";
+    personaje.style.backgroundImage = "url('img/avatariz.png')";
   } else {
-    personaje.style.backgroundImage = "url('images/avatarde.png')";
+    personaje.style.backgroundImage = "url('img/avatarde.png')";
   }
   personaje.style.backgroundSize = "contain";
   personaje.style.backgroundRepeat = "no-repeat";
@@ -287,3 +289,4 @@ function clearIntervalos() {
   intervalos.forEach(i => clearInterval(i));
   intervalos = [];
 }
+
