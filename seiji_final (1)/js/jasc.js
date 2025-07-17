@@ -172,6 +172,8 @@ function iniciarAtrapa() {
   const juego = document.getElementById("atrapa-juego");
   const personaje = document.getElementById("personaje");
   personaje.style.left = "120px";
+  personaje.dataset.direccion = "derecha";
+  actualizarAvatar(personaje);
 
   // Evitar múltiples listeners
   document.removeEventListener("keydown", moverConTeclado);
@@ -232,20 +234,43 @@ function moverConTeclado(e) {
   const personaje = document.getElementById("personaje");
   if (!personaje) return;
   let left = parseInt(window.getComputedStyle(personaje).left);
-  if (e.key === "ArrowLeft") personaje.style.left = Math.max(left - 20, 0) + "px";
-  if (e.key === "ArrowRight") personaje.style.left = Math.min(left + 20, 260) + "px";
+  if (e.key === "ArrowLeft") {
+    personaje.style.left = Math.max(left - 20, 0) + "px";
+    personaje.dataset.direccion = "izquierda";
+    actualizarAvatar(personaje);
+  }
+  if (e.key === "ArrowRight") {
+    personaje.style.left = Math.min(left + 20, 260) + "px";
+    personaje.dataset.direccion = "derecha";
+    actualizarAvatar(personaje);
+  }
 }
 
 function moverIzquierda() {
   const personaje = document.getElementById("personaje");
   let left = parseInt(window.getComputedStyle(personaje).left);
   personaje.style.left = Math.max(left - 20, 0) + "px";
+  personaje.dataset.direccion = "izquierda";
+  actualizarAvatar(personaje);
 }
 
 function moverDerecha() {
   const personaje = document.getElementById("personaje");
   let left = parseInt(window.getComputedStyle(personaje).left);
   personaje.style.left = Math.min(left + 20, 260) + "px";
+  personaje.dataset.direccion = "derecha";
+  actualizarAvatar(personaje);
+}
+
+function actualizarAvatar(personaje) {
+  if (personaje.dataset.direccion === "izquierda") {
+    personaje.style.backgroundImage = "url('images/avatariz.png')";
+  } else {
+    personaje.style.backgroundImage = "url('images/avatarde.png')";
+  }
+  personaje.style.backgroundSize = "contain";
+  personaje.style.backgroundRepeat = "no-repeat";
+  personaje.style.backgroundPosition = "center";
 }
 
 function generarParticula(x, y) {
