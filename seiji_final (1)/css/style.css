@@ -3,9 +3,9 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: #f9ccd3;
+  background: #FFF5D0; /* Fondo general */
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  color: #333333;
+  color: #1B475D; /* Texto principal */
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -16,7 +16,7 @@ body, html {
 #bloqueo {
   position: fixed;
   inset: 0;
-  background: #f7a8b8; /* rosa suave más oscuro */
+  background: #B4BD62; /* Botón secundario / borde */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ body, html {
   background: #ffffff; /* blanco puro */
   padding: 2rem;
   border-radius: 25px;
-  box-shadow: 0 0 15px #dcbfa6; /* sombra marrón claro */
+  box-shadow: 0 0 15px #B4BD62; /* sombra con tono secundario */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,13 +36,13 @@ body, html {
 .entrada {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #333333;
+  color: #1B475D; /* texto principal */
   background: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 15px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 8px #b2d8b2; /* verde pastel */
+  box-shadow: 0 0 8px #8EBD9D; /* hover color para sombra */
 }
 
 .teclado {
@@ -55,19 +55,19 @@ body, html {
 .teclado button {
   padding: 12px;
   font-size: 1.2rem;
-  background-color: #f7a8b8; /* rosa suave */
-  color: #333333;
-  border: 2px solid #dcbfa6; /* marrón claro */
+  background-color: #FAD564; /* botón primario */
+  color: #1B475D; /* texto en botón primario */
+  border: 2px solid #B4BD62; /* borde botón secundario */
   border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(220, 191, 166, 0.7);
+  box-shadow: 0 2px 5px rgba(180, 189, 98, 0.7);
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .teclado button:hover {
-  background-color: #b2d8b2; /* verde pastel */
+  background-color: #8EBD9D; /* hover */
   color: #ffffff;
-  border-color: #a0c0a0;
+  border-color: #8EBD9D;
 }
 
 .vibrar {
@@ -90,19 +90,19 @@ body, html {
   border-radius: 20px;
   max-width: 480px;
   margin: 1rem auto;
-  box-shadow: 0 0 12px #dcbfa6;
-  color: #333333;
+  box-shadow: 0 0 12px #B4BD62; /* sombra con tono secundario */
+  color: #1B475D; /* texto principal */
 }
 
 h1 {
   font-size: 2rem;
-  color: #b2d8b2; /* verde pastel */
+  color: #1B475D; /* título */
   margin-bottom: 0.5rem;
 }
 
 p {
   font-size: 1.1rem;
-  color: #444444;
+  color: #1B475D; /* Texto principal */
   margin-bottom: 1rem;
 }
 
@@ -116,29 +116,29 @@ nav {
 
 nav a {
   padding: 0.5rem 1rem;
-  background-color: #f9ccd3; /* rosa suave */
-  border: 2px solid #dcbfa6; /* marrón claro */
-  color: #333333;
+  background-color: #FAD564; /* Botón primario */
+  border: 2px solid #B4BD62; /* Borde secundario */
+  color: #1B475D; /* Texto en botón */
   border-radius: 999px;
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(220, 191, 166, 0.5);
+  box-shadow: 0 2px 4px rgba(180, 189, 98, 0.5);
 }
 
 nav a:hover {
-  background-color: #b2d8b2; /* verde pastel */
+  background-color: #8EBD9D; /* Hover */
   color: #ffffff;
-  border-color: #a0c0a0;
-  box-shadow: 0 4px 10px rgba(178, 216, 178, 0.7);
+  border-color: #8EBD9D;
+  box-shadow: 0 4px 10px rgba(142, 189, 157, 0.7);
 }
 
 /* Estilo para páginas individuales */
 main.contenido section {
   margin-top: 1rem;
   font-size: 1rem;
-  color: #444444;
+  color: #1B475D; /* Texto principal */
 }
 
 /* --- Sección tipo tweet --- */
@@ -148,7 +148,7 @@ main.contenido section {
   padding: 1rem;
   margin: auto;
   max-width: 400px;
-  box-shadow: 0 4px 15px rgba(220, 191, 166, 0.4);
+  box-shadow: 0 4px 15px rgba(180, 189, 98, 0.4); /* Borde sombra */
   margin-bottom: 1rem;
 }
 
@@ -164,7 +164,7 @@ main.contenido section {
   border-radius: 50%;
   margin-right: 0.6rem;
   object-fit: cover;
-  border: 2px solid #dcbfa6;
+  border: 2px solid #B4BD62; /* Borde secundario */
 }
 
 .foto-post {
@@ -186,14 +186,14 @@ main.contenido section {
 /* Comentarios estilo tweet */
 .comentario {
   display: flex;
-  background: #f9ccd3; /* rosa suave */
+  background: #FAD564; /* Botón primario */
   padding: 0.8rem;
   border-radius: 15px;
   max-width: 400px;
   margin: 1rem auto;
   align-items: flex-start;
   gap: 0.6rem;
-  box-shadow: 0 0 10px rgba(178, 216, 178, 0.3);
+  box-shadow: 0 0 10px rgba(142, 189, 157, 0.3); /* Hover color en sombra */
 }
 
 .comentario img.perfil {
@@ -202,7 +202,7 @@ main.contenido section {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid #dcbfa6;
+  border: 2px solid #B4BD62; /* Borde secundario */
 }
 
 .info-usuario {
@@ -221,44 +221,44 @@ main.contenido section {
 
 .nombre {
   font-weight: bold;
-  color: #333333;
+  color: #1B475D; /* Texto principal */
   font-size: 0.95rem;
   margin-bottom: 2px;
 }
 
 .user {
   font-size: 0.85rem;
-  color: #444444;
+  color: #1B475D; /* Texto principal */
 }
 
 .mensaje {
   font-size: 0.95rem;
-  color: #333333;
+  color: #1B475D; /* Texto principal */
 }
 
 /* Botón siguiente */
 #mensajes button, .comentario + button {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
-  background-color: #f7a8b8;
-  color: #333333;
-  border: 2px solid #dcbfa6;
+  background-color: #FAD564; /* Botón primario */
+  color: #1B475D;
+  border: 2px solid #B4BD62;
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(220, 191, 166, 0.6);
+  box-shadow: 0 2px 5px rgba(180, 189, 98, 0.6);
 }
 
 #mensajes button:hover, .comentario + button:hover {
-  background-color: #b2d8b2;
+  background-color: #8EBD9D; /* Hover */
   color: #ffffff;
-  border-color: #a0c0a0;
-  box-shadow: 0 4px 10px rgba(178, 216, 178, 0.8);
+  border-color: #8EBD9D;
+  box-shadow: 0 4px 10px rgba(142, 189, 157, 0.8);
 }
 
 body {
-  background: #f9ccd3;
+  background: #FFF5D0; /* Fondo general */
   font-family: 'Comic Sans MS', cursive, sans-serif;
   margin: 0;
   padding: 0;
@@ -270,7 +270,7 @@ body {
 }
 
 h1 {
-  color: #b2d8b2;
+  color: #1B475D;
   margin-bottom: 1.5rem;
 }
 
@@ -281,10 +281,10 @@ nav {
 nav a {
   margin: 0.3rem;
   padding: 0.5rem 1rem;
-  background-color: #f9ccd3;
+  background-color: #FAD564;
   border-radius: 20px;
   text-decoration: none;
-  color: #333333;
+  color: #1B475D;
   font-weight: bold;
 }
 
@@ -292,18 +292,18 @@ nav a {
   width: 320px;          /* ancho fijo para escritorio */
   margin: auto;
   background: #ffffff;
-  border: 8px solid #dcbfa6;
+  border: 8px solid #B4BD62;
   border-radius: 30px;
   padding: 1.2rem;
-  box-shadow: inset 0 0 10px #dcbfa6;
+  box-shadow: inset 0 0 10px #B4BD62;
   position: relative;
-  box-sizing: content-box; /* el default, para que padding y border sumen al ancho */
+  box-sizing: content-box;
   overflow: visible;
 }
 
 .pantalla-kawaii {
   background: #ffffff;
-  border: 4px inset #dcbfa6;
+  border: 4px inset #B4BD62;
   height: 200px;
   border-radius: 15px;
   padding: 1rem;
@@ -321,18 +321,18 @@ nav a {
 .botones-ab button {
   width: 50px;
   height: 50px;
-  background: #b2d8b2;
+  background: #FAD564;
   border: none;
   border-radius: 50%;
   font-size: 1.2rem;
-  color: #333333;
+  color: #1B475D;
   font-weight: bold;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   cursor: pointer;
 }
 
 .botones-ab button:hover {
-  background: #a0c0a0;
+  background: #8EBD9D;
 }
 
 /* --- Juego Atrapa el Sol --- */
@@ -344,7 +344,7 @@ nav a {
   border-radius: 10px;
   overflow: hidden;
   margin-top: 0.5rem;
-  box-shadow: 0 0 10px #dcbfa6;
+  box-shadow: 0 0 10px #B4BD62;
 }
 
 .personaje {
@@ -353,9 +353,9 @@ nav a {
   left: 120px;
   width: 40px;
   height: 40px;
-  background: #b2d8b2;
+  background: #FAD564;
   border-radius: 50%;
-  box-shadow: 0 0 5px #a0c0a0;
+  box-shadow: 0 0 5px #8EBD9D;
 }
 
 .personaje.vibrar {
@@ -370,20 +370,20 @@ nav a {
 }
 
 .sol {
-  background: #dcbfa6;
-  box-shadow: 0 0 8px #b2d8b2;
+  background: #FAD564;
+  box-shadow: 0 0 8px #8EBD9D;
 }
 
 .nube {
-  background: #f7a8b8;
-  box-shadow: inset 0 0 5px #dcbfa6;
+  background: #8EBD9D;
+  box-shadow: inset 0 0 5px #B4BD62;
 }
 
 .particle {
   position: absolute;
   width: 10px;
   height: 10px;
-  background: #b2d8b2;
+  background: #FAD564;
   border-radius: 50%;
   pointer-events: none;
   animation: explotar 0.5s ease-out forwards;
@@ -410,9 +410,9 @@ nav a {
 }
 
 .controles-touch button {
-  background: #b2d8b2;
+  background: #FAD564;
   border: none;
-  color: #333333;
+  color: #1B475D;
   font-size: 1.5rem;
   border-radius: 15px;
   padding: 5px 10px;
@@ -428,7 +428,7 @@ nav a {
 
 .adivina-juego {
   text-align: center;
-  color: #b2d8b2;
+  color: #1B475D;
   font-family: 'Comic Sans MS', cursive;
 }
 
@@ -439,7 +439,7 @@ nav a {
   background: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 15px;
-  box-shadow: inset 0 0 5px rgba(220,191,166,0.1);
+  box-shadow: inset 0 0 5px rgba(180,189,98,0.2);
 }
 
 .opciones-corazones {
@@ -461,34 +461,34 @@ nav a {
 }
 
 .opciones-corazones button {
-  background: #f9ccd3;
-  border: 2px solid #dcbfa6;
+  background: #FAD564;
+  border: 2px solid #B4BD62;
   padding: 0.5rem 1.2rem;
   border-radius: 999px;
   font-size: 0.9rem;
-  color: #333333;
+  color: #1B475D;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 1px 2px 5px rgba(220,191,166,0.2);
+  box-shadow: 1px 2px 5px rgba(180,189,98,0.3);
 }
 
 .opciones-corazones button:hover {
-  background: #b2d8b2;
+  background: #8EBD9D;
   color: #ffffff;
-  border-color: #a0c0a0;
+  border-color: #8EBD9D;
 }
 
 /* Colores según resultado */
 .opciones-corazones button.correcta {
-  background-color: #a0d7a0 !important;
-  border-color: #70b370 !important;
-  color: #276442 !important;
+  background-color: #8EBD9D !important;
+  border-color: #B4BD62 !important;
+  color: #1B475D !important;
 }
 
 .opciones-corazones button.incorrecta {
-  background-color: #f9c4d2 !important;
-  border-color: #f7a8b9 !important;
+  background-color: #FAD564 !important;
+  border-color: #B4BD62 !important;
   color: #912b4c !important;
 }
 
@@ -499,32 +499,29 @@ nav a {
 
 .respuesta {
   font-size: 0.9rem;
-  color: #b23456;
+  color: #912b4c;
   font-style: italic;
   margin-top: 1rem;
 }
 
-/* ------------------------- */
-/* AJUSTES PARA MÓVILES iPHONE 11 y similares */
-/* ------------------------- */
 @media (max-width: 440px) {
   html, body {
     font-size: 16px; 
     max-width: 100%;
     width: 100%;
-    height: 100vh;         /* altura total de la ventana */
+    height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #f9ccd3;
+    background-color: #FFF5D0;
     overflow-x: hidden;
-    overflow-y: hidden;    /* evita scroll vertical */
+    overflow-y: hidden;
     box-sizing: border-box;
   }
 
   h1 {
     font-size: 1.3rem;
     margin: 0.3rem 0;
-    color: #333333;
+    color: #1B475D;
   }
 
   nav {
@@ -538,24 +535,24 @@ nav a {
   nav a {
     font-size: 0.8rem;
     padding: 0.3rem 0.5rem;
-    background-color: #ffffff;
-    color: #333333;
+    background-color: #FAD564;
+    color: #1B475D;
     border-radius: 20px;
-    border: 2px solid #dcbfa6;
+    border: 2px solid #B4BD62;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 2px 4px rgba(220, 191, 166, 0.4);
+    box-shadow: 0 2px 4px rgba(180, 189, 98, 0.4);
     transition: background-color 0.3s ease;
   }
 
   nav a:hover {
-    background-color: #f7a8b8;
-    color: #333333;
+    background-color: #8EBD9D;
+    color: #ffffff;
   }
 
   .contenido, #mensajes, main {
-    height: 100vh;          /* ocupan toda la pantalla */
-    overflow: hidden;       /* sin scroll interno */
+    height: 100vh;
+    overflow: hidden;
     padding: 0.5rem;
     box-sizing: border-box;
   }
@@ -563,15 +560,15 @@ nav a {
   .tweet-principal,
   .comentario {
     max-width: 100%;
-    max-height: 20%;       /* limita alto para que quepa todo */
+    max-height: 20%;
     font-size: 0.85rem;
     padding: 0.4rem;
     margin: 0.3rem 0;
-    overflow: hidden;      /* no permite scroll dentro del bloque */
+    overflow: hidden;
     background-color: #ffffff;
     border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(220, 191, 166, 0.3);
-    color: #444444;
+    box-shadow: 0 2px 8px rgba(180, 189, 98, 0.3);
+    color: #1B475D;
   }
 
   .foto-post {
@@ -586,7 +583,7 @@ nav a {
   .perfil {
     width: 32px;
     height: 32px;
-    border: 2px solid #dcbfa6;
+    border: 2px solid #B4BD62;
   }
 
   .mensaje, .nombre, .user {
@@ -597,16 +594,17 @@ nav a {
     font-size: 1rem;
     padding: 0.6rem 1rem;
     border-radius: 18px;
-    background-color: #f9ccd3;
-    color: #333333;
-    border: 2px solid #dcbfa6;
+    background-color: #FAD564;
+    color: #1B475D;
+    border: 2px solid #B4BD62;
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
 
   button:hover {
-    background-color: #f7a8b8;
+    background-color: #8EBD9D;
+    color: #ffffff;
   }
 
   .gameboy {
@@ -615,9 +613,9 @@ nav a {
     padding: 1rem;
     margin: auto;
     background: #ffffff;
-    border: 4px solid #dcbfa6;
+    border: 4px solid #B4BD62;
     border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(220, 191, 166, 0.4);
+    box-shadow: 0 4px 12px rgba(180, 189, 98, 0.4);
   }
 }
 
@@ -640,14 +638,14 @@ html, body {
     overflow-x: hidden;
     overflow-y: auto;
     font-size: 14px;
-    background-color: #f9ccd3;
+    background-color: #FFF5D0;
     font-family: 'Comic Sans MS', cursive, sans-serif;
   }
 
   h1 {
     font-size: 1.3rem;
     margin: 0.3rem 0;
-    color: #333333;
+    color: #1B475D;
   }
 
   nav {
@@ -661,13 +659,13 @@ html, body {
   nav a {
     font-size: 0.85rem;
     padding: 0.3rem 0.5rem;
-    background-color: #ffffff;
-    color: #333333;
+    background-color: #FAD564;
+    color: #1B475D;
     border-radius: 20px;
-    border: 2px solid #dcbfa6;
+    border: 2px solid #B4BD62;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 2px 4px rgba(220, 191, 166, 0.4);
+    box-shadow: 0 2px 4px rgba(180, 189, 98, 0.4);
   }
 
   .contenido, #mensajes, main {
@@ -689,7 +687,7 @@ html, body {
     box-sizing: border-box;
     background: #ffffff;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(220, 191, 166, 0.4);
+    box-shadow: 0 4px 15px rgba(180, 189, 98, 0.4);
   }
 
   .tweet-principal {
@@ -697,8 +695,8 @@ html, body {
   }
 
   .comentario {
-    background: #f9ccd3;
-    box-shadow: 0 0 10px rgba(178, 216, 178, 0.3);
+    background: #FAD564;
+    box-shadow: 0 0 10px rgba(142, 189, 157, 0.3);
   }
 
   .foto-post {
@@ -713,13 +711,13 @@ html, body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid #dcbfa6;
+    border: 2px solid #B4BD62;
     object-fit: cover;
   }
 
   .mensaje, .nombre, .user {
     font-size: 1rem;
-    color: #333333;
+    color: #1B475D;
   }
 
   .entrada {
@@ -729,24 +727,33 @@ html, body {
   .teclado button {
     font-size: 1rem;
     padding: 10px;
+    background-color: #FAD564;
+    border: 2px solid #B4BD62;
+    color: #1B475D;
   }
 
   .botones-ab button {
     width: 45px;
     height: 45px;
     font-size: 1rem;
+    background: #8EBD9D;
+    color: #1B475D;
+    border: none;
   }
 }
 
 @media (max-width: 450px) {
   .gameboy {
-    width: 95%;           /* que ocupe casi todo el ancho disponible */
-    max-width: 360px;     /* límite máximo para pantallas más anchas */
+    width: 95%;
+    max-width: 360px;
     margin: 0 auto;
-    box-sizing: border-box; /* incluye padding y border en el ancho total */
-    overflow: hidden;     /* evita que el contenido interno se salga */
-    border-width: 4px;    /* borde más delgado para móviles */
-    padding: 1rem;        /* padding un poco menor para ajustarse */
+    box-sizing: border-box;
+    overflow: hidden;
+    border-width: 4px;
+    padding: 1rem;
+    background: #ffffff;
+    border: 4px solid #B4BD62;
+    box-shadow: 0 4px 12px rgba(180, 189, 98, 0.4);
   }
 }
 
@@ -763,5 +770,6 @@ html, body {
 /* Para aplicar la fuente al título de la gameboy */
 .titulo-gameboy {
   font-family: 'Retro Mario', cursive, sans-serif;
+  color: #1B475D;
 }
 
