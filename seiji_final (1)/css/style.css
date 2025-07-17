@@ -385,10 +385,14 @@ nav a:hover {
   left: 120px;
   width: 40px;
   height: 40px;
-  background: #4A90E2; /* azul medio */
   border-radius: 50%;
-  box-shadow: 0 0 5px #3B7A74; /* sombra verde azulado */
+  box-shadow: 0 0 5px #3B7A74;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* elimina el background azul sólido */
 }
+
 
 .personaje.vibrar {
   animation: vibrar 0.3s;
