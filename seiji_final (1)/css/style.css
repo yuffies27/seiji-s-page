@@ -383,15 +383,17 @@ nav a:hover {
   position: absolute;
   bottom: 10px;
   left: 120px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 0 5px #3B7A74;
+  width: 50px;    /* antes era 40px */
+  height: 50px;   /* antes era 40px */
+  background: none;  /* elimina el fondo azul */
+  border-radius: 0;  /* quita el círculo */
+  box-shadow: none;  /* quita la sombra */
+  background-image: url('7ffb6837-d75e-4967-9d24-46d89b690293.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  /* elimina el background azul sólido */
 }
+
 
 
 .personaje.vibrar {
