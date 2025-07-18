@@ -408,13 +408,21 @@ nav a:hover {
 }
 
 .sol {
-  background: #4A90E2; /* azul medio */
-  box-shadow: 0 0 8px #3B7A74;
+  background-image: url('img/sol.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
 }
 
 .nube {
-  background: #3B7A74; /* verde azulado */
-  box-shadow: inset 0 0 5px #1B475D; /* azul oscuro */
+  background-image: url('img/nube.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
 }
 
 .particle {
