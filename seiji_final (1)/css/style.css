@@ -402,8 +402,8 @@ nav a:hover {
 
 .objeto {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -412,8 +412,8 @@ nav a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .nube {
@@ -421,8 +421,8 @@ nav a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .particle {
