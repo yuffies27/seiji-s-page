@@ -156,12 +156,12 @@ main.contenido section {
 .tweet-principal .top {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .perfil {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-right: 0.6rem;
   object-fit: cover;
@@ -170,13 +170,10 @@ main.contenido section {
 
 .foto-post {
   width: 100%;
-  max-height: 150px;
+  max-height: 180px; /* Aumentado para que se vea más grande pero sin romper el diseño */
   border-radius: 15px;
   margin-top: 0.5rem;
   object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .icons {
@@ -195,15 +192,15 @@ main.contenido section {
   padding: 0.8rem;
   border-radius: 15px;
   max-width: 400px;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   align-items: flex-start;
   gap: 0.6rem;
   box-shadow: 0 0 10px rgba(59, 122, 116, 0.3);
 }
 
 .comentario img.perfil {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -215,6 +212,7 @@ main.contenido section {
   flex-direction: column;
   align-items: flex-start;
   line-height: 1.2;
+  margin-top: 2px;
 }
 
 .identidad {
@@ -241,8 +239,7 @@ main.contenido section {
 }
 
 /* Botón siguiente */
-#mensajes button,
-.comentario + button {
+#mensajes button, .comentario + button {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
   background-color: #4A90E2;
@@ -255,15 +252,13 @@ main.contenido section {
   box-shadow: 0 2px 5px rgba(59, 122, 116, 0.6);
 }
 
-#mensajes button:hover,
-.comentario + button:hover {
+#mensajes button:hover, .comentario + button:hover {
   background-color: #3B7A74;
   color: #D9F0F0;
   border-color: #3B7A74;
   box-shadow: 0 4px 10px rgba(59, 122, 116, 0.8);
 }
 
-/* Generales */
 body {
   background: #D9F0F0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -305,7 +300,6 @@ nav a:hover {
   border-color: #3B7A74;
   box-shadow: 0 4px 10px rgba(59, 122, 116, 0.8);
 }
-
 
 .gameboy {
   width: 320px;          /* ancho fijo para escritorio */
