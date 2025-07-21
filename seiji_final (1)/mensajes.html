@@ -1,41 +1,48 @@
-<main class="contenido" id="mensajes">
-  <h1>💌 Mensajes</h1>
+</head>
+<body>
+  <main class="contenido">
+    <h1>💌 Mensajes</h1>
 
-  <nav>
-    <a href="home.html">inicio</a>
-    <a href="juegos.html">juegos</a>
-    <a href="videos.html">videos especiales</a>
-    <a href="playlist.html">playlist</a>
-  </nav>
+    <nav>
+      <a href="home.html">inicio</a>
+      <a href="juegos.html">juegos</a>
+      <a href="videos.html">videos especiales</a>
+      <a href="playlist.html">playlist</a>
+    </nav>
 
-  <div class="tweet-principal">
-    <div class="top">
-      <img src="img/seijid.jpg" alt="Perfil Seiji" class="perfil" />
-      <div class="info-usuario">
-        <div class="identidad">
+    <!-- Publicación principal -->
+    <div class="tweet-principal">
+      <div class="top">
+        <img src="img/seijid.jpg" alt="Perfil Seiji" class="perfil" />
+        <div class="info-usuario">
           <strong class="nombre">seiji</strong>
           <span class="user">@retorcr</span>
         </div>
       </div>
-    </div>
-    <p class="mensaje">みどりご ⠀ ⋅.˳˳.✞　❀　✞ </p>
-    <img src="img/seiji.jpg" alt="Foto Seiji" class="foto-post" />
-    <div class="icons">
-      <span>💬</span><span>🔁</span><span>❤</span>
-    </div>
-  </div>
-
-  <div class="comentario" id="comentario">
-    <img src="img/yuffie.jpg" alt="Perfil Yuffie" class="perfil" />
-    <div class="info-usuario">
-      <div class="identidad">
-        <strong class="nombre">yuffie</strong>
-        <span class="user">@piururin</span>
+      <p class="mensaje">みどりご ⠀ ⋅.˳˳.✞　❀　✞ </p>
+      <img src="img/seiji.jpg" alt="Foto Seiji" class="foto-post" />
+      <div class="icons">
+        <span>💬</span><span>🔁</span><span>❤</span>
       </div>
-      <p class="mensaje">text text text 💖</p>
     </div>
-  </div>
 
-  <button type="button" onclick="siguienteComentario()">Ver siguiente</button>
-</main>
+    <!-- Comentario interactivo -->
+    <div class="comentario" id="comentario">
+      <img src="img/yuffie.jpg" alt="Perfil Yuffie" class="perfil" />
+      <div class="info-usuario">
+        <div class="identidad">
+          <strong class="nombre">yuffie</strong>
+          <span class="user">@piururin</span>
+        </div>
+        <p class="mensaje">text text text 💖</p>
+      </div>
+    </div>
+
+    <button type="button" onclick="siguienteComentario()">Ver siguiente</button>
+  </main>
+
+  <script src="js/jasc.js"></script>
+</body>
+</html>
+
 
