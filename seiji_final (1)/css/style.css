@@ -170,7 +170,7 @@ main.contenido section {
 
 .foto-post {
   width: 100%;
-  max-height: 180px; /* Aumentado para que se vea más grande pero sin romper el diseño */
+  max-height: 180px;
   border-radius: 15px;
   margin-top: 0.5rem;
   object-fit: cover;
@@ -226,11 +226,13 @@ main.contenido section {
   color: #D9F0F0;
   font-size: 0.95rem;
   margin-bottom: 2px;
+  text-transform: capitalize;
 }
 
 .user {
   font-size: 0.85rem;
   color: #D9F0F0;
+  text-transform: lowercase;
 }
 
 .mensaje {
@@ -300,6 +302,7 @@ nav a:hover {
   border-color: #3B7A74;
   box-shadow: 0 4px 10px rgba(59, 122, 116, 0.8);
 }
+
 
 .gameboy {
   width: 320px;          /* ancho fijo para escritorio */
