@@ -142,14 +142,14 @@ main.contenido section {
   color: #1B475D; /* Texto principal azul oscuro */
 }
 
-/* --- Sección tipo tweet --- */
+ /* --- Sección tipo tweet --- */
 .tweet-principal {
   background: #ffffff;
   border-radius: 20px;
   padding: 1rem;
   margin: auto;
   max-width: 400px;
-  box-shadow: 0 4px 15px rgba(59, 122, 116, 0.4);
+  box-shadow: 0 4px 15px rgba(59, 122, 116, 0.4); /* Borde sombra verde azulado */
   margin-bottom: 1rem;
 }
 
@@ -165,15 +165,14 @@ main.contenido section {
   border-radius: 50%;
   margin-right: 0.6rem;
   object-fit: cover;
-  border: 2px solid #3B7A74;
+  border: 2px solid #3B7A74; /* Borde verde azulado */
 }
 
 .foto-post {
   width: 100%;
-  max-height: 180px; /* Aumentado para que se vea más grande pero sin romper el diseño */
   border-radius: 15px;
   margin-top: 0.5rem;
-  object-fit: cover;
+  object-fit: cover; /* importante para que la imagen se ajuste */
 }
 
 .icons {
@@ -188,14 +187,14 @@ main.contenido section {
 /* Comentarios estilo tweet */
 .comentario {
   display: flex;
-  background: #4A90E2;
+  background: #4A90E2; /* Botón azul medio */
   padding: 0.8rem;
   border-radius: 15px;
   max-width: 400px;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
   align-items: flex-start;
   gap: 0.6rem;
-  box-shadow: 0 0 10px rgba(59, 122, 116, 0.3);
+  box-shadow: 0 0 10px rgba(59, 122, 116, 0.3); /* sombra verde azulado */
 }
 
 .comentario img.perfil {
@@ -204,7 +203,7 @@ main.contenido section {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid #3B7A74;
+  border: 2px solid #3B7A74; /* Borde verde azulado */
 }
 
 .info-usuario {
@@ -223,44 +222,44 @@ main.contenido section {
 
 .nombre {
   font-weight: bold;
-  color: #D9F0F0;
+  color: #D9F0F0; /* Texto claro para contraste */
   font-size: 0.95rem;
   margin-bottom: 2px;
 }
 
 .user {
   font-size: 0.85rem;
-  color: #D9F0F0;
+  color: #D9F0F0; /* Texto claro */
 }
 
 .mensaje {
   font-size: 0.95rem;
-  color: #D9F0F0;
+  color: #D9F0F0; /* Texto claro */
 }
 
 /* Botón siguiente */
 #mensajes button, .comentario + button {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
-  background-color: #4A90E2;
-  color: #D9F0F0;
-  border: 2px solid #3B7A74;
+  background-color: #4A90E2; /* Botón azul medio */
+  color: #D9F0F0; /* Texto claro */
+  border: 2px solid #3B7A74; /* Borde verde azulado */
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(59, 122, 116, 0.6);
+  box-shadow: 0 2px 5px rgba(59, 122, 116, 0.6); /* sombra verde azulado */
 }
 
 #mensajes button:hover, .comentario + button:hover {
-  background-color: #3B7A74;
+  background-color: #3B7A74; /* Hover verde azulado */
   color: #D9F0F0;
   border-color: #3B7A74;
   box-shadow: 0 4px 10px rgba(59, 122, 116, 0.8);
 }
 
 body {
-  background: #D9F0F0;
+  background: #D9F0F0; /* Fondo general azul muy claro */
   font-family: 'Comic Sans MS', cursive, sans-serif;
   margin: 0;
   padding: 0;
@@ -269,7 +268,7 @@ body {
 .contenido {
   text-align: center;
   padding: 2rem;
-  color: #1B475D;
+  color: #1B475D; /* texto principal azul oscuro */
 }
 
 h1 {
@@ -284,18 +283,18 @@ nav {
 nav a {
   margin: 0.3rem;
   padding: 0.5rem 1rem;
-  background-color: #4A90E2;
+  background-color: #4A90E2; /* botón azul medio */
   border-radius: 20px;
   text-decoration: none;
-  color: #D9F0F0;
+  color: #D9F0F0; /* texto claro */
   font-weight: bold;
-  border: 2px solid #3B7A74;
+  border: 2px solid #3B7A74; /* borde verde azulado */
   box-shadow: 0 2px 4px rgba(59, 122, 116, 0.5);
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #3B7A74;
+  background-color: #3B7A74; /* hover verde azulado */
   color: #D9F0F0;
   border-color: #3B7A74;
   box-shadow: 0 4px 10px rgba(59, 122, 116, 0.8);
