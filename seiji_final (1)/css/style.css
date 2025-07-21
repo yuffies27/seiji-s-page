@@ -169,15 +169,12 @@ main.contenido section {
 }
 
 .foto-post {
-  width: 90%;         /* Más ancho pero dejando margen */
-  max-width: 300px;   /* Para que no se pase en pantallas grandes */
-  max-height: 220px;  /* Más alto para que se vea más grande */
+  width: 100%;
+  max-height: 220px;
   border-radius: 15px;
-  margin: 0.5rem auto;  /* Centrar vertical y horizontal */
-  display: block;
+  margin: 0.5rem 0;
   object-fit: cover;
 }
-
 
 .icons {
   margin-top: 0.5rem;
@@ -206,7 +203,6 @@ main.contenido section {
   height: 42px;
   border-radius: 50%;
   object-fit: cover;
-  flex-shrink: 0;
   border: 2px solid #3B7A74;
 }
 
@@ -218,17 +214,10 @@ main.contenido section {
   margin-top: 2px;
 }
 
-.identidad {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.2rem;
-}
-
 .nombre {
   font-weight: bold;
   color: #D9F0F0;
   font-size: 0.95rem;
-  margin-bottom: 2px;
 }
 
 .user {
@@ -242,7 +231,7 @@ main.contenido section {
 }
 
 /* Botón siguiente */
-#mensajes button, .comentario + button {
+.boton-siguiente {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
   background-color: #4A90E2;
@@ -251,17 +240,16 @@ main.contenido section {
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
   box-shadow: 0 2px 5px rgba(59, 122, 116, 0.6);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-#mensajes button:hover, .comentario + button:hover {
+.boton-siguiente:hover {
   background-color: #3B7A74;
   color: #D9F0F0;
-  border-color: #3B7A74;
-  box-shadow: 0 4px 10px rgba(59, 122, 116, 0.8);
 }
 
+/* General */
 body {
   background: #D9F0F0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
