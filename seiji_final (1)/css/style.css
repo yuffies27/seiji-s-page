@@ -169,12 +169,15 @@ main.contenido section {
 }
 
 .foto-post {
-  width: 100%;
-  max-height: 180px; /* Aumentado para que se vea más grande pero sin romper el diseño */
+  width: 90%;         /* Más ancho pero dejando margen */
+  max-width: 300px;   /* Para que no se pase en pantallas grandes */
+  max-height: 220px;  /* Más alto para que se vea más grande */
   border-radius: 15px;
-  margin-top: 0.5rem;
+  margin: 0.5rem auto;  /* Centrar vertical y horizontal */
+  display: block;
   object-fit: cover;
 }
+
 
 .icons {
   margin-top: 0.5rem;
