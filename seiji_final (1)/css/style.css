@@ -169,7 +169,7 @@ main.contenido section {
 }
 
 .foto-post {
-  width: 100%;
+  width: 150%;
   max-height: 70vh; /* NUEVO: hace la foto más grande */
   border-radius: 15px;
   margin-top: 0.5rem;
