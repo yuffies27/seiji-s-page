@@ -149,30 +149,34 @@ main.contenido section {
   padding: 1rem;
   margin: auto;
   max-width: 400px;
-  box-shadow: 0 4px 15px rgba(59, 122, 116, 0.4); /* Borde sombra verde azulado */
+  box-shadow: 0 4px 15px rgba(59, 122, 116, 0.4);
   margin-bottom: 1rem;
 }
 
 .tweet-principal .top {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .perfil {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 0.6rem;
   object-fit: cover;
-  border: 2px solid #3B7A74; /* Borde verde azulado */
+  border: 2px solid #3B7A74;
 }
 
 .foto-post {
   width: 100%;
+  max-height: 150px;
   border-radius: 15px;
   margin-top: 0.5rem;
-  object-fit: cover; /* importante para que la imagen se ajuste */
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .icons {
@@ -187,23 +191,23 @@ main.contenido section {
 /* Comentarios estilo tweet */
 .comentario {
   display: flex;
-  background: #4A90E2; /* Botón azul medio */
+  background: #4A90E2;
   padding: 0.8rem;
   border-radius: 15px;
   max-width: 400px;
   margin: 1rem auto;
   align-items: flex-start;
   gap: 0.6rem;
-  box-shadow: 0 0 10px rgba(59, 122, 116, 0.3); /* sombra verde azulado */
+  box-shadow: 0 0 10px rgba(59, 122, 116, 0.3);
 }
 
 .comentario img.perfil {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid #3B7A74; /* Borde verde azulado */
+  border: 2px solid #3B7A74;
 }
 
 .info-usuario {
@@ -211,7 +215,6 @@ main.contenido section {
   flex-direction: column;
   align-items: flex-start;
   line-height: 1.2;
-  margin-top: 2px;
 }
 
 .identidad {
@@ -222,44 +225,47 @@ main.contenido section {
 
 .nombre {
   font-weight: bold;
-  color: #D9F0F0; /* Texto claro para contraste */
+  color: #D9F0F0;
   font-size: 0.95rem;
   margin-bottom: 2px;
 }
 
 .user {
   font-size: 0.85rem;
-  color: #D9F0F0; /* Texto claro */
+  color: #D9F0F0;
 }
 
 .mensaje {
   font-size: 0.95rem;
-  color: #D9F0F0; /* Texto claro */
+  color: #D9F0F0;
 }
 
 /* Botón siguiente */
-#mensajes button, .comentario + button {
+#mensajes button,
+.comentario + button {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
-  background-color: #4A90E2; /* Botón azul medio */
-  color: #D9F0F0; /* Texto claro */
-  border: 2px solid #3B7A74; /* Borde verde azulado */
+  background-color: #4A90E2;
+  color: #D9F0F0;
+  border: 2px solid #3B7A74;
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(59, 122, 116, 0.6); /* sombra verde azulado */
+  box-shadow: 0 2px 5px rgba(59, 122, 116, 0.6);
 }
 
-#mensajes button:hover, .comentario + button:hover {
-  background-color: #3B7A74; /* Hover verde azulado */
+#mensajes button:hover,
+.comentario + button:hover {
+  background-color: #3B7A74;
   color: #D9F0F0;
   border-color: #3B7A74;
   box-shadow: 0 4px 10px rgba(59, 122, 116, 0.8);
 }
 
+/* Generales */
 body {
-  background: #D9F0F0; /* Fondo general azul muy claro */
+  background: #D9F0F0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   margin: 0;
   padding: 0;
@@ -268,7 +274,7 @@ body {
 .contenido {
   text-align: center;
   padding: 2rem;
-  color: #1B475D; /* texto principal azul oscuro */
+  color: #1B475D;
 }
 
 h1 {
@@ -283,22 +289,23 @@ nav {
 nav a {
   margin: 0.3rem;
   padding: 0.5rem 1rem;
-  background-color: #4A90E2; /* botón azul medio */
+  background-color: #4A90E2;
   border-radius: 20px;
   text-decoration: none;
-  color: #D9F0F0; /* texto claro */
+  color: #D9F0F0;
   font-weight: bold;
-  border: 2px solid #3B7A74; /* borde verde azulado */
+  border: 2px solid #3B7A74;
   box-shadow: 0 2px 4px rgba(59, 122, 116, 0.5);
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #3B7A74; /* hover verde azulado */
+  background-color: #3B7A74;
   color: #D9F0F0;
   border-color: #3B7A74;
   box-shadow: 0 4px 10px rgba(59, 122, 116, 0.8);
 }
+
 
 .gameboy {
   width: 320px;          /* ancho fijo para escritorio */
