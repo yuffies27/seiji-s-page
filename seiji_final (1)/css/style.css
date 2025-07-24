@@ -469,11 +469,11 @@ nav a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('avatarde.png'); /* avatar mirando derecha */
+  background-image: url('img/avatarde.png'); /* avatar mirando derecha */
 }
 
 .personaje.izquierda {
-  background-image: url('avatariz.png'); /* avatar mirando izquierda */
+  background-image: url('img/avatariz.png'); /* avatar mirando izquierda */
 }
 
 
