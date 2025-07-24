@@ -176,6 +176,41 @@ p {
   display: block;
 }
 
+#btn-menu {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #3B7A74;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#nav-menu {
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  background-color: #fff;
+  border: 2px solid #3B7A74;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+#nav-menu a {
+  color: #3B7A74;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.oculto {
+  display: none;
+}
 
 
 /* Estilo para páginas individuales */
