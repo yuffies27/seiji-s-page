@@ -2,23 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Juegos - Game Boy</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Menú hamburguesa fuera de la consola -->
-  <header>
-    <button id="btn-menu" aria-label="Mostrar menú">☰</button>
-    <nav id="nav-menu" class="oculto">
-      <a href="home.html">inicio</a>
-      <a href="mensajes.html">mensajes</a>
-      <a href="juegos.html">juegos</a>
-      <a href="videos.html">videos especiales</a>
-      <a href="playlist.html">playlist</a>
-    </nav>
-  </header>
+  <!-- Botón menú hamburguesa FIXED -->
+  <button id="btn-menu" aria-label="Mostrar menú">☰</button>
+
+  <!-- Menú oculto inicialmente -->
+  <nav id="nav-menu" class="oculto" aria-label="Menú de navegación">
+    <a href="home.html">inicio</a>
+    <a href="mensajes.html">mensajes</a>
+    <a href="juegos.html">juegos</a>
+    <a href="videos.html">videos especiales</a>
+    <a href="playlist.html">playlist</a>
+  </nav>
 
   <div class="gameboy">
     <h2 class="titulo-gameboy">Consola Seiji Boy</h2>
@@ -26,17 +26,27 @@
     <div class="pantalla-kawaii" id="pantalla-juego">
       <p>Selecciona un juego</p>
 
-      <!-- Contenedor para el juego Atrapa el Sol -->
+      <!-- Contenedor del juego Atrapa el Sol -->
       <div id="atrapa-juego" style="display:none; position: relative; width: 300px; height: 160px; background: #fff; border-radius: 10px; overflow: hidden; margin-top: 0.5rem;">
         <div id="personaje" class="personaje"></div>
       </div>
     </div>
 
     <div class="botones-ab">
-      <button id="boton-a">A</button>
-      <button id="boton-b">B</button>
+      <button id="boton-a" onclick="mostrarJuego('adivina')">A</button>
+      <button id="boton-b" onclick="mostrarJuego('atrapa')">B</button>
     </div>
   </div>
+
+  <script>
+    const btnMenu = document.getElementById('btn-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    btnMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('oculto');
+      btnMenu.classList.toggle('activo');
+    });
+  </script>
 
   <script src="js/jasc.js"></script>
 </body>
