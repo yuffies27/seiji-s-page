@@ -70,7 +70,6 @@ if (btnSiguiente) {
 // Juegos: mostrar juegos y control botones A y B
 // -----------------------------
 
-// Frases para "Adivina quién lo dijo"
 const frases = [
   { texto: "text text text ", autor: "Yuffie" },
   { texto: "text text text ", autor: "Naeve" },
@@ -97,7 +96,6 @@ function mostrarJuego(nombre) {
     `;
     iniciarAtrapa();
 
-    // Eventos botones táctiles
     document.getElementById('btn-izquierda').addEventListener('click', moverIzquierda);
     document.getElementById('btn-derecha').addEventListener('click', moverDerecha);
   }
@@ -179,7 +177,7 @@ function iniciarAtrapa() {
   const juego = document.getElementById("atrapa-juego");
   const personaje = document.getElementById("personaje");
 
-  personaje.style.left = "0px"; // reset posición
+  personaje.style.left = "0px";
 
   document.addEventListener("keydown", moverConTeclado);
 
@@ -284,7 +282,7 @@ if (btnMenu && navMenu) {
 }
 
 // -----------------------------
-// Eventos para botones A y B (no usar onclick inline)
+// Eventos para botones A y B (sin onclick inline)
 // -----------------------------
 
 const botonA = document.getElementById('boton-a');
