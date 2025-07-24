@@ -114,7 +114,7 @@ p {
   cursor: pointer;
   width: 30px;
   height: 22px;
-  margin: 1rem auto;
+  margin: 1rem 0 1rem 0; /* para que quede arriba a la izquierda */
   z-index: 10000;
 }
 
@@ -127,7 +127,6 @@ p {
   transition: 0.3s ease;
 }
 
-/* Animación para cuando está activo */
 .menu-hamburguesa.activo span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -145,7 +144,7 @@ p {
   display: none;
   position: absolute;
   top: 40px;
-  right: 0;
+  left: 0;  /* para que aparezca abajo y alineado a la izquierda */
   background-color: #4A90E2;
   border: 2px solid #3B7A74;
   border-radius: 10px;
@@ -177,11 +176,6 @@ p {
   display: block;
 }
 
-/* --- Resto de tu CSS original sin estilos para botones nav a --- */
-
-/* (Aquí iría todo lo demás que ya tienes, excepto los bloques nav a que borramos) */
-
-/* Resto de tu CSS permanece igual */
 
 
 /* Estilo para páginas individuales */
