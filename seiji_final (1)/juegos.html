@@ -2,23 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Juegos - Game Boy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Juegos - Seiji Boy</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Botón menú hamburguesa FIXED -->
-  <button id="btn-menu" aria-label="Mostrar menú">☰</button>
-
-  <!-- Menú oculto inicialmente -->
-  <nav id="nav-menu" class="oculto" aria-label="Menú de navegación">
-    <a href="home.html">inicio</a>
-    <a href="mensajes.html">mensajes</a>
-    <a href="juegos.html">juegos</a>
-    <a href="videos.html">videos especiales</a>
-    <a href="playlist.html">playlist</a>
-  </nav>
+  <!-- Menú hamburguesa fuera de la consola -->
+  <header>
+    <button id="btn-menu" aria-label="Mostrar menú">☰</button>
+    <nav id="nav-menu" class="oculto">
+      <a href="home.html">inicio</a>
+      <a href="mensajes.html">mensajes</a>
+      <a href="juegos.html">juegos</a>
+      <a href="videos.html">videos especiales</a>
+      <a href="playlist.html">playlist</a>
+    </nav>
+  </header>
 
   <div class="gameboy">
     <h2 class="titulo-gameboy">Consola Seiji Boy</h2>
@@ -30,6 +30,11 @@
       <div id="atrapa-juego" style="display:none; position: relative; width: 300px; height: 160px; background: #fff; border-radius: 10px; overflow: hidden; margin-top: 0.5rem;">
         <div id="personaje" class="personaje"></div>
       </div>
+
+      <!-- Contenedor del juego Adivina quién lo dijo -->
+      <div id="adivina-juego" style="display:none; margin-top:1rem;">
+        <!-- Aquí irá el contenido del juego "Adivina quién lo dijo" -->
+      </div>
     </div>
 
     <div class="botones-ab">
@@ -38,15 +43,9 @@
     </div>
   </div>
 
-  <script>
-    const btnMenu = document.getElementById('btn-menu');
-    const navMenu = document.getElementById('nav-menu');
-
-    btnMenu.addEventListener('click', () => {
-      navMenu.classList.toggle('oculto');
-      btnMenu.classList.toggle('activo');
-    });
-  </script>
+  <!-- Imágenes de avatar ocultas para usar con JS o CSS -->
+  <img src="img/avatarde.png" alt="Avatar de día" id="avatar-day" style="display:none;" />
+  <img src="img/avatariz.png" alt="Avatar de noche" id="avatar-night" style="display:none;" />
 
   <script src="js/jasc.js"></script>
 </body>
