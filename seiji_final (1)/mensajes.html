@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>Mensajes</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mensajes.css" />
 </head>
 <body>
-  <main class="contenido">
-    <h1>💌 Mensajes</h1>
-
-    <nav>
+  <header>
+    <button id="btn-menu" aria-label="Mostrar menú">☰</button>
+    <nav id="nav-menu" class="oculto">
       <a href="home.html">inicio</a>
       <a href="juegos.html">juegos</a>
       <a href="videos.html">videos especiales</a>
       <a href="playlist.html">playlist</a>
     </nav>
+  </header>
 
-    <!-- Publicación principal -->
+  <main class="contenido">
+    <h1>💌 Mensajes</h1>
+
+    <!-- Publicación principal tipo tweet -->
     <div class="tweet-principal">
       <div class="top">
         <img src="img/seijid.jpg" alt="Perfil Seiji" class="perfil" />
@@ -45,9 +48,10 @@
       </div>
     </div>
 
-    <button type="button" onclick="siguienteComentario()">Ver siguiente</button>
+    <button type="button" id="btn-siguiente">Ver siguiente</button>
   </main>
 
+  <script src="js/mensajes-menu.js"></script>
   <script src="js/jasc.js"></script>
 </body>
 </html>
