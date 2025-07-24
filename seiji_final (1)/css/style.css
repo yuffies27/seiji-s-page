@@ -464,17 +464,17 @@ nav a:hover {
   position: absolute;
   bottom: 10px;
   left: 120px;
-  width: 60px;    /* antes era 40px */
-  height: 60px;   /* antes era 40px */
-  background: none;  /* elimina el fondo azul */
-  border-radius: 0;  /* quita el círculo */
-  box-shadow: none;  /* quita la sombra */
-  background-image: url('7ffb6837-d75e-4967-9d24-46d89b690293.png');
+  width: 60px;
+  height: 60px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: url('avatarde.png'); /* avatar mirando derecha */
 }
 
+.personaje.izquierda {
+  background-image: url('avatariz.png'); /* avatar mirando izquierda */
+}
 
 
 .personaje.vibrar {
