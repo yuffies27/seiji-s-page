@@ -1,8 +1,17 @@
-// ==============================
-// SECCIÓN: BLOQUEO POR PIN
-// ==============================
+// -----------------------------
+// Variables globales
+// -----------------------------
 
 let entrada = '';
+let comentarioIndex = 0;
+let quizIndex = 0;
+let pendientes = [];
+let puntos = 0;
+let intervalos = [];
+
+// -----------------------------
+// Bloqueo por PIN
+// -----------------------------
 
 function agregarNumero(n) {
   if (entrada.length < 6) {
@@ -30,9 +39,9 @@ function verificarPIN() {
   }
 }
 
-// ==============================
-// SECCIÓN: COMENTARIOS
-// ==============================
+// -----------------------------
+// Comentarios (ejemplo básico)
+// -----------------------------
 
 const comentarios = [
   { nombre: "yuffie", user: "@piururin", mensaje: "text text text 💖", foto: "img/yuffie.jpg" },
@@ -41,8 +50,6 @@ const comentarios = [
   { nombre: "daniel", user: "@cautlver", mensaje: "text text text 🐰", foto: "img/daniel.jpg" },
   { nombre: "candy",  user: "@iglesitar",mensaje: "text text text 🌸", foto: "img/candy.jpg" }
 ];
-
-let comentarioIndex = 0;
 
 function siguienteComentario() {
   comentarioIndex = (comentarioIndex + 1) % comentarios.length;
@@ -53,40 +60,17 @@ function siguienteComentario() {
   document.querySelector("#comentario .mensaje").textContent = c.mensaje;
 }
 
-document.getElementById('btn-siguiente').addEventListener('click', siguienteComentario);
-
-// ==============================
-// SECCIÓN: MOSTRAR JUEGOS
-// ==============================
-
-window.mostrarJuego = function(nombre) {  // Aseguramos que sea global
-  const contenedor = document.getElementById("pantalla-juego");
-
-  if (nombre === "adivina") {
-    iniciarQuiz();
-  } else if (nombre === "atrapa") {
-    contenedor.innerHTML = `
-      <div id="atrapa-juego" style="position: relative; width: 300px; height: 160px; background: #fff; border-radius: 10px; overflow: hidden; margin-top: 0.5rem;">
-        <div class="personaje" id="personaje" style="position: absolute; bottom: 0; left: 130px; width: 30px; height: 30px; background: #3B7A74; border-radius: 50%;"></div>
-        <div class="controles-touch" style="margin-top: 0.5rem; text-align: center;">
-          <button id="btn-izq">⬅️</button>
-          <button id="btn-der">➡️</button>
-        </div>
-        <p style="margin-top: 0.5rem;">Puntos: <span id="puntos">0</span></p>
-      </div>
-    `;
-    iniciarAtrapa();
-
-    // Asignamos listeners a los botones de control táctil
-    document.getElementById('btn-izq').addEventListener('click', moverIzquierda);
-    document.getElementById('btn-der').addEventListener('click', moverDerecha);
-  }
+// Si tienes un botón para siguiente comentario
+const btnSiguiente = document.getElementById('btn-siguiente');
+if (btnSiguiente) {
+  btnSiguiente.addEventListener('click', siguienteComentario);
 }
 
-// ==============================
-// SECCIÓN: JUEGO "ADIVINA QUIÉN LO DIJO"
-// ==============================
+// -----------------------------
+// Juegos: mostrar juegos y control botones A y B
+// -----------------------------
 
+// Frases para "Adivina quién lo dijo"
 const frases = [
   { texto: "text text text ", autor: "Yuffie" },
   { texto: "text text text ", autor: "Naeve" },
@@ -95,8 +79,31 @@ const frases = [
   { texto: "text text text ", autor: "Candy" }
 ];
 
-let quizIndex = 0;
-let pendientes = [];
+function mostrarJuego(nombre) {
+  const contenedor = document.getElementById("pantalla-juego");
+
+  if (nombre === "adivina") {
+    iniciarQuiz();
+  } else if (nombre === "atrapa") {
+    contenedor.innerHTML = `
+      <div id="atrapa-juego" style="position: relative; width: 300px; height: 160px; background: #fff; border-radius: 10px; overflow: hidden; margin-top: 0.5rem;">
+        <div class="personaje" id="personaje" style="position:absolute; bottom:0; left:0; width:30px; height:30px; background:#3B7A74; border-radius:50%;"></div>
+        <div class="controles-touch" style="margin-top: 0.5rem;">
+          <button id="btn-izquierda">⬅️</button>
+          <button id="btn-derecha">➡️</button>
+        </div>
+      </div>
+      <p>Puntos: <span id="puntos">0</span></p>
+    `;
+    iniciarAtrapa();
+
+    // Eventos botones táctiles
+    document.getElementById('btn-izquierda').addEventListener('click', moverIzquierda);
+    document.getElementById('btn-derecha').addEventListener('click', moverDerecha);
+  }
+}
+
+// --- Juego Adivina quién lo dijo ---
 
 function iniciarQuiz() {
   quizIndex = 0;
@@ -127,14 +134,13 @@ function cargarPregunta(fraseObj) {
   `;
 }
 
-window.evaluarRespuesta = function(correcto, elegido) {
+function evaluarRespuesta(correcto, elegido) {
   const resultado = document.getElementById("resultado");
   const botones = document.querySelectorAll(".opciones-corazones button");
 
   botones.forEach(b => {
     b.disabled = true;
-    const texto = b.textContent.trim();
-    if (texto === elegido) {
+    if (b.textContent.trim() === elegido) {
       if (elegido === correcto) {
         b.classList.add("correcta");
         resultado.textContent = "¡Correcto! ";
@@ -165,12 +171,7 @@ window.evaluarRespuesta = function(correcto, elegido) {
   }, 1300);
 }
 
-// ==============================
-// SECCIÓN: JUEGO "ATRAPA EL SOL"
-// ==============================
-
-let puntos = 0;
-let intervalos = [];
+// --- Juego Atrapa el Sol ---
 
 function iniciarAtrapa() {
   puntos = 0;
@@ -178,7 +179,7 @@ function iniciarAtrapa() {
   const juego = document.getElementById("atrapa-juego");
   const personaje = document.getElementById("personaje");
 
-  personaje.style.left = "130px"; // Posición inicial
+  personaje.style.left = "0px"; // reset posición
 
   document.addEventListener("keydown", moverConTeclado);
 
@@ -188,9 +189,9 @@ function iniciarAtrapa() {
     const objeto = document.createElement("div");
     const esSol = Math.random() > 0.4;
     objeto.classList.add("objeto", esSol ? "sol" : "nube");
-    objeto.style.position = "absolute";
+    objeto.style.left = Math.random() * 260 + "px";
     objeto.style.top = "0px";
-    objeto.style.left = Math.floor(Math.random() * 260) + "px";
+    objeto.style.position = "absolute";
     juego.appendChild(objeto);
 
     let caida = setInterval(() => {
@@ -257,9 +258,9 @@ function generarParticula(x, y) {
   const juego = document.getElementById("atrapa-juego");
   const part = document.createElement("div");
   part.classList.add("particle");
-  part.style.position = "absolute";
   part.style.left = x + "px";
   part.style.top = y + "px";
+  part.style.position = "absolute";
   juego.appendChild(part);
   setTimeout(() => part.remove(), 600);
 }
@@ -269,9 +270,9 @@ function clearIntervalos() {
   intervalos = [];
 }
 
-// ==============================
-// SECCIÓN: menu hamburguesa
-// ==============================
+// -----------------------------
+// Menú hamburguesa
+// -----------------------------
 
 const btnMenu = document.getElementById('btn-menu');
 const navMenu = document.getElementById('nav-menu');
@@ -282,14 +283,17 @@ if (btnMenu && navMenu) {
   });
 }
 
-// ==========
-// INICIALIZACIÓN BOTONES A y B
-// ==========
+// -----------------------------
+// Eventos para botones A y B (no usar onclick inline)
+// -----------------------------
 
-document.addEventListener('DOMContentLoaded', () => {
-  const botones = document.querySelectorAll('.botones-ab button');
-  if (botones.length >= 2) {
-    botones[0].addEventListener('click', () => mostrarJuego('adivina'));
-    botones[1].addEventListener('click', () => mostrarJuego('atrapa'));
-  }
-});
+const botonA = document.getElementById('boton-a');
+const botonB = document.getElementById('boton-b');
+
+if (botonA) {
+  botonA.addEventListener('click', () => mostrarJuego('adivina'));
+}
+
+if (botonB) {
+  botonB.addEventListener('click', () => mostrarJuego('atrapa'));
+}
