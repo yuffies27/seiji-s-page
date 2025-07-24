@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>Videos</title>
-  <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <main class="contenido">
     <h1>📹 Videos Especiales</h1>
-    <nav>
+
+    <!-- Botón menú hamburguesa -->
+    <div class="menu-hamburguesa" id="btn-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menú desplegable -->
+    <nav class="menu-navegacion" id="nav-menu">
       <a href="home.html">inicio</a>
       <a href="juegos.html">juegos</a>
       <a href="playlist.html">playlist</a>
       <a href="mensajes.html">mensajes</a>
     </nav>
+
     <p>text text text text text</p>
   </main>
+
+  <script>
+    const btnMenu = document.getElementById('btn-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    btnMenu.addEventListener('click', () => {
+      btnMenu.classList.toggle('activo');
+      navMenu.classList.toggle('activo');
+    });
+  </script>
 </body>
 </html>
