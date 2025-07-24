@@ -59,23 +59,27 @@ document.getElementById('btn-siguiente').addEventListener('click', siguienteCome
 // SECCIÓN: MOSTRAR JUEGOS
 // ==============================
 
-function mostrarJuego(nombre) {
+window.mostrarJuego = function(nombre) {  // Aseguramos que sea global
   const contenedor = document.getElementById("pantalla-juego");
 
   if (nombre === "adivina") {
     iniciarQuiz();
   } else if (nombre === "atrapa") {
     contenedor.innerHTML = `
-      <div id="atrapa-juego">
-        <div class="personaje" id="personaje"></div>
-        <div class="controles-touch">
-          <button onclick="moverIzquierda()">⬅️</button>
-          <button onclick="moverDerecha()">➡️</button>
+      <div id="atrapa-juego" style="position: relative; width: 300px; height: 160px; background: #fff; border-radius: 10px; overflow: hidden; margin-top: 0.5rem;">
+        <div class="personaje" id="personaje" style="position: absolute; bottom: 0; left: 130px; width: 30px; height: 30px; background: #3B7A74; border-radius: 50%;"></div>
+        <div class="controles-touch" style="margin-top: 0.5rem; text-align: center;">
+          <button id="btn-izq">⬅️</button>
+          <button id="btn-der">➡️</button>
         </div>
+        <p style="margin-top: 0.5rem;">Puntos: <span id="puntos">0</span></p>
       </div>
-      <p>Puntos: <span id="puntos">0</span></p>
     `;
     iniciarAtrapa();
+
+    // Asignamos listeners a los botones de control táctil
+    document.getElementById('btn-izq').addEventListener('click', moverIzquierda);
+    document.getElementById('btn-der').addEventListener('click', moverDerecha);
   }
 }
 
@@ -123,7 +127,7 @@ function cargarPregunta(fraseObj) {
   `;
 }
 
-function evaluarRespuesta(correcto, elegido) {
+window.evaluarRespuesta = function(correcto, elegido) {
   const resultado = document.getElementById("resultado");
   const botones = document.querySelectorAll(".opciones-corazones button");
 
@@ -174,6 +178,8 @@ function iniciarAtrapa() {
   const juego = document.getElementById("atrapa-juego");
   const personaje = document.getElementById("personaje");
 
+  personaje.style.left = "130px"; // Posición inicial
+
   document.addEventListener("keydown", moverConTeclado);
 
   clearIntervalos();
@@ -182,7 +188,9 @@ function iniciarAtrapa() {
     const objeto = document.createElement("div");
     const esSol = Math.random() > 0.4;
     objeto.classList.add("objeto", esSol ? "sol" : "nube");
-    objeto.style.left = Math.random() * 260 + "px";
+    objeto.style.position = "absolute";
+    objeto.style.top = "0px";
+    objeto.style.left = Math.floor(Math.random() * 260) + "px";
     juego.appendChild(objeto);
 
     let caida = setInterval(() => {
@@ -249,6 +257,7 @@ function generarParticula(x, y) {
   const juego = document.getElementById("atrapa-juego");
   const part = document.createElement("div");
   part.classList.add("particle");
+  part.style.position = "absolute";
   part.style.left = x + "px";
   part.style.top = y + "px";
   juego.appendChild(part);
@@ -272,3 +281,15 @@ if (btnMenu && navMenu) {
     navMenu.classList.toggle('oculto');
   });
 }
+
+// ==========
+// INICIALIZACIÓN BOTONES A y B
+// ==========
+
+document.addEventListener('DOMContentLoaded', () => {
+  const botones = document.querySelectorAll('.botones-ab button');
+  if (botones.length >= 2) {
+    botones[0].addEventListener('click', () => mostrarJuego('adivina'));
+    botones[1].addEventListener('click', () => mostrarJuego('atrapa'));
+  }
+});
