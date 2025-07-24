@@ -107,33 +107,82 @@ p {
   margin-bottom: 1rem;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-bottom: 2rem;
+/* Menú hamburguesa */
+.menu-hamburguesa {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  margin: 1rem auto;
+  z-index: 10000;
 }
 
-nav a {
-  padding: 0.5rem 1rem;
-  background-color: #4A90E2; /* Botón azul medio */
-  border: 2px solid #3B7A74; /* Borde verde azulado */
-  color: #D9F0F0; /* Texto claro */
-  border-radius: 999px;
-  font-size: 1rem;
+.menu-hamburguesa span {
+  display: block;
+  height: 4px;
+  margin: 4px 0;
+  background-color: #4A90E2;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Animación para cuando está activo */
+.menu-hamburguesa.activo span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-hamburguesa.activo span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-hamburguesa.activo span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Contenedor menú */
+.menu-navegacion {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #4A90E2;
+  border: 2px solid #3B7A74;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(59, 122, 116, 0.7);
+  width: 180px;
+  z-index: 9999;
+}
+
+.menu-navegacion a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #D9F0F0;
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(59, 122, 116, 0.5); /* sombra verde azulado */
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 0.5rem;
+  border: 1px solid transparent;
 }
 
-nav a:hover {
-  background-color: #3B7A74; /* Hover verde azulado */
-  color: #D9F0F0;
+.menu-navegacion a:hover {
+  background-color: #3B7A74;
   border-color: #3B7A74;
-  box-shadow: 0 4px 10px rgba(59, 122, 116, 0.7);
 }
+
+/* Mostrar menú cuando está activo */
+.menu-navegacion.activo {
+  display: block;
+}
+
+/* --- Resto de tu CSS original sin estilos para botones nav a --- */
+
+/* (Aquí iría todo lo demás que ya tienes, excepto los bloques nav a que borramos) */
+
+/* Resto de tu CSS permanece igual */
+
 
 /* Estilo para páginas individuales */
 main.contenido section {
