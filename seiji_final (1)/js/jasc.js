@@ -53,6 +53,8 @@ function siguienteComentario() {
   document.querySelector("#comentario .mensaje").textContent = c.mensaje;
 }
 
+document.getElementById('btn-siguiente').addEventListener('click', siguienteComentario);
+
 // ==============================
 // SECCIÓN: MOSTRAR JUEGOS
 // ==============================
@@ -71,7 +73,7 @@ function mostrarJuego(nombre) {
           <button onclick="moverDerecha()">➡️</button>
         </div>
       </div>
-      <p style="color:#5a422a; font-weight:bold; margin-top:10px;">Puntos: <span id="puntos">0</span></p>
+      <p>Puntos: <span id="puntos">0</span></p>
     `;
     iniciarAtrapa();
   }
@@ -154,7 +156,7 @@ function evaluarRespuesta(correcto, elegido) {
       quizIndex = 0;
       cargarPregunta(frases[quizIndex]);
     } else {
-      document.getElementById("pantalla-juego").innerHTML = `<p class="frase" style="color:#276442; font-weight:bold;">¡Completaste todas las frases! 🌟</p>`;
+      document.getElementById("pantalla-juego").innerHTML = `<p class="frase">¡Completaste todas las frases! 🌟</p>`;
     }
   }, 1300);
 }
@@ -171,12 +173,7 @@ function iniciarAtrapa() {
   document.getElementById("puntos").textContent = puntos;
   const juego = document.getElementById("atrapa-juego");
   const personaje = document.getElementById("personaje");
-  personaje.style.left = "120px";
-  personaje.dataset.direccion = "derecha";
-  actualizarAvatar(personaje);
 
-  // Evitar múltiples listeners
-  document.removeEventListener("keydown", moverConTeclado);
   document.addEventListener("keydown", moverConTeclado);
 
   clearIntervalos();
@@ -186,7 +183,6 @@ function iniciarAtrapa() {
     const esSol = Math.random() > 0.4;
     objeto.classList.add("objeto", esSol ? "sol" : "nube");
     objeto.style.left = Math.random() * 260 + "px";
-    objeto.style.top = "0px";
     juego.appendChild(objeto);
 
     let caida = setInterval(() => {
@@ -215,7 +211,7 @@ function iniciarAtrapa() {
             const mensajeFinal = document.createElement("p");
             mensajeFinal.textContent = "Tú eres el solecito ☀️";
             mensajeFinal.style.fontSize = "1.1rem";
-            mensajeFinal.style.color = "#276442";
+            mensajeFinal.style.color = "#d94f7a";
             mensajeFinal.style.marginTop = "1rem";
             document.getElementById("pantalla-juego").appendChild(mensajeFinal);
           }
@@ -232,47 +228,21 @@ function iniciarAtrapa() {
 
 function moverConTeclado(e) {
   const personaje = document.getElementById("personaje");
-  if (!personaje) return;
   let left = parseInt(window.getComputedStyle(personaje).left);
-  if (e.key === "ArrowLeft") {
-    personaje.style.left = Math.max(left - 20, 0) + "px";
-    personaje.dataset.direccion = "izquierda";
-    actualizarAvatar(personaje);
-  }
-  if (e.key === "ArrowRight") {
-    personaje.style.left = Math.min(left + 20, 260) + "px";
-    personaje.dataset.direccion = "derecha";
-    actualizarAvatar(personaje);
-  }
+  if (e.key === "ArrowLeft") personaje.style.left = Math.max(left - 20, 0) + "px";
+  if (e.key === "ArrowRight") personaje.style.left = Math.min(left + 20, 260) + "px";
 }
 
 function moverIzquierda() {
   const personaje = document.getElementById("personaje");
-  if (!personaje) return;
   let left = parseInt(window.getComputedStyle(personaje).left);
   personaje.style.left = Math.max(left - 20, 0) + "px";
-  personaje.dataset.direccion = "izquierda";
-  actualizarAvatar(personaje);
 }
 
 function moverDerecha() {
   const personaje = document.getElementById("personaje");
-  if (!personaje) return;
   let left = parseInt(window.getComputedStyle(personaje).left);
   personaje.style.left = Math.min(left + 20, 260) + "px";
-  personaje.dataset.direccion = "derecha";
-  actualizarAvatar(personaje);
-}
-
-function actualizarAvatar(personaje) {
-  if (personaje.dataset.direccion === "izquierda") {
-    personaje.style.backgroundImage = "url('img/avatariz.png')";
-  } else {
-    personaje.style.backgroundImage = "url('img/avatarde.png')";
-  }
-  personaje.style.backgroundSize = "contain";
-  personaje.style.backgroundRepeat = "no-repeat";
-  personaje.style.backgroundPosition = "center";
 }
 
 function generarParticula(x, y) {
@@ -290,3 +260,15 @@ function clearIntervalos() {
   intervalos = [];
 }
 
+// ==============================
+// SECCIÓN: menu hamburguesa
+// ==============================
+
+const btnMenu = document.getElementById('btn-menu');
+const navMenu = document.getElementById('nav-menu');
+
+if (btnMenu && navMenu) {
+  btnMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('oculto');
+  });
+}
