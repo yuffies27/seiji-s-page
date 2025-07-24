@@ -25,25 +25,16 @@
 
     <div class="pantalla-kawaii" id="pantalla-juego">
       <p>Selecciona un juego</p>
-
-      <!-- Contenedor del juego Atrapa el Sol -->
-      <div id="atrapa-juego" style="display:none; position: relative; width: 300px; height: 160px; background: #fff; border-radius: 10px; overflow: hidden; margin-top: 0.5rem;">
-        <div id="personaje" class="personaje"></div>
-      </div>
-
-      <!-- Contenedor del juego Adivina quién lo dijo -->
-      <div id="adivina-juego" style="display:none; margin-top:1rem;">
-        <!-- Aquí irá el contenido del juego "Adivina quién lo dijo" -->
-      </div>
+      <!-- Juegos se cargarán aquí -->
     </div>
 
     <div class="botones-ab">
-      <button id="boton-a" onclick="mostrarJuego('adivina')">A</button>
-      <button id="boton-b" onclick="mostrarJuego('atrapa')">B</button>
+      <button id="boton-a">A</button>
+      <button id="boton-b">B</button>
     </div>
   </div>
 
-  <!-- Imágenes de avatar ocultas para usar con JS o CSS -->
+  <!-- Avatares ocultos para JS -->
   <img src="img/avatarde.png" alt="Avatar de día" id="avatar-day" style="display:none;" />
   <img src="img/avatariz.png" alt="Avatar de noche" id="avatar-night" style="display:none;" />
 
