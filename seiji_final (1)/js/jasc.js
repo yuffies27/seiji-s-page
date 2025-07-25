@@ -86,7 +86,7 @@ function mostrarJuego(nombre) {
   } else if (nombre === "atrapa") {
     contenedor.innerHTML = `
       <div id="atrapa-juego" style="position: relative; width: 300px; height: 160px; background: #fff; border-radius: 10px; overflow: hidden; margin-top: 0.5rem;">
-        <div class="personaje" id="personaje" style="position:absolute; bottom:0; left:0; width:30px; height:30px; background:#3B7A74; border-radius:50%;"></div>
+        <div class="personaje" id="personaje" style="position:absolute; bottom:10px; left:0; width:60px; height:60px; border-radius:50%;"></div>
         <div class="controles-touch" style="margin-top: 0.5rem;">
           <button id="btn-izquierda">⬅️</button>
           <button id="btn-derecha">➡️</button>
@@ -177,6 +177,10 @@ function iniciarAtrapa() {
   const juego = document.getElementById("atrapa-juego");
   const personaje = document.getElementById("personaje");
 
+  // Establecer la imagen del avatar al iniciar el juego (mirando a la derecha por defecto)
+  personaje.style.backgroundImage = "url('img/avatarde.png')";
+  personaje.classList.remove("izquierda");
+
   personaje.style.left = "0px";
 
   document.addEventListener("keydown", moverConTeclado);
@@ -236,20 +240,35 @@ function iniciarAtrapa() {
 function moverConTeclado(e) {
   const personaje = document.getElementById("personaje");
   let left = parseInt(window.getComputedStyle(personaje).left);
-  if (e.key === "ArrowLeft") personaje.style.left = Math.max(left - 20, 0) + "px";
-  if (e.key === "ArrowRight") personaje.style.left = Math.min(left + 20, 260) + "px";
+
+  if (e.key === "ArrowLeft") {
+    personaje.style.left = Math.max(left - 20, 0) + "px";
+    // Cambiar avatar para mirar izquierda
+    personaje.style.backgroundImage = "url('img/avatariz.png')";
+    personaje.classList.add("izquierda");
+  }
+  if (e.key === "ArrowRight") {
+    personaje.style.left = Math.min(left + 20, 260) + "px";
+    // Cambiar avatar para mirar derecha
+    personaje.style.backgroundImage = "url('img/avatarde.png')";
+    personaje.classList.remove("izquierda");
+  }
 }
 
 function moverIzquierda() {
   const personaje = document.getElementById("personaje");
   let left = parseInt(window.getComputedStyle(personaje).left);
   personaje.style.left = Math.max(left - 20, 0) + "px";
+  personaje.style.backgroundImage = "url('img/avatariz.png')";
+  personaje.classList.add("izquierda");
 }
 
 function moverDerecha() {
   const personaje = document.getElementById("personaje");
   let left = parseInt(window.getComputedStyle(personaje).left);
   personaje.style.left = Math.min(left + 20, 260) + "px";
+  personaje.style.backgroundImage = "url('img/avatarde.png')";
+  personaje.classList.remove("izquierda");
 }
 
 function generarParticula(x, y) {
