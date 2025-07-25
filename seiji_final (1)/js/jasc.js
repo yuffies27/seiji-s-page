@@ -289,8 +289,17 @@ const btnMenu = document.getElementById('btn-menu');
 const navMenu = document.getElementById('nav-menu');
 
 if (btnMenu && navMenu) {
-  btnMenu.addEventListener('click', () => {
+  btnMenu.addEventListener('click', (e) => {
     navMenu.classList.toggle('oculto');
+    e.stopPropagation();
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!navMenu.classList.contains('oculto')) {
+      if (!navMenu.contains(e.target) && e.target !== btnMenu) {
+        navMenu.classList.add('oculto');
+      }
+    }
   });
 }
 
