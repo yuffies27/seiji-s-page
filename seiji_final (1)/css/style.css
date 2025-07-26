@@ -188,30 +188,25 @@ p {
   z-index: 1000;
 }
 
+/* Animación suave para mostrar el menú */
 #nav-menu {
-  position: fixed;
-  top: 50px;
-  left: 10px;
-  background-color: #fff;
-  border: 2px solid #3B7A74;
-  border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 999;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
 }
 
-#nav-menu a {
-  color: #3B7A74;
-  text-decoration: none;
-  font-weight: bold;
+/* Cuando está visible */
+#nav-menu.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
+/* Oculto sigue siendo display: none para compatibilidad */
 .oculto {
   display: none;
 }
-
 
 /* Estilo para páginas individuales */
 main.contenido section {
