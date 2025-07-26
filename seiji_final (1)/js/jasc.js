@@ -285,23 +285,44 @@ function clearIntervalos() {
 // Menú hamburguesa
 // -----------------------------
 
-const btnMenu = document.getElementById('btn-menu');
-const navMenu = document.getElementById('nav-menu');
+document.addEventListener('DOMContentLoaded', () => {
+  const btnMenu = document.getElementById('btn-menu');
+  const navMenu = document.getElementById('nav-menu');
 
-if (btnMenu && navMenu) {
-  btnMenu.addEventListener('click', (e) => {
-    navMenu.classList.toggle('oculto');
-    e.stopPropagation();
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!navMenu.classList.contains('oculto')) {
-      if (!navMenu.contains(e.target) && e.target !== btnMenu) {
-        navMenu.classList.add('oculto');
+  if (btnMenu && navMenu) {
+    btnMenu.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('visible')) {
+        navMenu.classList.remove('visible');
+        setTimeout(() => {
+          navMenu.classList.add('oculto');
+        }, 300); // Espera que termine la animación
+      } else {
+        navMenu.classList.remove('oculto');
+        // Forzar reflow para que la transición funcione
+        void navMenu.offsetWidth;
+        navMenu.classList.add('visible');
       }
-    }
-  });
-}
+      e.stopPropagation();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (
+        navMenu.classList.contains('visible') &&
+        !navMenu.contains(e.target) &&
+        e.target !== btnMenu
+      ) {
+        navMenu.classList.remove('visible');
+        setTimeout(() => {
+          navMenu.classList.add('oculto');
+        }, 300);
+      }
+    });
+
+    navMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+});
 
 // -----------------------------
 // Eventos para botones A y B
