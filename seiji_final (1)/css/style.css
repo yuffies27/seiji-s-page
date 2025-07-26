@@ -114,7 +114,7 @@ p {
   cursor: pointer;
   width: 30px;
   height: 22px;
-  margin: 1rem 0 1rem 0; /* para que quede arriba a la izquierda */
+  margin: 1rem 0 1rem 0;
   z-index: 10000;
 }
 
@@ -127,6 +127,7 @@ p {
   transition: 0.3s ease;
 }
 
+/* Animación para la X cuando el menú está abierto */
 .menu-hamburguesa.activo span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -139,12 +140,11 @@ p {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Contenedor menú */
+/* Contenedor del menú */
 .menu-navegacion {
-  display: none;
   position: absolute;
   top: 40px;
-  left: 0;  /* para que aparezca abajo y alineado a la izquierda */
+  left: 0;
   background-color: #4A90E2;
   border: 2px solid #3B7A74;
   border-radius: 10px;
@@ -154,6 +154,7 @@ p {
   z-index: 9999;
 }
 
+/* Estilos para los enlaces del menú */
 .menu-navegacion a {
   display: block;
   padding: 0.6rem 1rem;
@@ -171,11 +172,7 @@ p {
   border-color: #3B7A74;
 }
 
-/* Mostrar menú cuando está activo */
-.menu-navegacion.activo {
-  display: block;
-}
-
+/* Botón del menú fijo arriba a la izquierda */
 #btn-menu {
   position: fixed;
   top: 10px;
@@ -188,7 +185,7 @@ p {
   z-index: 1000;
 }
 
-/* Animación suave para mostrar el menú */
+/* Animación para mostrar el menú */
 #nav-menu {
   opacity: 0;
   transform: translateY(-10px);
@@ -203,10 +200,11 @@ p {
   pointer-events: auto;
 }
 
-/* Oculto sigue siendo display: none para compatibilidad */
+/* Oculto por defecto */
 .oculto {
   display: none;
 }
+
 
 /* Estilo para páginas individuales */
 main.contenido section {
