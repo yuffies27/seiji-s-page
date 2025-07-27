@@ -4,27 +4,27 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #f5f5f2; /* beige muy suave */
-  color: #3b3b3b;
+  background-color: #D9F0F0; /* azul muy claro */
+  color: #1B475D; /* azul oscuro */
 }
 
 .header {
   text-align: center;
   padding: 1rem;
-  background-color: #e7e6e1; /* gris claro cálido */
-  border-bottom: 3px dotted #8b8a85; /* gris medio */
+  background-color: #ffffff; /* blanco puro */
+  border-bottom: 3px dotted #3B7A74; /* verde azulado */
 }
 
 .header h1 {
   font-size: 2rem;
-  color: #4a4a45; /* gris oscuro */
+  color: #1B475D; /* azul oscuro */
   margin: 0;
 }
 
 .header p {
   font-size: 1rem;
   margin: 0.3rem 0 0;
-  color: #6b6a66; /* gris medio */
+  color: #4A90E2; /* azul medio */
 }
 
 .contenedor-principal {
@@ -35,7 +35,7 @@ body {
   gap: 2rem;
 }
 
-/* Menú Sanrio a la izquierda */
+/* Menú estilo Sanrio adaptado */
 .menu-kawaii {
   display: flex;
   flex-direction: column;
@@ -47,13 +47,13 @@ body {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  background-color: #faf9f6; /* casi blanco con un toque cálido */
-  border: 2px solid #b4b3ae; /* gris suave */
+  background-color: #ffffff; /* blanco puro */
+  border: 2px solid #3B7A74; /* verde azulado */
   border-radius: 20px;
   padding: 1rem;
   width: 110px;
   transition: transform 0.2s;
-  box-shadow: 2px 2px 5px #c9c8c4; /* sombra muy suave */
+  box-shadow: 2px 2px 5px rgba(59, 122, 116, 0.3); /* sombra verde azulado suave */
 }
 
 .boton-kawaii img {
@@ -65,13 +65,15 @@ body {
 
 .boton-kawaii span {
   font-weight: bold;
-  color: #4a4a45; /* gris oscuro */
+  color: #1B475D; /* azul oscuro */
   font-size: 0.9rem;
   text-align: center;
 }
 
 .boton-kawaii:hover {
   transform: scale(1.05);
+  border-color: #4A90E2; /* azul medio */
+  box-shadow: 0 0 8px #4A90E2;
 }
 
 /* Fotos con frases */
@@ -85,12 +87,12 @@ body {
 
 .foto-frase {
   width: 130px;
-  background-color: #f9f9f7; /* blanco muy suave */
-  border: 2px solid #d6d5d1; /* gris claro */
+  background-color: #ffffff; /* blanco puro */
+  border: 2px solid #4A90E2; /* azul medio */
   border-radius: 15px;
   text-align: center;
   padding: 0.5rem;
-  box-shadow: 1px 1px 4px #c9c8c4;
+  box-shadow: 1px 1px 4px rgba(74, 144, 226, 0.3);
 }
 
 .foto-frase img {
@@ -100,6 +102,6 @@ body {
 
 .foto-frase p {
   font-size: 0.85rem;
-  color: #6b6a66; /* gris medio */
+  color: #3B7A74; /* verde azulado */
   margin-top: 0.3rem;
 }
