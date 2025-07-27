@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #F7EEE5; /* beige suave */
+  background-color: #D9F0F0; /* fondo azul muy claro */
   color: #1B475D; /* azul oscuro para texto */
 }
 
@@ -74,7 +74,7 @@ body {
 .boton-kawaii:hover {
   transform: scale(1.05);
   background-color: #3B7A74; /* verde azulado hover */
-  color: #F7EEE5; /* beige texto claro */
+  color: #D9F0F0; /* texto claro para contraste */
   border-color: #1B475D;
   box-shadow: 0 4px 10px rgba(59, 122, 116, 0.6);
 }
