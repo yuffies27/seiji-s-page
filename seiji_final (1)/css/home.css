@@ -27,15 +27,21 @@ body {
   color: #a56f93;
 }
 
-.contenedor-principal {
+/* Estructura nueva con botón y foto al lado */
+.fila-combinada {
   display: flex;
-  justify-content: space-between;
-  padding: 1.5rem 2rem;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
+  margin: 1rem auto;
+  max-width: 600px;
 }
 
-/* Menú Sanrio a la izquierda */
+.fila-combinada.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Menú estilo Sanrio (botones kawaii) */
 .menu-kawaii {
   display: flex;
   flex-direction: column;
@@ -75,21 +81,13 @@ body {
 }
 
 /* Fotos con frases */
-.zona-frases {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 600px;
-  justify-content: center;
-}
-
 .foto-frase {
-  width: 130px;
+  width: 150px;
   background-color: #fffced;
   border: 2px solid #ffe3a3;
   border-radius: 15px;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.6rem;
   box-shadow: 1px 1px 4px #ccc;
 }
 
@@ -104,3 +102,19 @@ body {
   margin-top: 0.3rem;
 }
 
+/* Opcional: Responsive */
+@media (max-width: 480px) {
+  .fila-combinada {
+    flex-direction: column !important;
+    gap: 1rem;
+  }
+
+  .foto-frase,
+  .boton-kawaii {
+    width: 100px;
+  }
+
+  .foto-frase p {
+    font-size: 0.75rem;
+  }
+}
