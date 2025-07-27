@@ -4,14 +4,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #D9F0F0; /* azul muy claro */
-  color: #1B475D; /* azul oscuro */
+  background-color: #F7EEE5; /* beige suave */
+  color: #1B475D; /* azul oscuro para texto */
 }
 
 .header {
   text-align: center;
   padding: 1rem;
-  background-color: #ffffff; /* blanco puro */
+  background-color: #CBE1EC; /* azul pastel suave */
   border-bottom: 3px dotted #3B7A74; /* verde azulado */
 }
 
@@ -24,7 +24,7 @@ body {
 .header p {
   font-size: 1rem;
   margin: 0.3rem 0 0;
-  color: #4A90E2; /* azul medio */
+  color: #3B7A74; /* verde azulado */
 }
 
 .contenedor-principal {
@@ -47,13 +47,15 @@ body {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  background-color: #ffffff; /* blanco puro */
+  background-color: #CBE1EC; /* azul pastel */
   border: 2px solid #3B7A74; /* verde azulado */
   border-radius: 20px;
   padding: 1rem;
   width: 110px;
   transition: transform 0.2s;
-  box-shadow: 2px 2px 5px rgba(59, 122, 116, 0.3); /* sombra verde azulado suave */
+  box-shadow: 2px 2px 5px rgba(59, 122, 116, 0.3);
+  color: #1B475D;
+  font-weight: bold;
 }
 
 .boton-kawaii img {
@@ -64,16 +66,17 @@ body {
 }
 
 .boton-kawaii span {
-  font-weight: bold;
-  color: #1B475D; /* azul oscuro */
   font-size: 0.9rem;
   text-align: center;
+  color: #1B475D;
 }
 
 .boton-kawaii:hover {
   transform: scale(1.05);
-  border-color: #4A90E2; /* azul medio */
-  box-shadow: 0 0 8px #4A90E2;
+  background-color: #3B7A74; /* verde azulado hover */
+  color: #F7EEE5; /* beige texto claro */
+  border-color: #1B475D;
+  box-shadow: 0 4px 10px rgba(59, 122, 116, 0.6);
 }
 
 /* Fotos con frases */
@@ -87,12 +90,13 @@ body {
 
 .foto-frase {
   width: 130px;
-  background-color: #ffffff; /* blanco puro */
-  border: 2px solid #4A90E2; /* azul medio */
+  background-color: #F7EEE5; /* beige suave */
+  border: 2px solid #3B7A74; /* verde azulado */
   border-radius: 15px;
   text-align: center;
   padding: 0.5rem;
-  box-shadow: 1px 1px 4px rgba(74, 144, 226, 0.3); /* sombra azul medio */
+  box-shadow: 1px 1px 4px rgba(59, 122, 116, 0.3);
+  color: #1B475D;
 }
 
 .foto-frase img {
