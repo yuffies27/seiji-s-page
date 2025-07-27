@@ -35,7 +35,7 @@ body {
   gap: 2rem;
 }
 
-/* Menú estilo Sanrio adaptado */
+/* Menú Sanrio a la izquierda */
 .menu-kawaii {
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ body {
   border-radius: 15px;
   text-align: center;
   padding: 0.5rem;
-  box-shadow: 1px 1px 4px rgba(74, 144, 226, 0.3);
+  box-shadow: 1px 1px 4px rgba(74, 144, 226, 0.3); /* sombra azul medio */
 }
 
 .foto-frase img {
