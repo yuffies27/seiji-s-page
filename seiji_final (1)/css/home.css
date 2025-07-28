@@ -10,29 +10,29 @@ body {
 
 .header {
   text-align: center;
-  padding: 1.2rem;
-  background-color: #CBE1EC;
-  border-bottom: 3px dotted #3B7A74;
+  padding: 1.5rem;
 }
 
 .header h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin: 0;
 }
 
 .header p {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 0;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
 }
 
 .contenedor-principal {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
-  gap: 2rem;
-  padding: 3rem 5%;
-  max-width: 1200px;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1400px;
   margin: auto;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .item-menu,
@@ -45,7 +45,7 @@ body {
 .menu-kawaii {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .boton-kawaii {
@@ -56,29 +56,29 @@ body {
   background-color: #CBE1EC;
   border: 2px solid #3B7A74;
   border-radius: 25px;
-  padding: 1.2rem;
-  width: 150px;
+  padding: 1.5rem;
+  width: 180px;
   transition: transform 0.2s;
   box-shadow: 3px 3px 7px rgba(59, 122, 116, 0.3);
   color: #1B475D;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .boton-kawaii img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .foto-frase {
-  background-color: #FFEBB0;
+  background-color: #F7EEE5; /* color beige restaurado */
   border: 2px dashed #3B7A74;
   border-radius: 20px;
-  padding: 1rem;
+  padding: 1.2rem;
   text-align: center;
-  max-width: 240px;
+  width: 280px;
   box-shadow: 2px 2px 6px rgba(59, 122, 116, 0.2);
 }
 
@@ -86,28 +86,26 @@ body {
   width: 100%;
   height: auto;
   border-radius: 15px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
 .foto-frase p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-/* Responsive para móviles */
+/* Móvil */
 @media (max-width: 768px) {
   .contenedor-principal {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   .boton-kawaii {
-    width: 80%;
+    width: 90%;
   }
 
   .foto-frase {
-    width: 80%;
+    width: 90%;
   }
 }
