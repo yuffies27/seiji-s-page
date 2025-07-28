@@ -37,9 +37,7 @@ h1 {
 
 /* Botones (Juegos, Playlist, etc.) */
 .boton {
-  background-color: #CBE1EC;
-  border: 2px solid #3B7A74;
-  border-radius: 12px;
+  background-color: #D9F0F0;
   width: 150px;
   height: 110px;
   display: flex;
