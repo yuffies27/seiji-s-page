@@ -4,42 +4,48 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #D9F0F0; /* fondo azul muy claro */
-  color: #1B475D; /* azul oscuro para texto */
+  background-color: #D9F0F0;
+  color: #1B475D;
 }
 
 .header {
   text-align: center;
-  padding: 1rem;
-  background-color: #CBE1EC; /* azul pastel suave */
-  border-bottom: 3px dotted #3B7A74; /* verde azulado */
+  padding: 1.2rem;
+  background-color: #CBE1EC;
+  border-bottom: 3px dotted #3B7A74;
 }
 
 .header h1 {
-  font-size: 2rem;
-  color: #1B475D; /* azul oscuro */
+  font-size: 2.2rem;
   margin: 0;
 }
 
 .header p {
-  font-size: 1rem;
-  margin: 0.3rem 0 0;
-  color: #3B7A74; /* verde azulado */
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0;
 }
 
 .contenedor-principal {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem 2rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
   gap: 2rem;
+  padding: 3rem 5%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Menú Sanrio a la izquierda */
+.item-menu,
+.item-frase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu-kawaii {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .boton-kawaii {
@@ -47,65 +53,61 @@ body {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  background-color: #CBE1EC; /* azul pastel */
-  border: 2px solid #3B7A74; /* verde azulado */
-  border-radius: 20px;
-  padding: 1rem;
-  width: 110px;
+  background-color: #CBE1EC;
+  border: 2px solid #3B7A74;
+  border-radius: 25px;
+  padding: 1.2rem;
+  width: 150px;
   transition: transform 0.2s;
-  box-shadow: 2px 2px 5px rgba(59, 122, 116, 0.3);
+  box-shadow: 3px 3px 7px rgba(59, 122, 116, 0.3);
   color: #1B475D;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .boton-kawaii img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   margin-bottom: 0.5rem;
 }
 
-.boton-kawaii span {
-  font-size: 0.9rem;
-  text-align: center;
-  color: #1B475D;
-}
-
-.boton-kawaii:hover {
-  transform: scale(1.05);
-  background-color: #3B7A74; /* verde azulado hover */
-  color: #D9F0F0; /* texto claro para contraste */
-  border-color: #1B475D;
-  box-shadow: 0 4px 10px rgba(59, 122, 116, 0.6);
-}
-
-/* Fotos con frases */
-.zona-frases {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 600px;
-  justify-content: center;
-}
-
 .foto-frase {
-  width: 130px;
-  background-color: #F7EEE5; /* beige suave */
-  border: 2px solid #3B7A74; /* verde azulado */
-  border-radius: 15px;
+  background-color: #FFEBB0;
+  border: 2px dashed #3B7A74;
+  border-radius: 20px;
+  padding: 1rem;
   text-align: center;
-  padding: 0.5rem;
-  box-shadow: 1px 1px 4px rgba(59, 122, 116, 0.3);
-  color: #1B475D;
+  max-width: 240px;
+  box-shadow: 2px 2px 6px rgba(59, 122, 116, 0.2);
 }
 
 .foto-frase img {
   width: 100%;
-  border-radius: 10px;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
 }
 
 .foto-frase p {
-  font-size: 0.85rem;
-  color: #3B7A74; /* verde azulado */
-  margin-top: 0.3rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .contenedor-principal {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .boton-kawaii {
+    width: 80%;
+  }
+
+  .foto-frase {
+    width: 80%;
+  }
 }
