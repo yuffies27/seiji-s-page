@@ -1,6 +1,4 @@
-/* home.css */
-
-@import url("style.css"); /* Asegúrate que este archivo existe o cámbialo si ya no usas uno global */
+@import url("style.css");
 
 body {
   margin: 0;
@@ -12,7 +10,7 @@ body {
 
 .container {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 h1 {
@@ -27,13 +25,13 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.fila {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Estructura de la grilla */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .boton {
@@ -46,7 +44,6 @@ h1 {
   padding: 1rem;
   border-radius: 20px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-  width: 160px;
   transition: transform 0.2s ease;
 }
 
@@ -70,8 +67,8 @@ h1 {
 }
 
 .foto-con-frase img {
-  width: 280px;
-  height: auto;
+  width: 100%;
+  max-width: 320px;
   border-radius: 12px;
   margin-bottom: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -86,20 +83,20 @@ h1 {
   margin: 0;
 }
 
-/* Responsive para celular */
+/* Responsive */
 @media (max-width: 768px) {
-  .fila {
-    flex-direction: column;
+  .grid {
+    grid-template-columns: 1fr;
   }
 
   .boton {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .foto-con-frase img {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
   }
 }
-
