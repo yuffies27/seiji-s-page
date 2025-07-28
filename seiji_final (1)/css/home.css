@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+/* home.css */
+
+@import url("style.css"); /* Asegúrate que este archivo existe o cámbialo si ya no usas uno global */
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   background-color: #D9F0F0;
   color: #333;
 }
@@ -25,12 +27,13 @@ h1 {
   margin-bottom: 2rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  justify-items: center;
+.fila {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .boton {
@@ -58,9 +61,12 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.boton span {
+  font-size: 1rem;
+}
+
 .foto-con-frase {
   text-align: center;
-  max-width: 100%;
 }
 
 .foto-con-frase img {
@@ -77,12 +83,13 @@ h1 {
   background-color: #F7EEE5;
   padding: 0.5rem;
   border-radius: 10px;
+  margin: 0;
 }
 
-/* Responsive */
+/* Responsive para celular */
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .fila {
+    flex-direction: column;
   }
 
   .boton {
@@ -95,3 +102,4 @@ h1 {
     max-width: 280px;
   }
 }
+
