@@ -84,9 +84,11 @@ h1 {
 }
 
 .foto-con-frase img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 5px;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Asegura que se ajuste bien en pantallas pequeñas */
@@ -96,15 +98,17 @@ h1 {
     gap: 10px;
   }
 
-  .boton, .foto-con-frase {
-    width: 120px;
-    height: 100px;
+  .boton {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
-  .boton img, .foto-con-frase img {
-    width: 32px;
-    height: 32px;
+  .foto-con-frase img {
+    width: 100%;
+    max-width: 300px;
   }
+}
 
   h1 {
     font-size: 20px;
