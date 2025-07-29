@@ -1,0 +1,138 @@
+/* playlist.css */
+
+/* Asegura que no haya scroll vertical en la página */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #D9F0F0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  height: 100vh;
+  overflow: hidden; /* elimina el scroll vertical completo */
+}
+
+/* Contenedor general de contenido sin desbordes */
+.contenido {
+  height: calc(100vh - 50px); /* restando espacio para el header */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Título y texto descriptivo */
+h1 {
+  font-size: 2rem;
+  color: #3B3B3B;
+  margin: 0.5rem 0;
+}
+
+.contenido p {
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem;
+}
+
+/* Carrusel horizontal con desplazamiento, sin scrollbars visibles */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  max-width: 100%;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilo para cada avatar del carrusel */
+.friend {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.friend:hover {
+  transform: scale(1.1);
+}
+
+.friend img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #FFEBB0;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.friend span {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Zona de canciones — se adapta sin overflow vertical */
+.playlist-section {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+/* Tarjetas de canción */
+.card {
+  background: #F7EEE5;
+  border-radius: 16px;
+  width: 200px;
+  padding: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #333;
+  text-align: center;
+}
+
+/* Estilo para el reproductor embebido */
+iframe {
+  width: 100%;
+  height: 80px;
+  border-radius: 12px;
+  margin-top: 0.3rem;
+}
+
+/* Enlace para abrir en Spotify */
+.spotify-link {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #1DB954;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.spotify-link:hover {
+  text-decoration: underline;
+}
