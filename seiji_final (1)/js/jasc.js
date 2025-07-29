@@ -365,7 +365,8 @@ const playlistData = {
     { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
     { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
     { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." }
+  ]
 };
 
 // Mostrar canciones al hacer clic
