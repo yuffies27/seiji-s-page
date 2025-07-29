@@ -1,5 +1,6 @@
 /* playlist.css */
 @import url("style.css");
+
 /* Asegura que no haya scroll vertical en la página */
 html, body {
   margin: 0;
@@ -7,12 +8,12 @@ html, body {
   background-color: #D9F0F0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   height: 100vh;
-  overflow: hidden; /* elimina el scroll vertical completo */
+  overflow: hidden;
 }
 
 /* Contenedor general de contenido sin desbordes */
 .contenido {
-  height: calc(100vh - 50px); /* restando espacio para el header */
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,19 +34,31 @@ h1 {
   margin: 0.5rem 0 1rem;
 }
 
-/* Carrusel horizontal con desplazamiento, sin scrollbars visibles */
+/* Carrusel con desplazamiento automático incluso si hay pocos amigos */
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .carousel {
   display: flex;
-  overflow-x: auto;
   gap: 1rem;
   padding: 1rem 0;
   scroll-snap-type: x mandatory;
-  max-width: 100%;
-  scrollbar-width: none;
+  animation: scrollCarousel 20s linear infinite;
+  width: fit-content;
 }
 
-.carousel::-webkit-scrollbar {
-  display: none;
+/* Si quieres duplicar contenido en JS para loop infinito, esto lo soporta */
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Estilo para cada avatar del carrusel */
@@ -78,7 +91,7 @@ h1 {
   color: #555;
 }
 
-/* Zona de canciones — se adapta sin overflow vertical */
+/* Zona de canciones */
 .playlist-section {
   flex: 1;
   width: 100%;
@@ -116,7 +129,7 @@ h1 {
   text-align: center;
 }
 
-/* Estilo para el reproductor embebido */
+/* Reproductor embebido */
 iframe {
   width: 100%;
   height: 80px;
