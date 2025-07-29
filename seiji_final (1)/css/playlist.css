@@ -1,5 +1,5 @@
 /* playlist.css */
-
+@import url("style.css");
 /* Asegura que no haya scroll vertical en la página */
 html, body {
   margin: 0;
