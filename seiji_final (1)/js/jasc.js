@@ -46,9 +46,8 @@ function verificarPIN() {
 const comentarios = [
   { nombre: "yuffie", user: "@piururin", mensaje: "text text text 💖", foto: "img/yuffie.jpg" },
   { nombre: "naeve",  user: "@ninfjal",  mensaje: "text text text ✨", foto: "img/naeve.jpg" },
-  { nombre: "zephyr", user: "@necrocize",mensaje: "text text text 🐱", foto: "img/zephyr.jpg" },
   { nombre: "daniel", user: "@cautlver", mensaje: "text text text 🐰", foto: "img/daniel.jpg" },
-  { nombre: "candy",  user: "@iglesitar",mensaje: "text text text 🌸", foto: "img/candy.jpg" }
+  { nombre: "isa",  user: "@iglesitar",mensaje: "text text text 🌸", foto: "img/candy.jpg" }
 ];
 
 function siguienteComentario() {
