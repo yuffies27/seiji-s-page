@@ -1,16 +1,17 @@
 @import url("style.css");
 
-/* Asegura que no haya scroll vertical en la página */
+/* Evitar scroll vertical en la página */
 html, body {
   margin: 0;
   padding: 0;
   background-color: #D9F0F0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: hidden;     /* bloqueo solo vertical */
+  overflow-x: visible;    /* permitir scroll horizontal */
 }
 
-/* Contenedor general de contenido sin desbordes */
+/* Contenedor general */
 .contenido {
   height: calc(100vh - 50px);
   display: flex;
@@ -21,7 +22,7 @@ html, body {
   overflow: hidden;
 }
 
-/* Título y texto descriptivo */
+/* Título y texto */
 h1 {
   font-size: 2rem;
   color: #3B3B3B;
@@ -33,35 +34,43 @@ h1 {
   margin: 0.5rem 0 1rem;
 }
 
-/* Carrusel con desplazamiento manual (scroll horizontal) */
+/* Carrusel con scroll táctil manual */
 .carousel-wrapper {
   width: 100%;
-  overflow-x: auto;              /* Habilita scroll horizontal manual */
-  overflow-y: hidden;            /* Sin scroll vertical */
-  -webkit-overflow-scrolling: touch; /* Suaviza scroll en iOS */
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   padding: 1rem 0;
   border-bottom: 1px solid #ccc;
+  touch-action: pan-x;
+  -ms-overflow-style: none;  /* IE scrollbar oculto */
+  scrollbar-width: none;     /* Firefox scrollbar oculto */
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome scrollbar oculto */
 }
 
 .carousel {
   display: flex;
   gap: 1rem;
-  width: max-content;           /* Ajusta ancho según contenido para scroll */
-  animation: none;              /* Quita la animación automática */
+  width: max-content;
+  animation: none;
 }
 
-/* Estilo para cada avatar del carrusel */
+/* Estilo de cada amigo (avatar + nombre) */
 .friend {
   flex: 0 0 auto;
   scroll-snap-align: center;
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease;
-  user-select: none;            /* Evita selección al deslizar */
+  user-select: none;
 }
 
-.friend:hover {
+.friend:hover,
+.friend.hovered {
   transform: scale(1.1);
 }
 
@@ -140,4 +149,3 @@ iframe {
 .spotify-link:hover {
   text-decoration: underline;
 }
-
