@@ -355,13 +355,20 @@ const playlistData = {
     { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
     { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
   ],
-  // Agrega más amigos aquí
+  "Daniel": [
+    { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 2", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
+  ],
+  "Candy": [
+    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
 };
 
-// ------------------------------
 // Mostrar canciones al hacer clic
-// ------------------------------
-
 const friends = document.querySelectorAll('.friend');
 const playlistSection = document.querySelector('.playlist-section');
 
@@ -387,36 +394,9 @@ function renderPlaylist(name, songs) {
     card.innerHTML = `
       <h3>${song.title}</h3>
       <iframe src="${song.embed}" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <a class="spotify-link" href="${song.embed.replace('/embed/', '/')}" target="_blank">Abrir en Spotify</a>
+      <a class="spotify-link" href="${song.embed.replace('/embed/', '/')}" target="_blank" rel="noopener noreferrer">Abrir en Spotify</a>
     `;
 
     playlistSection.appendChild(card);
   });
 }
-
-// ------------------------------
-// Movimiento automático carrusel
-// ------------------------------
-
-const carousel = document.querySelector('.carousel');
-let scrollPosition = 0;
-let scrollDirection = 1; // 1 = derecha, -1 = izquierda
-
-function autoScrollCarousel() {
-  if (!carousel) return;
-
-  scrollPosition += scrollDirection * 1; // velocidad
-
-  if (scrollPosition >= carousel.scrollWidth - carousel.clientWidth) {
-    scrollDirection = -1;
-  } else if (scrollPosition <= 0) {
-    scrollDirection = 1;
-  }
-
-  carousel.scrollTo({
-    left: scrollPosition,
-    behavior: 'smooth'
-  });
-}
-
-setInterval(autoScrollCarousel, 50); // cada 50ms
