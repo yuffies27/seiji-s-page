@@ -337,3 +337,86 @@ if (botonA) {
 if (botonB) {
   botonB.addEventListener('click', () => mostrarJuego('atrapa'));
 }
+
+// ------------------------------
+// Datos de canciones por amigo
+// ------------------------------
+
+const playlistData = {
+  "Yuffie": [
+    { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 2", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
+  ],
+  "Naeve": [
+    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
+  ],
+  // Agrega más amigos aquí
+};
+
+// ------------------------------
+// Mostrar canciones al hacer clic
+// ------------------------------
+
+const friends = document.querySelectorAll('.friend');
+const playlistSection = document.querySelector('.playlist-section');
+
+friends.forEach(friend => {
+  friend.addEventListener('click', () => {
+    const name = friend.dataset.name;
+    const songs = playlistData[name];
+    renderPlaylist(name, songs);
+  });
+});
+
+function renderPlaylist(name, songs) {
+  playlistSection.innerHTML = ""; // Limpiar anterior
+  if (!songs || songs.length === 0) {
+    playlistSection.innerHTML = `<p>No hay canciones disponibles para ${name}.</p>`;
+    return;
+  }
+
+  songs.forEach(song => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    card.innerHTML = `
+      <h3>${song.title}</h3>
+      <iframe src="${song.embed}" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <a class="spotify-link" href="${song.embed.replace('/embed/', '/')}" target="_blank">Abrir en Spotify</a>
+    `;
+
+    playlistSection.appendChild(card);
+  });
+}
+
+// ------------------------------
+// Movimiento automático carrusel
+// ------------------------------
+
+const carousel = document.querySelector('.carousel');
+let scrollPosition = 0;
+let scrollDirection = 1; // 1 = derecha, -1 = izquierda
+
+function autoScrollCarousel() {
+  if (!carousel) return;
+
+  scrollPosition += scrollDirection * 1; // velocidad
+
+  if (scrollPosition >= carousel.scrollWidth - carousel.clientWidth) {
+    scrollDirection = -1;
+  } else if (scrollPosition <= 0) {
+    scrollDirection = 1;
+  }
+
+  carousel.scrollTo({
+    left: scrollPosition,
+    behavior: 'smooth'
+  });
+}
+
+setInterval(autoScrollCarousel, 50); // cada 50ms
