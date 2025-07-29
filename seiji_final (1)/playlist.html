@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>Playlist</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/playlist.css" />
 </head>
 <body>
 
+  <!-- Menú hamburguesa -->
   <header>
     <button id="btn-menu" aria-label="Menú">☰</button>
     <nav id="nav-menu" class="oculto">
@@ -18,11 +20,40 @@
     </nav>
   </header>
 
+  <!-- Contenido principal -->
   <main class="contenido">
-    <h1>🎶 Playlist</h1>
-    <p>text text text text text</p>
+    <h1>Playlist</h1>
+    <p>Elige un amigo para escuchar su playlist especial </p>
+
+    <!-- Carrusel de amigos -->
+    <div class="carousel" id="carousel">
+      <div class="friend" onclick="mostrarPlaylist('yuffie')">
+        <img src="img/yuffie.png" alt="Yuffie" />
+        <span>Yuffie</span>
+      </div>
+      <div class="friend" onclick="mostrarPlaylist('naeve')">
+        <img src="img/naeve.png" alt="Naeve" />
+        <span>Naeve</span>
+      </div>
+      <div class="friend" onclick="mostrarPlaylist('daniel')">
+        <img src="img/daniel.png" alt="Daniel" />
+        <span>Daniel</span>
+      </div>
+      <div class="friend" onclick="mostrarPlaylist('candy')">
+        <img src="img/candy.png" alt="Candy" />
+        <span>Candy</span>
+      </div>
+    </div>
+
+    <!-- Zona donde aparecen las canciones -->
+    <div id="playlist-section" class="playlist-section">
+      <p>Selecciona a un amigo para ver su playlist </p>
+    </div>
   </main>
 
+  <!-- Scripts -->
   <script src="js/jasc.js"></script>
+  <script src="js/playlist.js"></script>
+
 </body>
 </html>
