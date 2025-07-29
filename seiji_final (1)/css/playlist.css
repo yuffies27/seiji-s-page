@@ -1,4 +1,3 @@
-/* playlist.css */
 @import url("style.css");
 
 /* Asegura que no haya scroll vertical en la página */
@@ -34,31 +33,22 @@ h1 {
   margin: 0.5rem 0 1rem;
 }
 
-/* Carrusel con desplazamiento automático incluso si hay pocos amigos */
+/* Carrusel con desplazamiento manual (scroll horizontal) */
 .carousel-wrapper {
   width: 100%;
-  overflow: hidden;
-  position: relative;
+  overflow-x: auto;              /* Habilita scroll horizontal manual */
+  overflow-y: hidden;            /* Sin scroll vertical */
+  -webkit-overflow-scrolling: touch; /* Suaviza scroll en iOS */
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
 }
 
 .carousel {
   display: flex;
   gap: 1rem;
-  padding: 1rem 0;
-  scroll-snap-type: x mandatory;
-  animation: scrollCarousel 20s linear infinite;
-  width: fit-content;
-}
-
-/* Si quieres duplicar contenido en JS para loop infinito, esto lo soporta */
-
-@keyframes scrollCarousel {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  width: max-content;           /* Ajusta ancho según contenido para scroll */
+  animation: none;              /* Quita la animación automática */
 }
 
 /* Estilo para cada avatar del carrusel */
@@ -68,6 +58,7 @@ h1 {
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease;
+  user-select: none;            /* Evita selección al deslizar */
 }
 
 .friend:hover {
@@ -149,3 +140,4 @@ iframe {
 .spotify-link:hover {
   text-decoration: underline;
 }
+
