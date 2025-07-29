@@ -401,3 +401,47 @@ function renderPlaylist(name, songs) {
     playlistSection.appendChild(card);
   });
 }
+
+// Efecto hover táctil en móviles para escala
+document.querySelectorAll('.friend').forEach(friend => {
+  friend.addEventListener('touchstart', () => friend.classList.add('hovered'));
+  friend.addEventListener('touchend', () => friend.classList.remove('hovered'));
+});
+
+// Scroll táctil con arrastre (drag) para escritorio y móvil
+const carouselWrapper = document.querySelector('.carousel-wrapper');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+if(carouselWrapper){
+  carouselWrapper.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - carouselWrapper.offsetLeft;
+    scrollLeft = carouselWrapper.scrollLeft;
+  });
+  carouselWrapper.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+  carouselWrapper.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+  carouselWrapper.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carouselWrapper.offsetLeft;
+    const walk = (x - startX) * 2;
+    carouselWrapper.scrollLeft = scrollLeft - walk;
+  });
+
+  carouselWrapper.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX - carouselWrapper.offsetLeft;
+    scrollLeft = carouselWrapper.scrollLeft;
+  });
+  carouselWrapper.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].pageX - carouselWrapper.offsetLeft;
+    const walk = (x - startX) * 2;
+    carouselWrapper.scrollLeft = scrollLeft - walk;
+  });
+}
