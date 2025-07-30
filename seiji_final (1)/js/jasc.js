@@ -44,10 +44,11 @@ function verificarPIN() {
 // -----------------------------
 
 const comentarios = [
-  { nombre: "yuffie", user: "@piururin", mensaje: "text text text 💖", foto: "img/yuffie.jpg" },
-  { nombre: "naeve",  user: "@ninfjal",  mensaje: "text text text ✨", foto: "img/naeve.jpg" },
-  { nombre: "daniel", user: "@cautlver", mensaje: "text text text 🐰", foto: "img/daniel.jpg" },
-  { nombre: "isa",  user: "@iglesitar",mensaje: "text text text 🌸", foto: "img/candy.jpg" }
+  { nombre: "yuffie", user: "@piururin", mensaje: "text text text ", foto: "img/yuffie.jpg" },
+  { nombre: "zephyr",  user: "@necrocize",  mensaje: "text text text ", foto: "img/zephyr.jpg" },
+  { nombre: "naeve",  user: "@ninfjal",  mensaje: "text text text ", foto: "img/naeve.jpg" },
+  { nombre: "daniel", user: "@cautlver", mensaje: "text text text ", foto: "img/daniel.jpg" },
+  { nombre: "isa",  user: "@iglesitar",mensaje: "text text text ", foto: "img/candy.jpg" }
 ];
 
 function siguienteComentario() {
@@ -73,7 +74,7 @@ const frases = [
   { texto: "text text text ", autor: "Naeve" },
   { texto: "text text text ", autor: "Zephyr" },
   { texto: "text text text ", autor: "Daniel" },
-  { texto: "text text text ", autor: "Candy" }
+  { texto: "text text text ", autor: "Isa" }
 ];
 
 function mostrarJuego(nombre) {
