@@ -43,7 +43,7 @@ html, body {
   grid-template-rows: repeat(4, 1fr);
   gap: 0.2rem;
   width: 90%;
-  max-width: 700px;
+  max-width: 600px;
   flex-grow: 1; /* toma el espacio restante sin overflow */
   box-sizing: border-box;
 }
@@ -81,9 +81,9 @@ html, body {
   position: relative;
   overflow: hidden;
   border-radius: 15px;
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
+  height: 900%;
+  width: 90%;
+  cursor pointer;
 }
 
 .foto-frase {
