@@ -12,7 +12,6 @@
     <div class="subtitulo">A world seen through the eyes of someone who loves him</div>
 
     <div class="grid-home">
-
       <!-- Fila 1 -->
       <div>
         <a href="juegos.html" class="boton-kawaii">
@@ -20,13 +19,13 @@
           <span>Juegos</span>
         </a>
       </div>
-      <div>
-        <img src="img/foto1.jpg" class="foto-frase" alt="Frase 1" />
+      <div class="foto-container">
+        <img src="img/foto1.jpg" class="foto-frase" alt="Frase 1" onclick="mostrarFrase('Frase de la foto 1')" />
       </div>
 
       <!-- Fila 2 -->
-      <div>
-        <img src="img/foto2.jpg" class="foto-frase" alt="Frase 2" />
+      <div class="foto-container">
+        <img src="img/foto2.jpg" class="foto-frase" alt="Frase 2" onclick="mostrarFrase('Frase de la foto 2')" />
       </div>
       <div>
         <a href="playlist.html" class="boton-kawaii">
@@ -42,13 +41,13 @@
           <span>Mensajes</span>
         </a>
       </div>
-      <div>
-        <img src="img/foto3.jpg" class="foto-frase" alt="Frase 3" />
+      <div class="foto-container">
+        <img src="img/foto3.jpg" class="foto-frase" alt="Frase 3" onclick="mostrarFrase('Frase de la foto 3')" />
       </div>
 
       <!-- Fila 4 -->
-      <div>
-        <img src="img/foto4.jpg" class="foto-frase" alt="Frase 4" />
+      <div class="foto-container">
+        <img src="img/foto4.jpg" class="foto-frase" alt="Frase 4" onclick="mostrarFrase('Frase de la foto 4')" />
       </div>
       <div>
         <a href="videos.html" class="boton-kawaii">
@@ -56,8 +55,17 @@
           <span>Videos</span>
         </a>
       </div>
+    </div>
 
+    <!-- Ventana emergente tipo libro -->
+    <div id="ventana-frase" class="ventana-frase">
+      <div class="contenido-frase">
+        <span class="cerrar" onclick="cerrarFrase()">&times;</span>
+        <p id="texto-frase"></p>
+      </div>
     </div>
   </div>
+
+  <script src="jasc.js"></script>
 </body>
 </html>
