@@ -244,7 +244,7 @@ main.contenido section {
   height: 250px;   /* altura fija, puedes subirla si quieres más grande */
   object-fit: cover;  /* recorta y llena el espacio */
   object-position: center; /* centra la imagen */
-  border-radius: 15px;
+  border-radius: 5px;
   margin-top: 0.5rem;
 }
 
