@@ -69,7 +69,7 @@ if (btnSiguiente) {
 // Juegos: mostrar juegos y control botones A y B
 // -----------------------------
 
-const frases = [
+const frasesJ = [
   { texto: "text text text ", autor: "Yuffie" },
   { texto: "text text text ", autor: "Naeve" },
   { texto: "text text text ", autor: "Zephyr" },
