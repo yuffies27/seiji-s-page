@@ -1,100 +1,139 @@
+
 @import url("style.css");
 
-/* Evita scroll, fondo y fuente general */
-html, body {
+/* Layout general */
+body, html {
   margin: 0;
   padding: 0;
-  background-color: #D9F0F0;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
   height: 100vh;
   overflow: hidden;
+  background-color: #D9F0F0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-/* Contenedor general */
-.contenido {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  justify-content: flex-start;
+  height: 100%;
 }
 
-/* Título principal */
+/* Títulos */
 .titulo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  margin-top: 1rem;
 }
 
-/* Subtítulo */
 .subtitulo {
-  font-size: 0.9rem;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* Grid de estructura general */
-.grid {
+/* Grid de botones y fotos */
+.grid-home {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: center;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.5rem;
+  width: 90%;
+  max-width: 700px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-/* Estilo para cada celda */
-.celda {
+/* Botones kawaii */
+.boton-kawaii {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  background-color: #FFEBB0;
+  border: 2px solid #509FB0;
+  border-radius: 20px;
+  padding: 0.5rem;
+  height: 100%;
   justify-content: center;
+  transition: transform 0.2s;
 }
 
-/* Contenedor imagen con frase (cuadro blanco con texto) */
-.foto-con-frase {
-  background-color: transparent;
-  border: none;
-  width: 150px;
-  height: auto;
-  text-align: center;
-  padding: 0;
-  margin: 0;
+.boton-kawaii img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.2rem;
 }
 
-/* Imagen dentro del cuadro de frase */
-.foto-con-frase img {
-  width: 150px;
-  height: auto;
-  border-radius: 0;
-  border: none;
-  box-shadow: none;
-}
-
-/* Texto de la frase */
-.frase {
-  font-size: 0.85rem;
-  margin-top: 5px;
-}
-
-/* Botón imagen sin borde ni fondo */
-.boton-imagen {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-/* Imagen del botón (sin borde ni marco) */
-.boton-imagen img {
-  width: 150px;
-  height: auto;
-  border: none;
-  box-shadow: none;
-}
-
-/* Texto debajo de la imagen del botón */
-.boton-texto {
-  margin-top: 4px;
-  font-weight: bold;
+.boton-kawaii span {
+  color: #333;
   font-size: 0.9rem;
+}
+
+.boton-kawaii:hover {
+  transform: scale(1.05);
+}
+
+/* Fotos con frases */
+.foto-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.foto-frase {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.foto-frase:hover {
+  transform: scale(1.03);
+}
+
+/* Ventana emergente tipo libro */
+.ventana-frase {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  width: 80%;
+  max-width: 400px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 3px solid #509FB0;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
   text-align: center;
+}
+
+/* Animación al activarse */
+.ventana-frase.activa {
+  opacity: 1;
+  z-index: 100;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.contenido-frase {
+  position: relative;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* Botón de cerrar */
+.cerrar {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #509FB0;
+  color: white;
+  border-radius: 50%;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
 }
