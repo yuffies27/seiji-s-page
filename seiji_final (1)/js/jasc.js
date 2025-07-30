@@ -367,7 +367,8 @@ const playlistData = {
     { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
     { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
     { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
-   "Zephyr": [
+  ],
+  "Zephyr": [
     { titulo: "Canción 1", url: "https://open.spotify.com/embed/track/..." },
     { titulo: "Canción 2", url: "https://open.spotify.com/embed/track/..." },
     { titulo: "Canción 3", url: "https://open.spotify.com/embed/track/..." },
