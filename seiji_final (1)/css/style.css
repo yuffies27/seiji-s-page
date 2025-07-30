@@ -259,7 +259,7 @@ main.contenido section {
 }
 
 /* Comentarios estilo tweet */
-.comentario {
+#comentario {
   display: flex;
   background: #4A90E2; /* Botón azul medio */
   padding: 0.8rem;
@@ -271,7 +271,7 @@ main.contenido section {
   box-shadow: 0 0 10px rgba(59, 122, 116, 0.3); /* sombra verde azulado */
 }
 
-.comentario img.perfil {
+#comentario img.perfil {
   width: 42px;
   height: 42px;
   border-radius: 50%;
