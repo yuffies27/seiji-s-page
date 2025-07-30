@@ -345,10 +345,10 @@ if (botonB) {
 
 const playlistData = {
   "Yuffie": [
-    { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 2", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Rainy Tapestry", embed: "https://open.spotify.com/intl-es/track/3INsIMe6Ap6EJ2xXgt9NB8?si=1d19a679b885431f" },
+    { title: "Keep on Loving you", embed: "https://open.spotify.com/intl-es/track/3GUSidbQwd7xuvU6AQorRh?si=bb0a4d33bb8040eb" },
+    { title: "You", embed: "https://open.spotify.com/intl-es/track/5KZ0qobWEFl892YjIC02SE?si=73fe2ed91446445b" },
+    { title: "Endlessly", embed: "https://open.spotify.com/intl-es/track/0wzCQjc8JRa39ej1TFkAFt?si=fc00748058f94a76" },
   ],
   "Naeve": [
     { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
@@ -369,10 +369,10 @@ const playlistData = {
     { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
   ],
   "Zephyr": [
-    { titulo: "Canción 1", url: "https://open.spotify.com/embed/track/..." },
-    { titulo: "Canción 2", url: "https://open.spotify.com/embed/track/..." },
-    { titulo: "Canción 3", url: "https://open.spotify.com/embed/track/..." },
-    { titulo: "Canción 4", url: "https://open.spotify.com/embed/track/..." }
+    { titulo: "Stranger in Moscow", url: "https://open.spotify.com/intl-es/track/64KrFHj9p5AyCX2yZQr4YJ?si=a4565aaeaa4f4e5c" },
+    { titulo: "Outside", url: "https://open.spotify.com/intl-es/track/0IXWLMBZeK33mOb044Sxu6?si=3bd6276c4a254b94" },
+    { titulo: "2000 Watts", url: "https://open.spotify.com/intl-es/track/4aTYZL8uyGXAdmWOQy4Wgx?si=ec42db64296d4aca" },
+    { titulo: "Jam", url: "https://open.spotify.com/intl-es/track/2EI8uljBPaI23VUr2tv4eS?si=1df7816e94cc4b43" }
   ],
 };
 
