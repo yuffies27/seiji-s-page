@@ -445,3 +445,33 @@ if(carouselWrapper){
     carouselWrapper.scrollLeft = scrollLeft - walk;
   });
 }
+
+// Selecciona todos los contenedores de fotos
+const fotos = document.querySelectorAll('.foto-container');
+// Selecciona la ventana emergente
+const ventana = document.querySelector('.ventana-frase');
+// Selecciona el contenido de la frase
+const contenido = document.querySelector('.contenido-frase');
+// Selecciona el botón de cerrar
+const cerrar = document.querySelector('.cerrar');
+
+// Frases asociadas (puedes personalizar estos textos según el orden de las fotos)
+const frases = [
+  "Frase 1: Siempre estás en mis pensamientos ♡",
+  "Frase 2: Este rincón es solo tuyo",
+  "Frase 3: Eres una luz en mi vida",
+  "Frase 4: Aquí se guarda todo lo bonito de ti"
+];
+
+// Asociar cada foto a su frase
+fotos.forEach((foto, index) => {
+  foto.addEventListener('click', () => {
+    contenido.textContent = frases[index];
+    ventana.classList.add('activa');
+  });
+});
+
+// Cerrar la ventana
+cerrar.addEventListener('click', () => {
+  ventana.classList.remove('activa');
+});
