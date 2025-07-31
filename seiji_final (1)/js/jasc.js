@@ -369,10 +369,10 @@ const playlistData = {
     { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
   ],
   "Zephyr": [
-    { titulo: "Stranger in Moscow", url: "https://open.spotify.com/intl-es/track/64KrFHj9p5AyCX2yZQr4YJ?si=a4565aaeaa4f4e5c" },
-    { titulo: "Outside", url: "https://open.spotify.com/intl-es/track/0IXWLMBZeK33mOb044Sxu6?si=3bd6276c4a254b94" },
-    { titulo: "2000 Watts", url: "https://open.spotify.com/intl-es/track/4aTYZL8uyGXAdmWOQy4Wgx?si=ec42db64296d4aca" },
-    { titulo: "Jam", url: "https://open.spotify.com/intl-es/track/2EI8uljBPaI23VUr2tv4eS?si=1df7816e94cc4b43" }
+    { titulo: "Stranger in Moscow", embed: "https://open.spotify.com/intl-es/track/64KrFHj9p5AyCX2yZQr4YJ?si=a4565aaeaa4f4e5c" },
+    { titulo: "Outside", embed: "https://open.spotify.com/intl-es/track/0IXWLMBZeK33mOb044Sxu6?si=3bd6276c4a254b94" },
+    { titulo: "2000 Watts", embed: "https://open.spotify.com/intl-es/track/4aTYZL8uyGXAdmWOQy4Wgx?si=ec42db64296d4aca" },
+    { titulo: "Jam", embed: "https://open.spotify.com/intl-es/track/2EI8uljBPaI23VUr2tv4eS?si=1df7816e94cc4b43" }
   ],
 };
 
