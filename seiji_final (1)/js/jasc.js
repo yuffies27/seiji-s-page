@@ -340,40 +340,41 @@ if (botonB) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Datos de canciones por amigo
-  const playlistData = {
-    "Yuffie": [
-      { title: "Rainy Tapestry", embed: "https://open.spotify.com/embed/track/3INsIMe6Ap6EJ2xXgt9NB8" },
-      { title: "Keep on Loving you", embed: "https://open.spotify.com/embed/track/3GUSidbQwd7xuvU6AQorRh" },
-      { title: "You", embed: "https://open.spotify.com/embed/track/5KZ0qobWEFl892YjIC02SE" },
-      { title: "Endlessly", embed: "https://open.spotify.com/embed/track/0wzCQjc8JRa39ej1TFkAFt" },
-    ],
-    "Naeve": [
-      { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
-      { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
-      { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
-      { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
-    ],
-    "Daniel": [
-      { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
-      { title: "Song 2", embed: "https://open.spotify.com/embed/track/..." },
-      { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
-      { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
-    ],
-    "Candy": [
-      { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
-      { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
-      { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
-      { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
-    ],
-    "Zephyr": [
-      { title: "Stranger in Moscow", embed: "https://open.spotify.com/embed/track/64KrFHj9p5AyCX2yZQr4YJ" },
-      { title: "Outside", embed: "https://open.spotify.com/embed/track/0IXWLMBZeK33mOb044Sxu6" },
-      { title: "2000 Watts", embed: "https://open.spotify.com/embed/track/4aTYZL8uyGXAdmWOQy4Wgx" },
-      { title: "Jam", embed: "https://open.spotify.com/embed/track/2EI8uljBPaI23VUr2tv4eS" },
-    ],
-  };
+// Datos de canciones por amigo
+const playlistData = {
+  "Yuffie": [
+    { title: "Rainy Tapestry", embed: "https://open.spotify.com/embed/track/3INsIMe6Ap6EJ2xXgt9NB8" },
+    { title: "Keep on Loving you", embed: "https://open.spotify.com/embed/track/3GUSidbQwd7xuvU6AQorRh" },
+    { title: "You", embed: "https://open.spotify.com/embed/track/5KZ0qobWEFl892YjIC02SE" },
+    { title: "Endlessly", embed: "https://open.spotify.com/embed/track/0wzCQjc8JRa39ej1TFkAFt" },
+  ],
+  "Naeve": [
+    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
+  ],
+  "Daniel": [
+    { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 2", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
+  ],
+  "Candy": [
+    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
+  ],
+  "Zephyr": [
+    { title: "Stranger in Moscow", embed: "https://open.spotify.com/embed/track/64KrFHj9p5AyCX2yZQr4YJ" },
+    { title: "Outside", embed: "https://open.spotify.com/embed/track/0IXWLMBZeK33mOb044Sxu6" },
+    { title: "2000 Watts", embed: "https://open.spotify.com/embed/track/4aTYZL8uyGXAdmWOQy4Wgx" },
+    { title: "Jam", embed: "https://open.spotify.com/embed/track/2EI8uljBPaI23VUr2tv4eS" },
+  ],
+};
 
+document.addEventListener("DOMContentLoaded", () => {
   const friends = document.querySelectorAll('.friend');
   const playlistSection = document.querySelector('#playlistBox');
 
@@ -421,40 +422,40 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Scroll táctil y drag para carrusel
-  const carouselWrapper = document.querySelector('.carousel-wrapper');
+  const carousel = document.querySelector('.carousel');
   let isDown = false;
   let startX;
   let scrollLeft;
 
-  if (carouselWrapper) {
-    carouselWrapper.addEventListener('mousedown', e => {
+  if (carousel) {
+    // Mouse
+    carousel.addEventListener('mousedown', e => {
       isDown = true;
-      startX = e.pageX - carouselWrapper.offsetLeft;
-      scrollLeft = carouselWrapper.scrollLeft;
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
     });
-    carouselWrapper.addEventListener('mouseleave', () => { isDown = false; });
-    carouselWrapper.addEventListener('mouseup', () => { isDown = false; });
-    carouselWrapper.addEventListener('mousemove', e => {
+    carousel.addEventListener('mouseleave', () => { isDown = false; });
+    carousel.addEventListener('mouseup', () => { isDown = false; });
+    carousel.addEventListener('mousemove', e => {
       if (!isDown) return;
       e.preventDefault();
-      const x = e.pageX - carouselWrapper.offsetLeft;
+      const x = e.pageX - carousel.offsetLeft;
       const walk = (x - startX) * 2;
-      carouselWrapper.scrollLeft = scrollLeft - walk;
+      carousel.scrollLeft = scrollLeft - walk;
     });
 
-    carouselWrapper.addEventListener('touchstart', e => {
-      startX = e.touches[0].pageX - carouselWrapper.offsetLeft;
-      scrollLeft = carouselWrapper.scrollLeft;
+    // Touch
+    carousel.addEventListener('touchstart', e => {
+      startX = e.touches[0].pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
     });
-    carouselWrapper.addEventListener('touchmove', e => {
-      const x = e.touches[0].pageX - carouselWrapper.offsetLeft;
+    carousel.addEventListener('touchmove', e => {
+      const x = e.touches[0].pageX - carousel.offsetLeft;
       const walk = (x - startX) * 2;
-      carouselWrapper.scrollLeft = scrollLeft - walk;
+      carousel.scrollLeft = scrollLeft - walk;
     });
   }
 });
-
-
 
 // Selecciona todos los contenedores de fotos
 const fotos = document.querySelectorAll('.foto-container');
