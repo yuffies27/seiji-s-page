@@ -12,74 +12,76 @@ html, body {
 }
 
 /* Contenedor general */
-.contenido {
+.contenido-playlist {
+  background: #D9F0F0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  padding: 1rem;
+  overflow: hidden;
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
-/* Título y texto */
+/* Título y texto (si usas) */
 h1 {
   font-size: 2rem;
   color: #3B3B3B;
   margin: 0.5rem 0;
 }
 
-.contenido p {
+.contenido-playlist p {
   font-size: 1rem;
   margin: 0.5rem 0 1rem;
 }
 
 /* Carrusel con scroll táctil manual */
-.carousel-wrapper {
-  width: 100%;
+.carousel {
+  display: flex;
   overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  padding: 1rem 0;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 600px;
+  -webkit-overflow-scrolling: touch;
   border-bottom: 1px solid #ccc;
-  touch-action: pan-x;
   -ms-overflow-style: none;  /* IE scrollbar oculto */
   scrollbar-width: none;     /* Firefox scrollbar oculto */
 }
 
-.carousel-wrapper::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
   display: none; /* Chrome scrollbar oculto */
-}
-
-.carousel {
-  display: flex;
-  gap: 1rem;
-  width: max-content;
-  animation: none;
 }
 
 /* Estilo de cada amigo (avatar + nombre) */
 .friend {
   flex: 0 0 auto;
+  width: 100px;
   scroll-snap-align: center;
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease;
   user-select: none;
+  border-radius: 10px;
+  padding: 0.2rem;
 }
 
 .friend:hover,
-.friend.hovered {
+.friend.activo {
   transform: scale(1.1);
+  box-shadow: 0 0 8px #3B7A74;
+  border: 2px solid #3B7A74;
 }
 
 .friend img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 3px solid #FFEBB0;
   object-fit: cover;
+  border: 3px solid #3B7A74;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
@@ -91,20 +93,25 @@ h1 {
   color: #555;
 }
 
-/* Zona de canciones */
-.playlist-section {
-  flex: 1;
-  width: 100%;
+/* Contenedor de playlist */
+#playlistBox {
+  margin-top: 1.5rem;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
-  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  overflow-y: auto;
+  max-height: 350px;
+  box-sizing: border-box;
   padding-bottom: 1rem;
+  background-color: #FFEBB0;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Tarjetas de canción */
+/* Tarjetas de canción (si usas) */
 .card {
   background: #F7EEE5;
   border-radius: 16px;
@@ -131,7 +138,7 @@ h1 {
 
 /* Reproductor embebido */
 iframe {
-  width: 100%;
+  width: 250px;
   height: 80px;
   border-radius: 12px;
   margin-top: 0.3rem;
@@ -149,5 +156,4 @@ iframe {
 .spotify-link:hover {
   text-decoration: underline;
 }
-
 
