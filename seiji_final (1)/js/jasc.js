@@ -339,117 +339,121 @@ if (botonB) {
   botonB.addEventListener('click', () => mostrarJuego('atrapa'));
 }
 
-// Datos de canciones por amigo
-const playlistData = {
-  "Yuffie": [
-    { title: "Rainy Tapestry", embed: "https://open.spotify.com/embed/track/3INsIMe6Ap6EJ2xXgt9NB8" },
-    { title: "Keep on Loving you", embed: "https://open.spotify.com/embed/track/3GUSidbQwd7xuvU6AQorRh" },
-    { title: "You", embed: "https://open.spotify.com/embed/track/5KZ0qobWEFl892YjIC02SE" },
-    { title: "Endlessly", embed: "https://open.spotify.com/embed/track/0wzCQjc8JRa39ej1TFkAFt" },
-  ],
-  "Naeve": [
-    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
-  ],
-  "Daniel": [
-    { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 2", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
-  ],
-  "Candy": [
-    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
-  ],
-  "Zephyr": [
-    { title: "Stranger in Moscow", embed: "https://open.spotify.com/embed/track/64KrFHj9p5AyCX2yZQr4YJ" },
-    { title: "Outside", embed: "https://open.spotify.com/embed/track/0IXWLMBZeK33mOb044Sxu6" },
-    { title: "2000 Watts", embed: "https://open.spotify.com/embed/track/4aTYZL8uyGXAdmWOQy4Wgx" },
-    { title: "Jam", embed: "https://open.spotify.com/embed/track/2EI8uljBPaI23VUr2tv4eS" },
-  ],
-};
+document.addEventListener('DOMContentLoaded', () => {
+  // Datos de canciones por amigo
+  const playlistData = {
+    "Yuffie": [
+      { title: "Rainy Tapestry", embed: "https://open.spotify.com/embed/track/3INsIMe6Ap6EJ2xXgt9NB8" },
+      { title: "Keep on Loving you", embed: "https://open.spotify.com/embed/track/3GUSidbQwd7xuvU6AQorRh" },
+      { title: "You", embed: "https://open.spotify.com/embed/track/5KZ0qobWEFl892YjIC02SE" },
+      { title: "Endlessly", embed: "https://open.spotify.com/embed/track/0wzCQjc8JRa39ej1TFkAFt" },
+    ],
+    "Naeve": [
+      { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
+      { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
+      { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
+      { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
+    ],
+    "Daniel": [
+      { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
+      { title: "Song 2", embed: "https://open.spotify.com/embed/track/..." },
+      { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
+      { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
+    ],
+    "Candy": [
+      { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
+      { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
+      { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
+      { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
+    ],
+    "Zephyr": [
+      { title: "Stranger in Moscow", embed: "https://open.spotify.com/embed/track/64KrFHj9p5AyCX2yZQr4YJ" },
+      { title: "Outside", embed: "https://open.spotify.com/embed/track/0IXWLMBZeK33mOb044Sxu6" },
+      { title: "2000 Watts", embed: "https://open.spotify.com/embed/track/4aTYZL8uyGXAdmWOQy4Wgx" },
+      { title: "Jam", embed: "https://open.spotify.com/embed/track/2EI8uljBPaI23VUr2tv4eS" },
+    ],
+  };
 
-const friends = document.querySelectorAll('.friend');
-const playlistSection = document.querySelector('#playlistBox');
+  const friends = document.querySelectorAll('.friend');
+  const playlistSection = document.querySelector('#playlistBox');
 
-friends.forEach(friend => {
-  friend.addEventListener('click', () => {
-    const name = friend.dataset.name;
-    const songs = playlistData[name];
-    renderPlaylist(name, songs);
+  // Mostrar playlist al hacer clic
+  friends.forEach(friend => {
+    friend.addEventListener('click', () => {
+      const name = friend.dataset.name;
+      const songs = playlistData[name];
+      renderPlaylist(name, songs);
 
-    // Marca el amigo activo para estilos visuales
-    friends.forEach(f => f.classList.remove('activo'));
-    friend.classList.add('activo');
+      // Marca el amigo activo para estilos
+      friends.forEach(f => f.classList.remove('activo'));
+      friend.classList.add('activo');
+    });
   });
-});
 
-function renderPlaylist(name, songs) {
-  playlistSection.innerHTML = ""; // limpia el contenido anterior
+  function renderPlaylist(name, songs) {
+    playlistSection.innerHTML = ""; // limpiar anterior
 
-  if (!songs || songs.length === 0) {
-    playlistSection.innerHTML = `<p>No hay canciones disponibles para ${name}.</p>`;
-    return;
+    if (!songs || songs.length === 0) {
+      playlistSection.innerHTML = `<p>No hay canciones disponibles para ${name}.</p>`;
+      return;
+    }
+
+    songs.forEach(song => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <h3>${song.title}</h3>
+        <iframe src="${song.embed}" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy"></iframe>
+        <a class="spotify-link" href="${song.embed.replace('/embed/', '/')}" target="_blank" rel="noopener noreferrer">
+          Abrir en Spotify
+        </a>
+      `;
+      playlistSection.appendChild(card);
+    });
   }
 
-  songs.forEach(song => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <h3>${song.title}</h3>
-      <iframe src="${song.embed}" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy"></iframe>
-      <a class="spotify-link" href="${song.embed.replace('/embed/', '/')}" target="_blank" rel="noopener noreferrer">
-        Abrir en Spotify
-      </a>
-    `;
-    playlistSection.appendChild(card);
+  // Hover táctil para móviles
+  friends.forEach(friend => {
+    friend.addEventListener('touchstart', () => friend.classList.add('hovered'));
+    friend.addEventListener('touchend', () => friend.classList.remove('hovered'));
   });
-}
 
-// Hover táctil para móviles
-friends.forEach(friend => {
-  friend.addEventListener('touchstart', () => friend.classList.add('hovered'));
-  friend.addEventListener('touchend', () => friend.classList.remove('hovered'));
+  // Scroll táctil y drag para carrusel
+  const carouselWrapper = document.querySelector('.carousel-wrapper');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  if (carouselWrapper) {
+    carouselWrapper.addEventListener('mousedown', e => {
+      isDown = true;
+      startX = e.pageX - carouselWrapper.offsetLeft;
+      scrollLeft = carouselWrapper.scrollLeft;
+    });
+    carouselWrapper.addEventListener('mouseleave', () => { isDown = false; });
+    carouselWrapper.addEventListener('mouseup', () => { isDown = false; });
+    carouselWrapper.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carouselWrapper.offsetLeft;
+      const walk = (x - startX) * 2;
+      carouselWrapper.scrollLeft = scrollLeft - walk;
+    });
+
+    carouselWrapper.addEventListener('touchstart', e => {
+      startX = e.touches[0].pageX - carouselWrapper.offsetLeft;
+      scrollLeft = carouselWrapper.scrollLeft;
+    });
+    carouselWrapper.addEventListener('touchmove', e => {
+      const x = e.touches[0].pageX - carouselWrapper.offsetLeft;
+      const walk = (x - startX) * 2;
+      carouselWrapper.scrollLeft = scrollLeft - walk;
+    });
+  }
 });
 
-// Scroll táctil con arrastre (drag) para carrusel
-const carouselWrapper = document.querySelector('.carousel-wrapper');
-let isDown = false;
-let startX;
-let scrollLeft;
-
-if (carouselWrapper) {
-  carouselWrapper.addEventListener('mousedown', e => {
-    isDown = true;
-    startX = e.pageX - carouselWrapper.offsetLeft;
-    scrollLeft = carouselWrapper.scrollLeft;
-  });
-  carouselWrapper.addEventListener('mouseleave', () => { isDown = false; });
-  carouselWrapper.addEventListener('mouseup', () => { isDown = false; });
-  carouselWrapper.addEventListener('mousemove', e => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - carouselWrapper.offsetLeft;
-    const walk = (x - startX) * 2; // velocidad scroll
-    carouselWrapper.scrollLeft = scrollLeft - walk;
-  });
-
-  carouselWrapper.addEventListener('touchstart', e => {
-    startX = e.touches[0].pageX - carouselWrapper.offsetLeft;
-    scrollLeft = carouselWrapper.scrollLeft;
-  });
-  carouselWrapper.addEventListener('touchmove', e => {
-    const x = e.touches[0].pageX - carouselWrapper.offsetLeft;
-    const walk = (x - startX) * 2;
-    carouselWrapper.scrollLeft = scrollLeft - walk;
-  });
-}
 
 
 // Selecciona todos los contenedores de fotos
