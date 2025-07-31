@@ -8,14 +8,15 @@
 </head>
 <body>
 
-  <!-- Menú hamburguesa con IDs para funcionar con tu JS -->
-  <div id="btn-menu">☰</div>
-  <nav id="nav-menu" class="oculto">
-    <button onclick="location.href='home.html'">Inicio</button>
-    <button onclick="location.href='juegos.html'">Juegos</button>
-    <button onclick="location.href='mensajes.html'">Mensajes</button>
-    <button onclick="location.href='videos.html'">Videos</button>
-  </nav>
+  <header>
+    <button id="btn-menu" aria-label="Menú">☰</button>
+    <nav id="nav-menu" class="oculto">
+      <a href="home.html">inicio</a>
+      <a href="juegos.html">juegos</a>
+      <a href="videos.html">videos</a>
+      <a href="mensajes.html">mensajes</a>
+    </nav>
+  </header>
 
   <!-- Contenedor general -->
   <div class="contenido-playlist">
