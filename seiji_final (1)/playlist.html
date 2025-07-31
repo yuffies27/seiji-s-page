@@ -10,12 +10,12 @@
 
   <!-- Menú hamburguesa -->
   <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <div class="menu" id="menu">
+  <nav class="menu" id="menu">
     <button onclick="location.href='home.html'">Inicio</button>
     <button onclick="location.href='juegos.html'">Juegos</button>
     <button onclick="location.href='mensajes.html'">Mensajes</button>
     <button onclick="location.href='videos.html'">Videos</button>
-  </div>
+  </nav>
 
   <!-- Contenedor general -->
   <div class="contenido-playlist">
@@ -23,10 +23,6 @@
     <!-- Carrusel de amigos -->
     <div class="carousel-wrapper">
       <div class="carousel" id="carousel">
-        <div class="friend" onclick="mostrarPlaylist('seiji')">
-          <img src="img/seiji.jpg" alt="Seiji" />
-          <span>Seiji</span>
-        </div>
         <div class="friend" onclick="mostrarPlaylist('yuffie')">
           <img src="img/yuffie.jpg" alt="Yuffie" />
           <span>Yuffie</span>
@@ -52,12 +48,12 @@
 
     <!-- Tarjetas de canciones -->
     <div class="playlist-box" id="playlistBox">
-      <!-- Aquí se cargan las canciones por JS -->
+      <!-- Aquí se cargarán las canciones mediante JS -->
     </div>
 
   </div>
 
   <script src="jasc.js"></script>
+
 </body>
 </html>
-
