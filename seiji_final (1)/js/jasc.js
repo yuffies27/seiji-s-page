@@ -132,12 +132,12 @@ const playlistData = {
     },
     { 
       title: "HAPPY BIRTHDAY TO YOU", 
-      embed: "https://open.spotify.com/intl-es/track/4hD3GY02X1jqSeku2G9FxS?si=40a2ee1091dc454c", 
+      embed: "https://open.spotify.com/embed/track/4hD3GY02X1jqSeku2G9FxS?si=40a2ee1091dc454c", 
       img: "https://via.placeholder.com/80" 
     },
     { 
       title: "BIRDS OF A FEATHER", 
-      embed: "https://open.spotify.com/intl-es/track/6dOtVTDdiauQNBQEDOtlAB?si=29a2b195d1a64a9c", 
+      embed: "https://open.spotify.com/embed/track/6dOtVTDdiauQNBQEDOtlAB?si=29a2b195d1a64a9c", 
       img: "https://via.placeholder.com/80" 
     },
   ],
@@ -230,15 +230,15 @@ function cargarPregunta(fraseObj) {
       <p class="frase">"${fraseObj.texto}"</p>
       <div class="opciones-corazones">
         <div class="fila">
-          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'Yuffie')">Yuffie</button>
-          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'Naeve')">Naeve</button>
+          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'yuffie')">yuffie</button>
+          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'naeve')">naeve</button>
         </div>
         <div class="fila">
-          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'Zephyr')">Zephyr</button>
-          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'Isa')">Candy</button>
+          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'zephyr')">zephyr</button>
+          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'isa')">isa</button>
         </div>
         <div class="fila fila-centrada">
-          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'Daniel')">Daniel</button>
+          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'daniel')">daniel</button>
         </div>
       </div>
       <p id="resultado" class="respuesta"></p>
