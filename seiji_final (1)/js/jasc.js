@@ -14,7 +14,7 @@ let intervalos = [];
 // -----------------------------
 
 const comentarios = [
-  { nombre: "yuffie", user: "@onlineusagirl", mensaje: "text text text ", foto: "img/yuffie.jpg" },
+  { nombre: "yuffie", user: "@onlineusagirl", mensaje: "Feliz cumpleañitos amor de mi vida, gracias por todo lo que haces por mi, te amo mas que a nada en el mundo y espero estar en muchos cumleañitos mas contigo <3, disfruta mucho tu dia y que tengas un mui bonito añio a pesar de los buenos i malos momentos. Eres una persona muy hermosa y me hace felis que me permitas ser parte de tu vida, te amo te amo y estoi mega enamorada de ti meu bizcochito (❤️ ω ❤️)", foto: "img/yuffie.jpg" },
   { nombre: "zephyr",  user: "@necrocize",  mensaje: "feliz cumple gordo d mi corazon, gracias por ser un amigo mas y apoyarme en casi todo. Te adoro muchísimo boludito, te convertiste en una persona muy importante para mí en tan poco tiempo, espero la pases re bien y disfrutes mucho este día pq merecés todo lo mejor. Gracias por todo mi gordo, gracias x tambien ser mi amante 🫶🏻", foto: "img/zephyr.jpg" },
   { nombre: "naeve",  user: "@cinefliar",  mensaje: "Feliz cumple, gordito. Gracias por ser mi mejor amigo, por estar siempre conmigo, incluso en mis peores momentos. No sabés lo que valoro tener a alguien como vos en mi vida, alguien que me banca, que me escucha, que me hace reír y que me acompaña sin juzgarme. Sos una de las personas más importantes que tengo, y espero que hoy la pases rodeado de todo eso que te hace bien y de la gente que te quiere, porque te lo re merecés. Te adoro muchísimo 💗💗💗", foto: "img/naeve.jpg" },
   { nombre: "daniel", user: "@cautlver", mensaje: "Hola goldito jeje felis cumpleaños, t keria decir que hoi no solo se celebra tu vida sino también la suerte d tenerte kmo amigo pk eres una persona muuy linda en todos los aspectos, siempre autentico i unico yy con una vibra que siempre contagia. Espero k todas tus metas se cumplan y k tu vida siempre esté llena d momentos felices. Te kiero demasiado y espero k en este día tan especial para ti la pases suuupeer bienn 🫶🏻", foto: "img/daniel.jpg" },
@@ -22,11 +22,12 @@ const comentarios = [
 ];
 
 const frasesJ = [
-  { texto: "text text text ", autor: "Yuffie" },
-  { texto: "facundo kere coca", autor: "Naeve" },
-  { texto: "SOPLAME LA VELAAAA", autor: "Zephyr" },
-  { texto: "text text text ", autor: "Daniel" },
-  { texto: "a ver malparida primero que todo mi cabello es real mira  como puedo verlo no es un pintando ahí de mona grilla ew", autor: "Isa" }
+  { texto: "la guadalupana la guadalupana...", autor: "yuffie" },
+  { texto: "facundo kere coca", autor: "naeve" },
+  { texto: "SOPLAME LA VELAAAA", autor: "zephyr" },
+  { texto: "ya 19 añitos de fluir... 💆🏻‍♂️🙌🏻 UEE😭🥺💧Eu💧💧E E😭
+🥺😭UUUUE😭🥺💧🥺", autor: "daniel" },
+  { texto: "a ver malparida primero que todo mi cabello es real mira  como puedo verlo no es un pintando ahí de mona grilla ew", autor: "isa" }
 ];
 
 const playlistData = {
