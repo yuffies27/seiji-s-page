@@ -78,13 +78,15 @@ h1 {
 .friend {
   flex: 0 0 auto;
   width: 100px;
+  min-height: 120px; /* espacio suficiente para imagen + texto */
   scroll-snap-align: center;
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease;
   user-select: none;
   border-radius: 10px;
-  padding: 0.2rem;
+  padding: 0.2rem 0; /* solo arriba y abajo */
+  box-sizing: border-box;
 }
 
 .friend:hover,
@@ -101,15 +103,18 @@ h1 {
   object-fit: cover;
   border: 3px solid #3B7A74;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 6px; /* espacio entre imagen y nombre */
 }
 
 .friend span {
   display: block;
-  margin-top: 0.4rem;
+  margin-top: 0;
   font-size: 0.85rem;
   font-weight: bold;
   color: #555;
+  user-select: none;
 }
+
 
 /* Playlist box */
 #playlistBox {
