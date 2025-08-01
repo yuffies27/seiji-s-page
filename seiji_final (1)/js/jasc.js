@@ -24,7 +24,7 @@ const comentarios = [
 const frasesJ = [
   { texto: "text text text ", autor: "Yuffie" },
   { texto: "facundo kere coca", autor: "Naeve" },
-  { texto: "text text text ", autor: "Zephyr" },
+  { texto: "SOPLAME LA VELAAAA", autor: "Zephyr" },
   { texto: "text text text ", autor: "Daniel" },
   { texto: "a ver malparida primero que todo mi cabello es real mira  como puedo verlo no es un pintando ahí de mona grilla ew", autor: "Isa" }
 ];
