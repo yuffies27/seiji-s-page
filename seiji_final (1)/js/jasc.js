@@ -234,7 +234,7 @@ function cargarPregunta(fraseObj) {
         </div>
         <div class="fila">
           <button onclick="evaluarRespuesta('${fraseObj.autor}', 'Zephyr')">Zephyr</button>
-          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'Candy')">Candy</button>
+          <button onclick="evaluarRespuesta('${fraseObj.autor}', 'Isa')">Candy</button>
         </div>
         <div class="fila fila-centrada">
           <button onclick="evaluarRespuesta('${fraseObj.autor}', 'Daniel')">Daniel</button>
