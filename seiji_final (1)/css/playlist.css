@@ -7,7 +7,6 @@ html, body {
   background-color: #D9F0F0;
   font-family: sans-serif; /* Se eliminó la fuente cursiva */
   height: 100vh;
-  overflow-y: hidden; /* Bloquea scroll de toda la página */
 }
 
 /* Contenedor general */
