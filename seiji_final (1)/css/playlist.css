@@ -1,13 +1,14 @@
 @import url("style.css");
 
-/* Evitar scroll lateral y que ocupe toda la pantalla */
+/* Evitar scroll vertical en la página */
 html, body {
   margin: 0;
   padding: 0;
   background-color: #D9F0F0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  height: 100%;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow-y: hidden;     /* bloqueo solo vertical */
+  overflow-x: visible;    /* permitir scroll horizontal */
 }
 
 /* Contenedor general principal */
