@@ -5,7 +5,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #D9F0F0;
-  font-family: 'Comic Sans MS', sans-serif; /* sin cursiva */
+  font-family: sans-serif; /* Se eliminó la fuente cursiva */
   height: 100vh;
   overflow: hidden; /* Bloquea scroll de toda la página */
 }
@@ -37,7 +37,8 @@ h1 {
 /* Carrusel de amigos */
 .carousel {
   display: flex;
-  overflow-x: auto;
+  overflow-x: auto; /* Scroll horizontal solo aquí */
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   gap: 1rem;
   padding: 1rem;
@@ -49,6 +50,7 @@ h1 {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .carousel::-webkit-scrollbar {
   display: none;
 }
@@ -99,21 +101,19 @@ h1 {
   width: 100%;
   max-width: 700px;
   flex-grow: 1;
+  overflow-y: auto; /* Scroll vertical solo interno */
   padding: 1rem;
   background-color: #FFEBB0;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   box-sizing: border-box;
   align-content: start;
-
-  /* Scroll vertical activado */
-  overflow-y: auto;
-  max-height: 100%;
+  justify-items: center; /* Centrado de las tarjetas */
 }
 
 /* Tarjeta de canción */
 .card {
-  background: #E9F7F6;
+  background: #F7EEE5;
   border-radius: 16px;
   width: 100%;
   max-width: 250px;
@@ -155,6 +155,7 @@ iframe {
   text-decoration: none;
   font-weight: bold;
 }
+
 .spotify-link:hover {
   text-decoration: underline;
 }
