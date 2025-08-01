@@ -37,8 +37,24 @@ h1 {
 .carousel-wrapper {
   width: 100%;
   overflow-x: auto;
+  overflow-y: hidden; /* ¡importante! */
   -webkit-overflow-scrolling: touch;
 }
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0; /* Solo padding arriba y abajo pequeño, evita mucho vertical */
+  width: max-content;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  overflow-y: hidden; /* Ya está */
+  border-bottom: 1px solid #ccc;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 
 .carousel {
   display: flex;
