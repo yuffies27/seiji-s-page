@@ -1,7 +1,7 @@
 /* Reset básico */
 body, html {
   margin: 0;
-  padding: 0;
+  padding: 0 1rem; /* conservé tu padding lateral */
   height: 100%;
   background: #D9F0F0; /* Fondo general azul muy claro */
   font-family: 'Comic Sans MS', sans-serif;
@@ -10,7 +10,7 @@ body, html {
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding: 0 1rem;
+  font-style: normal; /* <-- aquí quitas la cursiva */
 }
 
 /* Pantalla de bloqueo kawaii */
@@ -63,7 +63,9 @@ body, html {
   box-shadow: 0 2px 5px rgba(59, 122, 116, 0.7); /* sombra verde azulado */
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
+  font-style: normal; /* evitar cursiva */
 }
+
 
 .teclado button:hover {
   background-color: #3B7A74; /* hover verde azulado */
@@ -183,6 +185,7 @@ p {
   color: #3B7A74;
   cursor: pointer;
   z-index: 1000;
+  font-style: normal; /* evitar cursiva */
 }
 
 /* Animación para mostrar el menú */
@@ -211,6 +214,7 @@ main.contenido section {
   margin-top: 1rem;
   font-size: 1rem;
   color: #1B475D; /* Texto principal azul oscuro */
+  font-style: normal; /* evitar cursiva */
 }
 
 /* --- Sección tipo tweet --- */
@@ -256,6 +260,7 @@ main.contenido section {
 .icons span {
   margin-right: 10px;
   font-size: 1.2rem;
+  font-style: normal; /* evitar cursiva */
 }
 
 /* Comentarios estilo tweet */
@@ -299,11 +304,13 @@ main.contenido section {
   color: #D9F0F0; /* Texto claro para contraste */
   font-size: 0.95rem;
   margin-bottom: 2px;
+  font-style: normal; /* evitar cursiva */
 }
 
 .user {
   font-size: 0.85rem;
   color: #D9F0F0; /* Texto claro */
+  font-style: normal; /* evitar cursiva */
 }
 
 .mensaje {
@@ -326,6 +333,7 @@ main.contenido section {
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
   box-shadow: 0 2px 5px rgba(59, 122, 116, 0.6); /* sombra verde azulado */
+  font-style: normal; /* evitar cursiva */
 }
 
 #mensajes button:hover, .comentario + button:hover {
