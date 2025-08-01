@@ -465,33 +465,35 @@ function setupPlaylist() {
     friend.addEventListener('touchend', () => friend.classList.remove('hovered'));
   });
 
-  function renderPlaylist(name, songs) {
-    playlistSection.innerHTML = "";
-    if (!songs || songs.length === 0) {
-      playlistSection.innerHTML = `<p>No hay canciones para ${name}</p>`;
-      return;
-    }
-
-    songs.forEach(song => {
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <h3>${song.title}</h3>
-        <img src="${song.img}" alt="Portada de ${song.title}" />
-        <iframe 
-          src="${song.embed}" 
-          width="250" height="80" 
-          frameborder="0" 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-          allowfullscreen 
-          loading="lazy"></iframe>
-        <a href="${song.embed.replace('/embed/', '/')}" target="_blank" rel="noopener noreferrer">
-          Abrir en Spotify
-        </a>
-      `;
-      playlistSection.appendChild(card);
-    });
+function renderPlaylist(name, songs) {
+  playlistSection.innerHTML = "";
+  if (!songs || songs.length === 0) {
+    playlistSection.innerHTML = `<p>No hay canciones para ${name}</p>`;
+    return;
   }
+
+  songs.forEach(song => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <h3>${song.title}</h3>
+      <img src="${song.img}" alt="Portada de ${song.title}" 
+           onerror="this.style.display='none';" />
+      <iframe 
+        src="${song.embed}" 
+        width="250" height="80" 
+        frameborder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        allowfullscreen 
+        loading="lazy"></iframe>
+      <a href="${song.embed.replace('/embed/', '/')}" target="_blank" rel="noopener noreferrer">
+        Abrir en Spotify
+      </a>
+    `;
+    playlistSection.appendChild(card);
+  });
+}
+
 
   // Scroll táctil y drag para carrusel
   const carousel = document.querySelector('.carousel');
