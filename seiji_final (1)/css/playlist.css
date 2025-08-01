@@ -1,17 +1,16 @@
 @import url("style.css");
 
-/* Evitar scroll vertical en la página */
+/* Estilos base */
 html, body {
   margin: 0;
   padding: 0;
   background-color: #D9F0F0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   height: 100vh;
-  overflow-y: hidden;     /* bloqueo solo vertical */
-  overflow-x: visible;    /* permitir scroll horizontal */
+  overflow: hidden; /* Bloquea scroll de toda la página */
 }
 
-/* Contenedor general principal */
+/* Contenedor general */
 .contenido-playlist {
   background: #D9F0F0;
   text-align: center;
@@ -19,11 +18,11 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   box-sizing: border-box;
 }
 
-/* Título y texto */
+/* Título y descripción */
 h1 {
   font-size: 2rem;
   color: #3B3B3B;
@@ -43,18 +42,18 @@ h1 {
   gap: 1rem;
   padding: 1rem;
   width: 100%;
-  max-width: 600px;
+  max-width: 100%;
+  box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
   border-bottom: 1px solid #ccc;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
 .carousel::-webkit-scrollbar {
   display: none;
 }
 
-/* Estilo de amigo (avatar + nombre) */
+/* Amigo */
 .friend {
   flex: 0 0 auto;
   width: 100px;
@@ -91,29 +90,27 @@ h1 {
   color: #555;
 }
 
-/* Contenedor de la playlist */
-/* Contenedor de playlist */
+/* Playlist box */
 #playlistBox {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;         /* Centrado horizontal */
-  align-content: center;          /* Centrado vertical si hay espacio */
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
   width: 100%;
   max-width: 700px;
+  flex-grow: 1;
   overflow-y: auto;
-  box-sizing: border-box;
   padding: 1rem;
-  background-color: #FFF6D1;       /* Color más suave que combina mejor */
+  background-color: #FFEBB0;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  align-content: start;
 }
 
-
-/* Tarjetas de canción */
+/* Tarjeta de canción */
 .card {
-  background: #F7EEE5;
+  background: #E9F7F6; /* color más armonioso */
   border-radius: 16px;
   width: 100%;
   max-width: 250px;
@@ -138,7 +135,7 @@ h1 {
   text-align: center;
 }
 
-/* Reproductor embebido de Spotify */
+/* Spotify embed */
 iframe {
   width: 100%;
   height: 80px;
@@ -147,7 +144,7 @@ iframe {
   max-width: 100%;
 }
 
-/* Enlace a Spotify */
+/* Link a Spotify */
 .spotify-link {
   margin-top: 0.4rem;
   font-size: 0.85rem;
@@ -155,8 +152,6 @@ iframe {
   text-decoration: none;
   font-weight: bold;
 }
-
 .spotify-link:hover {
   text-decoration: underline;
 }
-
