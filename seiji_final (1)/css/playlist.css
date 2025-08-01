@@ -97,13 +97,13 @@ h1 {
 }
 
 .friend img {
-  width: 80px;
-  height: 80px;
+  width: 60px;    /* antes 80px, ahora más pequeño */
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #3B7A74;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  margin-bottom: 6px; /* espacio entre imagen y nombre */
+  margin-bottom: 6px; /* espacio para el nombre */
 }
 
 .friend span {
