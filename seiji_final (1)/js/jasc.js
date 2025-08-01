@@ -31,36 +31,117 @@ const frasesJ = [
 
 const playlistData = {
   "Yuffie": [
-    { title: "Rainy Tapestry", embed: "https://open.spotify.com/embed/track/3INsIMe6Ap6EJ2xXgt9NB8" },
-    { title: "Keep on Loving you", embed: "https://open.spotify.com/embed/track/3GUSidbQwd7xuvU6AQorRh" },
-    { title: "You", embed: "https://open.spotify.com/embed/track/5KZ0qobWEFl892YjIC02SE" },
-    { title: "Endlessly", embed: "https://open.spotify.com/embed/track/0wzCQjc8JRa39ej1TFkAFt" },
+    { 
+      title: "Rainy Tapestry", 
+      embed: "https://open.spotify.com/embed/track/3INsIMe6Ap6EJ2xXgt9NB8",
+      img: "https://i.scdn.co/image/ab67616d0000b273ca07c4307a1a176742d7b0e0"
+    },
+    { 
+      title: "Keep on Loving you", 
+      embed: "https://open.spotify.com/embed/track/3GUSidbQwd7xuvU6AQorRh",
+      img: "https://i.scdn.co/image/ab67616d0000b273a2a104e06f11ce7e1bf9816a"
+    },
+    { 
+      title: "You", 
+      embed: "https://open.spotify.com/embed/track/5KZ0qobWEFl892YjIC02SE",
+      img: "https://i.scdn.co/image/ab67616d0000b273de1e48c40b13d74c18b4db02"
+    },
+    { 
+      title: "Endlessly", 
+      embed: "https://open.spotify.com/embed/track/0wzCQjc8JRa39ej1TFkAFt",
+      img: "https://i.scdn.co/image/ab67616d0000b2734f1fbd420261df84b3a1e6e2"
+    },
   ],
   "Naeve": [
-    { title: "Packing it Up", embed: "https://open.spotify.com/embed/track/0D89q3d3eclowHBcDQZ4qn?si=6981ce08cb9e48e8" },
-    { title: "Nunca quise ", embed: "https://open.spotify.com/embed/track/0ZAJ660VP57lLK4U7NlGOy?si=6880b9c5c1324f16" },
-    { title: "Too Close", embed: "https://open.spotify.com/embed/track/6gezrIScVLEnV1szuZxhvA?si=57e148bb0cb84c33" },
-    { title: "You & I", embed: "https://open.spotify.com/embed/track/2afCBiru10AFckfOa49wIa?si=dd3e77d293374429" },
-  ],
-  "Daniel": [
-    { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 2", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
+    { 
+      title: "Packing it Up", 
+      embed: "https://open.spotify.com/embed/track/0D89q3d3eclowHBcDQZ4qn?si=6981ce08cb9e48e8",
+      img: "https://i.scdn.co/image/ab67616d0000b273c9e4d361f2d2dd5372e2e5aa"
+    },
+    { 
+      title: "Nunca quise ", 
+      embed: "https://open.spotify.com/embed/track/0ZAJ660VP57lLK4U7NlGOy?si=6880b9c5c1324f16",
+      img: "https://i.scdn.co/image/ab67616d0000b2737e7a1f93f4227cc57ffca57d"
+    },
+    { 
+      title: "Too Close", 
+      embed: "https://open.spotify.com/embed/track/6gezrIScVLEnV1szuZxhvA?si=57e148bb0cb84c33",
+      img: "https://i.scdn.co/image/ab67616d0000b2736ae11e3b5a295092ac50e670"
+    },
+    { 
+      title: "You & I", 
+      embed: "https://open.spotify.com/embed/track/2afCBiru10AFckfOa49wIa?si=dd3e77d293374429",
+      img: "https://i.scdn.co/image/ab67616d0000b273fe08f4dfdfb7442c15bfc8e9"
+    },
   ],
   "Isa": [
-    { title: "PENDEJO ATREVIDO", embed: "https://open.spotify.com/embed/track/0tCRhTNMLX2EYJeVqZiC2n?si=56c747b71ad84061" },
-    { title: "Bunda", embed: "https://open.spotify.com/embed/track/3UEIObvIQMJzF09RWRcqcP?si=d3ae14ae6d9846ce" },
-    { title: "PONTE LOKITA", embed: "https://open.spotify.com/embed/track/0Lahr7sUDdtYnX3n3KobR6?si=e2e9cd2738dc4905" },
-    { title: "Bing Bong", embed: "https://open.spotify.com/embed/track/6s9PpYbExKlHuJ8JMyep21?si=47250c667ae140b6" },
+    { 
+      title: "PENDEJO ATREVIDO", 
+      embed: "https://open.spotify.com/embed/track/0tCRhTNMLX2EYJeVqZiC2n?si=56c747b71ad84061",
+      img: "https://i.scdn.co/image/ab67616d0000b273fd99e6ae3137c5a424956f6f"
+    },
+    { 
+      title: "Bunda", 
+      embed: "https://open.spotify.com/embed/track/3UEIObvIQMJzF09RWRcqcP?si=d3ae14ae6d9846ce",
+      img: "https://i.scdn.co/image/ab67616d0000b273661ca28d1337cae98dced1a3"
+    },
+    { 
+      title: "PONTE LOKITA", 
+      embed: "https://open.spotify.com/embed/track/0Lahr7sUDdtYnX3n3KobR6?si=e2e9cd2738dc4905",
+      img: "https://i.scdn.co/image/ab67616d0000b273a8e6e73ab83c45a68286aab6"
+    },
+    { 
+      title: "Bing Bong", 
+      embed: "https://open.spotify.com/embed/track/6s9PpYbExKlHuJ8JMyep21?si=47250c667ae140b6",
+      img: "https://i.scdn.co/image/ab67616d0000b27336b34b8b7c0e26a7be7e9bfc"
+    },
   ],
   "Zephyr": [
-    { title: "Stranger in Moscow", embed: "https://open.spotify.com/embed/track/64KrFHj9p5AyCX2yZQr4YJ" },
-    { title: "Outside", embed: "https://open.spotify.com/embed/track/0IXWLMBZeK33mOb044Sxu6" },
-    { title: "2000 Watts", embed: "https://open.spotify.com/embed/track/4aTYZL8uyGXAdmWOQy4Wgx" },
-    { title: "Jam", embed: "https://open.spotify.com/embed/track/2EI8uljBPaI23VUr2tv4eS" },
+    { 
+      title: "Stranger in Moscow", 
+      embed: "https://open.spotify.com/embed/track/64KrFHj9p5AyCX2yZQr4YJ",
+      img: "https://i.scdn.co/image/ab67616d0000b273a0e87a62a5d7cbb2f12242ab"
+    },
+    { 
+      title: "Outside", 
+      embed: "https://open.spotify.com/embed/track/0IXWLMBZeK33mOb044Sxu6",
+      img: "https://i.scdn.co/image/ab67616d0000b2732a23b6f5a8a1c9c7a5d9bcfa"
+    },
+    { 
+      title: "2000 Watts", 
+      embed: "https://open.spotify.com/embed/track/4aTYZL8uyGXAdmWOQy4Wgx",
+      img: "https://i.scdn.co/image/ab67616d0000b273c5279b1f19367810e4e59427"
+    },
+    { 
+      title: "Jam", 
+      embed: "https://open.spotify.com/embed/track/2EI8uljBPaI23VUr2tv4eS",
+      img: "https://i.scdn.co/image/ab67616d0000b2735c34e4e6a7debb3fcae94243"
+    },
+  ],
+  "Daniel": [
+    { 
+      title: "Song 1", 
+      embed: "https://open.spotify.com/embed/track/...", 
+      img: "https://via.placeholder.com/80" 
+    },
+    { 
+      title: "Song 2", 
+      embed: "https://open.spotify.com/embed/track/...", 
+      img: "https://via.placeholder.com/80" 
+    },
+    { 
+      title: "Song 3", 
+      embed: "https://open.spotify.com/embed/track/...", 
+      img: "https://via.placeholder.com/80" 
+    },
+    { 
+      title: "Song 4", 
+      embed: "https://open.spotify.com/embed/track/...", 
+      img: "https://via.placeholder.com/80" 
+    },
   ],
 };
+
 
 const frases = [
   "Frase 1: Siempre estás en mis pensamientos ♡",
