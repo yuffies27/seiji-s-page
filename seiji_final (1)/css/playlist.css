@@ -92,22 +92,24 @@ h1 {
 }
 
 /* Contenedor de la playlist */
+/* Contenedor de playlist */
 #playlistBox {
-  margin-top: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;         /* Centrado horizontal */
+  align-content: center;          /* Centrado vertical si hay espacio */
   gap: 1rem;
   width: 100%;
   max-width: 700px;
-  flex-grow: 1;                /* Ocupa todo el espacio disponible hacia abajo */
   overflow-y: auto;
+  box-sizing: border-box;
   padding: 1rem;
-  background-color: #FFEBB0;
+  background-color: #FFF6D1;       /* Color más suave que combina mejor */
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  box-sizing: border-box;
-  align-content: start;
 }
+
 
 /* Tarjetas de canción */
 .card {
