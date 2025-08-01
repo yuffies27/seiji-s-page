@@ -34,20 +34,24 @@ h1 {
 }
 
 /* Carrusel de amigos */
+.carousel-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .carousel {
   display: flex;
-  overflow-x: auto; /* Scroll horizontal solo aquí */
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
   gap: 1rem;
   padding: 1rem;
-  width: 100%;
-  max-width: 100%;
+  width: max-content; /* que el ancho dependa del contenido */
   box-sizing: border-box;
-  -webkit-overflow-scrolling: touch;
-  border-bottom: 1px solid #ccc;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  overflow-y: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  border-bottom: 1px solid #ccc;
 }
 
 .carousel::-webkit-scrollbar {
