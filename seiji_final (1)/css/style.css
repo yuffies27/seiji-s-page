@@ -309,7 +309,8 @@ main.contenido section {
 .mensaje {
   font-size: 0.95rem;
   color: #D9F0F0;
-  text-align: center; /* <- Esto centra el texto horizontalmente */
+  text-align: center;
+  font-style: normal; /* <- Esto elimina la cursiva */
 }
 
 
