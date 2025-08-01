@@ -571,7 +571,7 @@ nav a:hover {
 .frase {
   font-size: 1rem;
   margin-bottom: 1rem;
-  font-style: italic;
+  font-style: normal;
   background: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 15px;
@@ -637,7 +637,7 @@ nav a:hover {
 .respuesta {
   font-size: 0.9rem;
   color: #912b4c; /* rojo */
-  font-style: italic;
+  font-style: normal;
   margin-top: 1rem;
 }
 
@@ -781,7 +781,7 @@ html, body {
     overflow-y: auto;
     font-size: 14px;
     background-color: #D9F0F0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Comic Sans MS', sans-serif;
   }
 
   h1 {
