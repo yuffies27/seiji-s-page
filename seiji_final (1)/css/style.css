@@ -4,7 +4,7 @@ body, html {
   padding: 0;
   height: 100%;
   background: #D9F0F0; /* Fondo general azul muy claro */
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Comic Sans MS', sans-serif;
   color: #1B475D; /* Texto principal azul oscuro */
   width: 100%;
   max-width: 100%;
@@ -899,7 +899,7 @@ html, body {
 
 /* Para aplicar la fuente al título de la gameboy */
 .titulo-gameboy {
-  font-family: 'Retro Mario', cursive, sans-serif;
+  font-family: 'Retro Mario', sans-serif;
   color: #1B475D; /* Azul oscuro */
 }
 
