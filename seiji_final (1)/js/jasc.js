@@ -437,8 +437,8 @@ function setupMenuHamburguesa() {
 
 // Playlist
 function setupPlaylist() {
-  const friends = document.querySelectorAll('.friend');
-  const playlistSection = document.querySelector('#playlistBox');
+  const friends = document.querySelectorAll(".amigo");
+  const playlistSection = document.getElementById("playlist");
 
   if (!friends.length || !playlistSection) return;
 
@@ -449,36 +449,53 @@ function setupPlaylist() {
       const songs = playlistData[name];
       renderPlaylist(name, songs);
 
-      // Marca el amigo activo para estilos
-      friends.forEach(f => f.classList.remove('activo'));
-      friend.classList.add('activo');
+ // Mostrar la playlist del primer amigo al cargar
+  const primerAmigo = friends[0];
+  if (primerAmigo) {
+    primerAmigo.classList.add("activo");
+    const name = primerAmigo.dataset.amigo;
+    renderPlaylist(name, playlistData[name]);
+  }
+
+  friends.forEach(friend => {
+    friend.addEventListener("click", () => {
+      const name = friend.dataset.amigo;
+      const songs = playlistData[name];
+      renderPlaylist(name, songs);
+
+      friends.forEach(f => f.classList.remove("activo"));
+      friend.classList.add("activo");
     });
   });
 
   function renderPlaylist(name, songs) {
-    playlistSection.innerHTML = ""; // limpiar anterior
-
+    playlistSection.innerHTML = "";
     if (!songs || songs.length === 0) {
-      playlistSection.innerHTML = `<p>No hay canciones disponibles para ${name}.</p>`;
+      playlistSection.innerHTML = `<p>No hay canciones para ${name}</p>`;
       return;
     }
 
     songs.forEach(song => {
-      const card = document.createElement('div');
-      card.className = 'card';
+      const card = document.createElement("div");
+      card.className = "card";
       card.innerHTML = `
         <h3>${song.title}</h3>
-        <iframe src="${song.embed}" 
+        <img src="${song.img}" alt="Portada de ${song.title}" />
+        <iframe 
+          src="${song.embed}" 
+          width="250" height="80" 
+          frameborder="0" 
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          allowfullscreen 
           loading="lazy"></iframe>
-        <a class="spotify-link" href="${song.embed.replace('/embed/', '/')}" target="_blank" rel="noopener noreferrer">
+        <a href="${song.embed.replace('/embed/', '/')}" target="_blank" rel="noopener noreferrer">
           Abrir en Spotify
         </a>
       `;
       playlistSection.appendChild(card);
     });
   }
-
+}
   // Hover táctil para móviles
   friends.forEach(friend => {
     friend.addEventListener('touchstart', () => friend.classList.add('hovered'));
