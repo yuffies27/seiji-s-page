@@ -121,23 +121,23 @@ const playlistData = {
   ],
   "Daniel": [
     { 
-      title: "Song 1", 
-      embed: "https://open.spotify.com/embed/track/...", 
+      title: "Tu Cumpleaños", 
+      embed: "https://open.spotify.com/embed/track/1MNhGda26PjPrpdoJCC9ji?si=f7427a16c25846de", 
       img: "https://via.placeholder.com/80" 
     },
     { 
-      title: "Song 2", 
-      embed: "https://open.spotify.com/embed/track/...", 
+      title: "Happy Birthday", 
+      embed: "https://open.spotify.com/embed/track/0XkGuccSfq43beHberZYKz?si=ed5759ac4d404959", 
       img: "https://via.placeholder.com/80" 
     },
     { 
-      title: "Song 3", 
-      embed: "https://open.spotify.com/embed/track/...", 
+      title: "HAPPY BIRTHDAY TO YOU", 
+      embed: "https://open.spotify.com/intl-es/track/4hD3GY02X1jqSeku2G9FxS?si=40a2ee1091dc454c", 
       img: "https://via.placeholder.com/80" 
     },
     { 
-      title: "Song 4", 
-      embed: "https://open.spotify.com/embed/track/...", 
+      title: "BIRDS OF A FEATHER", 
+      embed: "https://open.spotify.com/intl-es/track/6dOtVTDdiauQNBQEDOtlAB?si=29a2b195d1a64a9c", 
       img: "https://via.placeholder.com/80" 
     },
   ],
