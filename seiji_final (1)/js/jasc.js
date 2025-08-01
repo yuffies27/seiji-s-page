@@ -14,19 +14,19 @@ let intervalos = [];
 // -----------------------------
 
 const comentarios = [
-  { nombre: "yuffie", user: "@piururin", mensaje: "text text text ", foto: "img/yuffie.jpg" },
-  { nombre: "zephyr",  user: "@necrocize",  mensaje: "text text text ", foto: "img/zephyr.jpg" },
-  { nombre: "naeve",  user: "@ninfjal",  mensaje: "text text text ", foto: "img/naeve.jpg" },
+  { nombre: "yuffie", user: "@onlineusagirl", mensaje: "text text text ", foto: "img/yuffie.jpg" },
+  { nombre: "zephyr",  user: "@necrocize",  mensaje: "feliz cumple gordo d mi corazon, gracias por ser un amigo mas y apoyarme en casi todo. Te adoro muchísimo boludito, te convertiste en una persona muy importante para mí en tan poco tiempo, espero la pases re bien y disfrutes mucho este día pq merecés todo lo mejor. Gracias por todo mi gordo, gracias x tambien ser mi amante 🫶🏻", foto: "img/zephyr.jpg" },
+  { nombre: "naeve",  user: "@cinefliar",  mensaje: "Feliz cumple, gordito. Gracias por ser mi mejor amigo, por estar siempre conmigo, incluso en mis peores momentos. No sabés lo que valoro tener a alguien como vos en mi vida, alguien que me banca, que me escucha, que me hace reír y que me acompaña sin juzgarme. Sos una de las personas más importantes que tengo, y espero que hoy la pases rodeado de todo eso que te hace bien y de la gente que te quiere, porque te lo re merecés. Te adoro muchísimo 💗💗💗", foto: "img/naeve.jpg" },
   { nombre: "daniel", user: "@cautlver", mensaje: "text text text ", foto: "img/daniel.jpg" },
-  { nombre: "isa",  user: "@iglesitar",mensaje: "text text text ", foto: "img/candy.jpg" }
+  { nombre: "isa",  user: "@blbicr",mensaje: "FELIZ CUMPLE GORDO 👉🏼❤️ Espero que hoy la pases re bien, q disfrutes como se debe y bueno, que pases a tdo q ver lo que queda d este año, perdóname si alguna vez tiré un chiste malo o un comentario fuera d lugar, sabes q te amo y q no lo hago cn mala intención. sos r buen amigo y me alegra mucho eso, a pesar de q entre r tarde al grupo realmente apareció tu amistad y la de todos en especial. Tu escencia y tus opiniones hacen q el ambiente se vuelva mejor y cómodo para todos. realmente admiro tu forma d pensar y con la tranquilidad que afrontas las cosas (o al menos sho veo eso ;) anyways bebé felisitasiones Estás son las mañanitas que cantaba el Rey David 👉🏼❤️", foto: "img/candy.jpg" }
 ];
 
 const frasesJ = [
   { texto: "text text text ", autor: "Yuffie" },
-  { texto: "text text text ", autor: "Naeve" },
+  { texto: "facundo kere coca", autor: "Naeve" },
   { texto: "text text text ", autor: "Zephyr" },
   { texto: "text text text ", autor: "Daniel" },
-  { texto: "text text text ", autor: "Isa" }
+  { texto: "a ver malparida primero que todo mi cabello es real mira  como puedo verlo no es un pintando ahí de mona grilla ew", autor: "Isa" }
 ];
 
 const playlistData = {
@@ -37,10 +37,10 @@ const playlistData = {
     { title: "Endlessly", embed: "https://open.spotify.com/embed/track/0wzCQjc8JRa39ej1TFkAFt" },
   ],
   "Naeve": [
-    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Packing it Up", embed: "https://open.spotify.com/embed/track/0D89q3d3eclowHBcDQZ4qn?si=6981ce08cb9e48e8" },
+    { title: "Nunca quise ", embed: "https://open.spotify.com/embed/track/0ZAJ660VP57lLK4U7NlGOy?si=6880b9c5c1324f16" },
+    { title: "Too Close", embed: "https://open.spotify.com/embed/track/6gezrIScVLEnV1szuZxhvA?si=57e148bb0cb84c33" },
+    { title: "You & I", embed: "https://open.spotify.com/embed/track/2afCBiru10AFckfOa49wIa?si=dd3e77d293374429" },
   ],
   "Daniel": [
     { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
@@ -48,11 +48,11 @@ const playlistData = {
     { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
     { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
   ],
-  "Candy": [
-    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
+  "Isa": [
+    { title: "PENDEJO ATREVIDO", embed: "https://open.spotify.com/embed/track/0tCRhTNMLX2EYJeVqZiC2n?si=56c747b71ad84061" },
+    { title: "Bunda", embed: "https://open.spotify.com/embed/track/3UEIObvIQMJzF09RWRcqcP?si=d3ae14ae6d9846ce" },
+    { title: "PONTE LOKITA", embed: "https://open.spotify.com/embed/track/0Lahr7sUDdtYnX3n3KobR6?si=e2e9cd2738dc4905" },
+    { title: "Bing Bong", embed: "https://open.spotify.com/embed/track/6s9PpYbExKlHuJ8JMyep21?si=47250c667ae140b6" },
   ],
   "Zephyr": [
     { title: "Stranger in Moscow", embed: "https://open.spotify.com/embed/track/64KrFHj9p5AyCX2yZQr4YJ" },
