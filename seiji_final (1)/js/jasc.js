@@ -435,21 +435,13 @@ function setupMenuHamburguesa() {
   }
 }
 
-// Playlist
 function setupPlaylist() {
-  const friends = document.querySelectorAll(".amigo");
-  const playlistSection = document.getElementById("playlist");
+  const friends = document.querySelectorAll(".friend"); // clase friend, según tu HTML
+  const playlistSection = document.getElementById("playlistBox"); // id playlistBox, según tu HTML
 
   if (!friends.length || !playlistSection) return;
 
-  // Mostrar playlist al hacer clic
-  friends.forEach(friend => {
-    friend.addEventListener('click', () => {
-      const name = friend.dataset.name;
-      const songs = playlistData[name];
-      renderPlaylist(name, songs);
-
- // Mostrar la playlist del primer amigo al cargar
+  // Mostrar la playlist del primer amigo al cargar
   const primerAmigo = friends[0];
   if (primerAmigo) {
     primerAmigo.classList.add("activo");
@@ -457,15 +449,21 @@ function setupPlaylist() {
     renderPlaylist(name, playlistData[name]);
   }
 
+  // Mostrar playlist al hacer clic en cualquier amigo
   friends.forEach(friend => {
     friend.addEventListener("click", () => {
       const name = friend.dataset.amigo;
       const songs = playlistData[name];
       renderPlaylist(name, songs);
 
+      // Marcar amigo activo
       friends.forEach(f => f.classList.remove("activo"));
       friend.classList.add("activo");
     });
+
+    // Hover táctil para móviles
+    friend.addEventListener('touchstart', () => friend.classList.add('hovered'));
+    friend.addEventListener('touchend', () => friend.classList.remove('hovered'));
   });
 
   function renderPlaylist(name, songs) {
@@ -495,12 +493,6 @@ function setupPlaylist() {
       playlistSection.appendChild(card);
     });
   }
-}
-  // Hover táctil para móviles
-  friends.forEach(friend => {
-    friend.addEventListener('touchstart', () => friend.classList.add('hovered'));
-    friend.addEventListener('touchend', () => friend.classList.remove('hovered'));
-  });
 
   // Scroll táctil y drag para carrusel
   const carousel = document.querySelector('.carousel');
