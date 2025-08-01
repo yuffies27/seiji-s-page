@@ -10,9 +10,70 @@ let puntos = 0;
 let intervalos = [];
 
 // -----------------------------
-// Bloqueo por PIN
+// Datos fijos
 // -----------------------------
 
+const comentarios = [
+  { nombre: "yuffie", user: "@piururin", mensaje: "text text text ", foto: "img/yuffie.jpg" },
+  { nombre: "zephyr",  user: "@necrocize",  mensaje: "text text text ", foto: "img/zephyr.jpg" },
+  { nombre: "naeve",  user: "@ninfjal",  mensaje: "text text text ", foto: "img/naeve.jpg" },
+  { nombre: "daniel", user: "@cautlver", mensaje: "text text text ", foto: "img/daniel.jpg" },
+  { nombre: "isa",  user: "@iglesitar",mensaje: "text text text ", foto: "img/candy.jpg" }
+];
+
+const frasesJ = [
+  { texto: "text text text ", autor: "Yuffie" },
+  { texto: "text text text ", autor: "Naeve" },
+  { texto: "text text text ", autor: "Zephyr" },
+  { texto: "text text text ", autor: "Daniel" },
+  { texto: "text text text ", autor: "Isa" }
+];
+
+const playlistData = {
+  "Yuffie": [
+    { title: "Rainy Tapestry", embed: "https://open.spotify.com/embed/track/3INsIMe6Ap6EJ2xXgt9NB8" },
+    { title: "Keep on Loving you", embed: "https://open.spotify.com/embed/track/3GUSidbQwd7xuvU6AQorRh" },
+    { title: "You", embed: "https://open.spotify.com/embed/track/5KZ0qobWEFl892YjIC02SE" },
+    { title: "Endlessly", embed: "https://open.spotify.com/embed/track/0wzCQjc8JRa39ej1TFkAFt" },
+  ],
+  "Naeve": [
+    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
+  ],
+  "Daniel": [
+    { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 2", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
+  ],
+  "Candy": [
+    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
+    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
+  ],
+  "Zephyr": [
+    { title: "Stranger in Moscow", embed: "https://open.spotify.com/embed/track/64KrFHj9p5AyCX2yZQr4YJ" },
+    { title: "Outside", embed: "https://open.spotify.com/embed/track/0IXWLMBZeK33mOb044Sxu6" },
+    { title: "2000 Watts", embed: "https://open.spotify.com/embed/track/4aTYZL8uyGXAdmWOQy4Wgx" },
+    { title: "Jam", embed: "https://open.spotify.com/embed/track/2EI8uljBPaI23VUr2tv4eS" },
+  ],
+};
+
+const frases = [
+  "Frase 1: Siempre estás en mis pensamientos ♡",
+  "Frase 2: Este rincón es solo tuyo",
+  "Frase 3: Eres una luz en mi vida",
+  "Frase 4: Aquí se guarda todo lo bonito de ti"
+];
+
+// -----------------------------
+// Funciones
+// -----------------------------
+
+// PIN
 function agregarNumero(n) {
   if (entrada.length < 6) {
     entrada += n;
@@ -39,18 +100,7 @@ function verificarPIN() {
   }
 }
 
-// -----------------------------
-// Comentarios (ejemplo básico)
-// -----------------------------
-
-const comentarios = [
-  { nombre: "yuffie", user: "@piururin", mensaje: "text text text ", foto: "img/yuffie.jpg" },
-  { nombre: "zephyr",  user: "@necrocize",  mensaje: "text text text ", foto: "img/zephyr.jpg" },
-  { nombre: "naeve",  user: "@ninfjal",  mensaje: "text text text ", foto: "img/naeve.jpg" },
-  { nombre: "daniel", user: "@cautlver", mensaje: "text text text ", foto: "img/daniel.jpg" },
-  { nombre: "isa",  user: "@iglesitar",mensaje: "text text text ", foto: "img/candy.jpg" }
-];
-
+// Comentarios
 function siguienteComentario() {
   comentarioIndex = (comentarioIndex + 1) % comentarios.length;
   const c = comentarios[comentarioIndex];
@@ -60,23 +110,7 @@ function siguienteComentario() {
   document.querySelector("#comentario .mensaje").textContent = c.mensaje;
 }
 
-const btnSiguiente = document.getElementById('btn-siguiente');
-if (btnSiguiente) {
-  btnSiguiente.addEventListener('click', siguienteComentario);
-}
-
-// -----------------------------
-// Juegos: mostrar juegos y control botones A y B
-// -----------------------------
-
-const frasesJ = [
-  { texto: "text text text ", autor: "Yuffie" },
-  { texto: "text text text ", autor: "Naeve" },
-  { texto: "text text text ", autor: "Zephyr" },
-  { texto: "text text text ", autor: "Daniel" },
-  { texto: "text text text ", autor: "Isa" }
-];
-
+// Juegos
 function mostrarJuego(nombre) {
   const contenedor = document.getElementById("pantalla-juego");
 
@@ -100,12 +134,11 @@ function mostrarJuego(nombre) {
   }
 }
 
-// --- Juego Adivina quién lo dijo ---
-
+// Juego Adivina quién lo dijo
 function iniciarQuiz() {
   quizIndex = 0;
   pendientes = [];
-  cargarPregunta(frases[quizIndex]);
+  cargarPregunta(frasesJ[quizIndex]);
 }
 
 function cargarPregunta(fraseObj) {
@@ -154,22 +187,21 @@ function evaluarRespuesta(correcto, elegido) {
 
   setTimeout(() => {
     quizIndex++;
-    if (quizIndex < frases.length) {
-      cargarPregunta(frases[quizIndex]);
+    if (quizIndex < frasesJ.length) {
+      cargarPregunta(frasesJ[quizIndex]);
     } else if (pendientes.length > 0) {
-      frases.length = 0;
-      frases.push(...pendientes);
+      frasesJ.length = 0;
+      frasesJ.push(...pendientes);
       pendientes = [];
       quizIndex = 0;
-      cargarPregunta(frases[quizIndex]);
+      cargarPregunta(frasesJ[quizIndex]);
     } else {
       document.getElementById("pantalla-juego").innerHTML = `<p class="frase">¡Completaste todas las frases! 🌟</p>`;
     }
   }, 1300);
 }
 
-// --- Juego Atrapa el Sol ---
-
+// Juego Atrapa el Sol
 function iniciarAtrapa() {
   puntos = 0;
   document.getElementById("puntos").textContent = puntos;
@@ -281,11 +313,8 @@ function clearIntervalos() {
   intervalos = [];
 }
 
-// -----------------------------
 // Menú hamburguesa
-// -----------------------------
-
-document.addEventListener('DOMContentLoaded', () => {
+function setupMenuHamburguesa() {
   const btnMenu = document.getElementById('btn-menu');
   const navMenu = document.getElementById('nav-menu');
 
@@ -322,61 +351,14 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
     });
   }
-});
-
-// -----------------------------
-// Eventos para botones A y B
-// -----------------------------
-
-const botonA = document.getElementById('boton-a');
-const botonB = document.getElementById('boton-b');
-
-if (botonA) {
-  botonA.addEventListener('click', () => mostrarJuego('adivina'));
 }
 
-if (botonB) {
-  botonB.addEventListener('click', () => mostrarJuego('atrapa'));
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-// Datos de canciones por amigo
-const playlistData = {
-  "Yuffie": [
-    { title: "Rainy Tapestry", embed: "https://open.spotify.com/embed/track/3INsIMe6Ap6EJ2xXgt9NB8" },
-    { title: "Keep on Loving you", embed: "https://open.spotify.com/embed/track/3GUSidbQwd7xuvU6AQorRh" },
-    { title: "You", embed: "https://open.spotify.com/embed/track/5KZ0qobWEFl892YjIC02SE" },
-    { title: "Endlessly", embed: "https://open.spotify.com/embed/track/0wzCQjc8JRa39ej1TFkAFt" },
-  ],
-  "Naeve": [
-    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
-  ],
-  "Daniel": [
-    { title: "Song 1", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 2", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 3", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song 4", embed: "https://open.spotify.com/embed/track/..." },
-  ],
-  "Candy": [
-    { title: "Song A", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song B", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song C", embed: "https://open.spotify.com/embed/track/..." },
-    { title: "Song D", embed: "https://open.spotify.com/embed/track/..." },
-  ],
-  "Zephyr": [
-    { title: "Stranger in Moscow", embed: "https://open.spotify.com/embed/track/64KrFHj9p5AyCX2yZQr4YJ" },
-    { title: "Outside", embed: "https://open.spotify.com/embed/track/0IXWLMBZeK33mOb044Sxu6" },
-    { title: "2000 Watts", embed: "https://open.spotify.com/embed/track/4aTYZL8uyGXAdmWOQy4Wgx" },
-    { title: "Jam", embed: "https://open.spotify.com/embed/track/2EI8uljBPaI23VUr2tv4eS" },
-  ],
-};
-
-document.addEventListener("DOMContentLoaded", () => {
+// Playlist
+function setupPlaylist() {
   const friends = document.querySelectorAll('.friend');
   const playlistSection = document.querySelector('#playlistBox');
+
+  if (!friends.length || !playlistSection) return;
 
   // Mostrar playlist al hacer clic
   friends.forEach(friend => {
@@ -455,34 +437,60 @@ document.addEventListener("DOMContentLoaded", () => {
       carousel.scrollLeft = scrollLeft - walk;
     });
   }
-});
+}
 
-// Selecciona todos los contenedores de fotos
-const fotos = document.querySelectorAll('.foto-container');
-// Selecciona la ventana emergente
-const ventana = document.querySelector('.ventana-frase');
-// Selecciona el contenido de la frase
-const contenido = document.querySelector('.contenido-frase');
-// Selecciona el botón de cerrar
-const cerrar = document.querySelector('.cerrar');
+// Frases emergentes
+function setupFrasesEmergentes() {
+  const fotos = document.querySelectorAll('.foto-container');
+  const ventana = document.querySelector('.ventana-frase');
+  const contenido = document.querySelector('.contenido-frase');
+  const cerrar = document.querySelector('.cerrar');
 
-// Frases asociadas (puedes personalizar estos textos según el orden de las fotos)
-const frases = [
-  "Frase 1: Siempre estás en mis pensamientos ♡",
-  "Frase 2: Este rincón es solo tuyo",
-  "Frase 3: Eres una luz en mi vida",
-  "Frase 4: Aquí se guarda todo lo bonito de ti"
-];
+  if (!ventana || !contenido || !cerrar) return;
 
-// Asociar cada foto a su frase
-fotos.forEach((foto, index) => {
-  foto.addEventListener('click', () => {
-    contenido.textContent = frases[index];
-    ventana.classList.add('activa');
+  fotos.forEach((foto, index) => {
+    foto.addEventListener('click', () => {
+      contenido.textContent = frases[index];
+      ventana.classList.add('activa');
+    });
   });
-});
 
-// Cerrar la ventana
-cerrar.addEventListener('click', () => {
-  ventana.classList.remove('activa');
+  cerrar.addEventListener('click', () => {
+    ventana.classList.remove('activa');
+  });
+}
+
+// -----------------------------
+// Código principal que se ejecuta cuando el DOM está listo
+// -----------------------------
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Setup menú hamburguesa
+  setupMenuHamburguesa();
+
+  // Setup playlist y carrusel
+  setupPlaylist();
+
+  // Setup frases emergentes
+  setupFrasesEmergentes();
+
+  // Botón siguiente comentario
+  const btnSiguiente = document.getElementById('btn-siguiente');
+  if (btnSiguiente) {
+    btnSiguiente.addEventListener('click', siguienteComentario);
+  }
+
+  // Botones A y B juegos
+  const botonA = document.getElementById('boton-a');
+  const botonB = document.getElementById('boton-b');
+
+  if (botonA) {
+    botonA.addEventListener('click', () => mostrarJuego('adivina'));
+  }
+  if (botonB) {
+    botonB.addEventListener('click', () => mostrarJuego('atrapa'));
+  }
+
+  // Inicializa con el primer comentario
+  if (comentarios.length) siguienteComentario();
 });
