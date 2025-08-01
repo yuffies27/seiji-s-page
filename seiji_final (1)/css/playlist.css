@@ -157,19 +157,3 @@ iframe {
   text-decoration: underline;
 }
 
-/* Responsive: 2 columnas en móviles */
-@media (max-width: 600px) {
-  .card {
-    width: 100%;
-    max-width: none;
-  }
-
-  iframe {
-    width: 100%;
-  }
-
-  #playlistBox {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-  }
-}
