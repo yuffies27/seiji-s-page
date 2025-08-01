@@ -25,8 +25,7 @@ const frasesJ = [
   { texto: "la guadalupana la guadalupana...", autor: "yuffie" },
   { texto: "facundo kere coca", autor: "naeve" },
   { texto: "SOPLAME LA VELAAAA", autor: "zephyr" },
-  { texto: "ya 19 añitos de fluir... 💆🏻‍♂️🙌🏻 UEE😭🥺💧Eu💧💧E E😭
-🥺😭UUUUE😭🥺💧🥺", autor: "daniel" },
+  { texto: "ya 19 añitos de fluir... 💆🏻‍♂️🙌🏻 UEE😭🥺💧Eu💧💧E E😭🥺😭UUUUE😭🥺💧🥺", autor: "daniel" },
   { texto: "a ver malparida primero que todo mi cabello es real mira  como puedo verlo no es un pintando ahí de mona grilla ew", autor: "isa" }
 ];
 
